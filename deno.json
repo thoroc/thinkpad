@@ -1,14 +1,26 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts",
-    "dv": "vercel dev"
+    "dev": "deno run --watch -A api/thinkpad.ts",
+    "start": "deno run -A api/thinkpad.ts",
+    "test": "deno test -A --unstable",
+    "deploy": "denoctl deploy --entry-point api/thinkpad.ts --name thinkpad",
+    "data": "deno run --allow-read --allow-write --allow-env --allow-sys ./data/scripts/main.ts"
   },
   "nodeModulesDir": "auto",
   "imports": {
+    "@hono/hono": "jsr:@hono/hono@^4.6.17",
     "@hono/zod-validator": "npm:@hono/zod-validator@^0.4.2",
+    "@psych/sheet": "jsr:@psych/sheet@^1.0.6",
     "@std/assert": "jsr:@std/assert@1",
-    "hono": "npm:hono@^4.6.17",
+    "@std/fs": "jsr:@std/fs@^1.0.9",
+    "@wok/case": "jsr:@wok/case@^1.0.2",
+    "chalk": "npm:chalk@^5.4.1",
+    "csvtojson": "npm:csvtojson@^2.0.10",
+    "exceljs": "npm:exceljs@^4.4.0",
+    "quicktype": "npm:quicktype@^23.0.170",
+    "quicktype-core": "npm:quicktype-core@^23.0.170",
     "vercel": "npm:vercel@^39.3.0",
+    "xlsx": "npm:xlsx@^0.18.5",
     "zod": "npm:zod@^3.24.1"
   }
 }
