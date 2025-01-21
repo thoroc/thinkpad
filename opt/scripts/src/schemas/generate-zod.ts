@@ -1,4 +1,6 @@
+import chalk from "npm:chalk";
 import { generate } from "npm:ts-to-zod";
+import { getFileConfig } from "../file/config.ts";
 
 interface GenerateZodSchemaOptions {
   sourceText: string;
@@ -12,5 +14,18 @@ export const generateZodSchema = (
     sourceText,
   });
 
-  return getZodSchemasFile(typesImportPath);
+  const code = getZodSchemasFile(typesImportPath);
+
+  console.log(
+    `> Generated Zod schema at ${chalk.green(`${typesImportPath}.ts`)}`,
+  );
+
+  const config = getFileConfig(`${typesImportPath}.ts`);
+
+  // this is for the deno runtime
+  const denoCompatibleCode = code
+    .replace('import { z } from "zod";', 'import { z } from "npm:zod";')
+    .replace(typesImportPath, `../${config.parentDir}/${config.name}.ts`);
+
+  return denoCompatibleCode;
 };
