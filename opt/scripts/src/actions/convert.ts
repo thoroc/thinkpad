@@ -23,9 +23,9 @@ export const convertXls = async (
 
   const filename = getFileConfig(filepath).name;
   const outputFilepath = `${outputDir}/${filename}.${exports.fileExtension}`;
+  const fileExists = await exists(outputFilepath);
 
-  if (!await exists(outputFilepath) || overwrite) {
-    // get only the filename from the path
+  if (!fileExists || overwrite) {
     const file = await Deno.readFile(filepath);
     const data = await importSheet(file, "xls");
 
@@ -40,7 +40,7 @@ export const convertXls = async (
     console.log(
       `Skipping ${
         chalk.green(filepath)
-      }: File existing and will not be overwriten: `,
+      }: File existing and will not be overwriten`,
     );
   }
 

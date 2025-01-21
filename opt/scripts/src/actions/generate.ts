@@ -20,6 +20,9 @@ export const generate = async (
   { inputDir, dataDir, schemaDir, fileExtension }: Options,
 ) => {
   const files = Deno.readDirSync(inputDir);
+  const orderedFiles = Array.from(files).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
 
   if (!existsSync(dataDir)) {
     Deno.mkdirSync(dataDir, { recursive: true });
@@ -35,7 +38,7 @@ export const generate = async (
 
   const datafiles = [];
 
-  for (const file of files) {
+  for (const file of orderedFiles) {
     const filepath = `${inputDir}/${file.name}`;
 
     console.log(`\n\n> Processing ${chalk.yellow(filepath)}\n`);
