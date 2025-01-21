@@ -26,7 +26,6 @@ export const generateSchema = async (
   const { lines } = await quicktype({
     inputData,
     lang: "typescript",
-    // rendererOptions: { framework: "zod" },
   });
 
   return lines.join("\n");

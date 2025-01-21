@@ -11,14 +11,12 @@ interface Options {
   dataDir: string;
   schemaDir: string;
   fileExtension: ExcelFileExtension;
-  maxFiles?: number;
 }
 
 export const generateTypes = async (
-  { inputDir, dataDir, schemaDir, fileExtension, maxFiles }: Options,
+  { inputDir, dataDir, schemaDir, fileExtension }: Options,
 ) => {
   const files = Deno.readDirSync(inputDir);
-  let counter = 0;
 
   if (!existsSync(dataDir)) {
     Deno.mkdirSync(dataDir, { recursive: true });
@@ -35,10 +33,6 @@ export const generateTypes = async (
   const datafiles = [];
 
   for (const file of files) {
-    if (maxFiles && counter >= maxFiles && maxFiles !== -1) {
-      break;
-    }
-
     const filepath = `${inputDir}/${file.name}`;
 
     console.log(`\n\n> Processing ${chalk.yellow(filepath)}\n`);
@@ -52,8 +46,6 @@ export const generateTypes = async (
         exportFileExtension: "json",
       });
       datafiles.push(jsonFile);
-
-      counter++;
     }
 
     console.log(`\n> Done processing ${chalk.yellow(filepath)}`);

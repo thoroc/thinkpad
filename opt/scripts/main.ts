@@ -13,5 +13,4 @@ await generateTypes({
   dataDir: "data/json",
   schemaDir: "data/schemas",
   fileExtension: "xls",
-  maxFiles: -1,
 });
