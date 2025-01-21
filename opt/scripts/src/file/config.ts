@@ -11,7 +11,7 @@ export type FileConfig = {
  *
  * @param filepath - The full path of the file.
  * @returns An object containing the file's configuration details:
- * - `extension`: The file extension.
+ * - `extension`: The file extension. If the file has no extension, this value is `undefined`.
  * - `name`: The name of the file without the extension. Excludes any values after a period.
  * - `path`: The directory path of the file. Excludes the filename.
  * - `root`: The root directory of the file path.
