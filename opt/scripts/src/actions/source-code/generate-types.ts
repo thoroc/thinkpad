@@ -1,3 +1,4 @@
+import chalk from "npm:chalk";
 import {
   InputData,
   jsonInputForTargetLanguage,
@@ -53,13 +54,15 @@ export const generateTypes = async (
     lang: "typescript",
   });
 
-  console.log(`Generated type for ${typeName}`);
-
   const encoder = new TextEncoder();
   const filePath = `${directory}/${typeName}.ts`;
   const sourceCode = lines.join("\n");
 
   await Deno.writeFile(filePath, encoder.encode(sourceCode));
+
+  console.log(
+    `Generated type for ${chalk.yellow(typeName)} to ${chalk.green(filePath)}`,
+  );
 
   return { sourceCode, filePath };
 };

@@ -1,3 +1,4 @@
+import chalk from "npm:chalk";
 import { pascalCase } from "npm:string-ts";
 import { generate } from "npm:ts-to-zod";
 import { getFileConfig } from "../../file/config.ts";
@@ -46,14 +47,18 @@ export const generateZodSchema = async (
   // this is for the deno runtime
   const denoCompatibleCode = sourceCode
     .replace('import { z } from "zod";', 'import { z } from "npm:zod";')
-    .replace(typesImportPath, `../${config.parentDir}/${config.name}.ts`);
-
-  console.log(`Generated Zod schema for ${config.name}`);
+    .replace(typesImportPath, `./${config.name}.ts`);
 
   const encoder = new TextEncoder();
   const filePath = `${directory}/${pascalCase(config.name)}.zod.ts`;
 
   await Deno.writeFile(filePath, encoder.encode(denoCompatibleCode));
+
+  console.log(
+    `Generated Zod schema for ${chalk.yellow(config.name)} at ${
+      chalk.green(filePath)
+    }`,
+  );
 
   return { sourceCode: denoCompatibleCode, filePath };
 };

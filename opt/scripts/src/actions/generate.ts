@@ -2,14 +2,14 @@ import { emptyDir, existsSync } from "jsr:@std/fs";
 import chalk from "npm:chalk";
 import { pascalCase } from "npm:string-ts";
 import { getFileConfig } from "../file/config.ts";
-import { ExcelFileExtension } from "../types.ts";
+import { ExcelFileExtension, ExportOptions } from "../types.ts";
 import { convertXls } from "./convert.ts";
 import { writeExports } from "./exports/mod.ts";
 import { generateTypes } from "./mod.ts";
 import { renameFile } from "./rename.ts";
 import { generateZodSchema } from "./source-code/mod.ts";
 
-interface Options {
+interface GenerateOptions {
   inputDir: string;
   dataDir: string;
   schemaDir: string;
@@ -17,7 +17,7 @@ interface Options {
 }
 
 export const generate = async (
-  { inputDir, dataDir, schemaDir, fileExtension }: Options,
+  { inputDir, dataDir, schemaDir, fileExtension }: GenerateOptions,
 ) => {
   const files = Deno.readDirSync(inputDir);
   const orderedFiles = Array.from(files).sort((a, b) =>
@@ -36,7 +36,7 @@ export const generate = async (
     emptyDir(schemaDir);
   }
 
-  const datafiles = [];
+  const datafiles: ExportOptions[] = [];
 
   for (const file of orderedFiles) {
     const filepath = `${inputDir}/${file.name}`;
@@ -57,19 +57,26 @@ export const generate = async (
       if (dataFile) {
         const typeName = pascalCase(fileConfig.name);
 
-        const generatedOutput = await generateTypes({
+        const generatedTypesOutput = await generateTypes({
           json: JSON.parse(await Deno.readTextFile(dataFile)),
           typeName,
           directory: schemaDir,
         });
+        datafiles.push({
+          filePath: generatedTypesOutput.filePath,
+          exportType: "type",
+        });
 
-        await generateZodSchema({
-          sourceText: generatedOutput.sourceCode,
+        const generatedSchemsOutput = await generateZodSchema({
+          sourceText: generatedTypesOutput.sourceCode,
           typesImportPath: `./${schemaDir}/${typeName}`,
           directory: schemaDir,
         });
 
-        datafiles.push(dataFile);
+        datafiles.push({
+          filePath: generatedSchemsOutput.filePath,
+          exportType: "schema",
+        });
       }
     }
 
@@ -79,10 +86,6 @@ export const generate = async (
   writeExports({
     outputDir: schemaDir,
     files: datafiles,
-    exports: {
-      types: true,
-      schemas: true,
-    },
   });
 
   console.log(`\n\n> Generated exports`);
