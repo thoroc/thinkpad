@@ -1,5 +1,5 @@
 import { camelCase, pascalCase } from "npm:string-ts";
-import { FileConfig } from "../file/config.ts";
+import { FileConfig } from "../../file/config.ts";
 
 export const getExportStatement = (config: FileConfig, withSchema: boolean) => {
   let statement = "";

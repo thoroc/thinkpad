@@ -1,6 +1,6 @@
 import chalk from "npm:chalk";
 import { pascalCase } from "npm:string-ts";
-import { getFileConfig } from "../file/config.ts";
+import { getFileConfig } from "../../file/config.ts";
 import { generateSchema } from "./generate-single.ts";
 import { generateZodSchema } from "./generate-zod.ts";
 
@@ -19,16 +19,14 @@ export const generateSchemas = async (
 
   const outputFilepaths: string[] = [];
 
-  await Promise.all(inputFiles.map(async (inputFile) => {
+  for (const inputFile of inputFiles) {
     const data = await Deno.readTextFile(inputFile);
 
     const config = getFileConfig(inputFile);
     const typeName = pascalCase(config.name);
 
     console.log(
-      `\n\n> Generating schema for ${chalk.green(typeName)} in ${
-        chalk.yellow("typescript")
-      }`,
+      `\n\n> Generating types/schema for ${chalk.yellow(typeName)}\n`,
     );
 
     const generatedCode = await generateSchema({
@@ -44,6 +42,10 @@ export const generateSchemas = async (
       encoder.encode(generatedCode),
     );
 
+    console.log(
+      `Generated types at ${chalk.green(outputFilepath)}`,
+    );
+
     const generatedZodCode = generateZodSchema({
       sourceText: generatedCode,
       typesImportPath: `./${outputDir}/${typeName}`,
@@ -57,13 +59,15 @@ export const generateSchemas = async (
     );
 
     console.log(
-      `> Generated schema for ${chalk.green(typeName)} in ${
-        chalk.yellow("typescript")
-      } at ${chalk.green(outputFilepath)}`,
+      `Generated Zod schema at ${chalk.green(`${zodOutputFilepath}`)}`,
+    );
+
+    console.log(
+      `\n> Done Generating types/schema for ${chalk.yellow(typeName)}`,
     );
 
     outputFilepaths.push(outputFilepath);
-  }));
+  }
 
   return outputFilepaths;
 };

@@ -29,9 +29,5 @@ export const generateSchema = async (
     // rendererOptions: { framework: "zod" },
   });
 
-  console.log(
-    `\n\n> Generated ${lines.length} lines of code`,
-  );
-
   return lines.join("\n");
 };

@@ -1,4 +1,4 @@
-import { getFileConfig } from "../file/config.ts";
+import { getFileConfig } from "../../file/config.ts";
 import { getExportStatement } from "./get-statement.ts";
 
 interface WriteExportsOptions {
@@ -21,7 +21,7 @@ export const writeExports = (
     return getExportStatement(config, exports.schemas || true);
   }).join("\n");
 
-  console.log(`<<\n ${content} \n>>`);
+  console.debug(`<<\n${content}\n>>`);
 
   console.log(`\n\n> Writing ${content.length} exports to ${outputDir}/mod.ts`);
 

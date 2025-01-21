@@ -1,6 +1,6 @@
 import chalk from "npm:chalk";
 import figlet from "npm:figlet";
-import { generateTypes } from "./src/generate.ts";
+import { generateTypes } from "./src/actions/generate.ts";
 
 console.log(
   chalk.bold.yellow(

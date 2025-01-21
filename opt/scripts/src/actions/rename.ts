@@ -1,5 +1,5 @@
 import chalk from "npm:chalk";
-import { ExcelFileExtension } from "./types.ts";
+import { ExcelFileExtension } from "../types.ts";
 
 interface RenameFileOptions {
   file: Deno.DirEntry;

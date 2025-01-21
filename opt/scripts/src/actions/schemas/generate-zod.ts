@@ -1,6 +1,5 @@
-import chalk from "npm:chalk";
 import { generate } from "npm:ts-to-zod";
-import { getFileConfig } from "../file/config.ts";
+import { getFileConfig } from "../../file/config.ts";
 
 interface GenerateZodSchemaOptions {
   sourceText: string;
@@ -15,10 +14,6 @@ export const generateZodSchema = (
   });
 
   const code = getZodSchemasFile(typesImportPath);
-
-  console.log(
-    `> Generated Zod schema at ${chalk.green(`${typesImportPath}.ts`)}`,
-  );
 
   const config = getFileConfig(`${typesImportPath}.ts`);
 
