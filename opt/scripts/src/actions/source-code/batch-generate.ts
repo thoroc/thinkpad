@@ -32,41 +32,22 @@ export const batchGenerate = async (
     const generatedCode = await generateTypes({
       json: JSON.parse(data),
       typeName,
+      directory: outputDir,
     });
 
-    const encoder = new TextEncoder();
-    const outputFilepath = `./${outputDir}/${typeName}.ts`;
+    outputFilepaths.push(generatedCode.filePath);
 
-    await Deno.writeFile(
-      outputFilepath,
-      encoder.encode(generatedCode),
-    );
-
-    console.log(
-      `Generated types at ${chalk.green(outputFilepath)}`,
-    );
-
-    const generatedZodCode = generateZodSchema({
-      sourceText: generatedCode,
+    const generatedZodCode = await generateZodSchema({
+      sourceText: generatedCode.sourceCode,
       typesImportPath: `./${outputDir}/${typeName}`,
+      directory: outputDir,
     });
 
-    const zodOutputFilepath = `./${outputDir}/${typeName}.zod.ts`;
-
-    await Deno.writeFile(
-      zodOutputFilepath,
-      encoder.encode(generatedZodCode),
-    );
-
-    console.log(
-      `Generated Zod schema at ${chalk.green(`${zodOutputFilepath}`)}`,
-    );
+    outputFilepaths.push(generatedZodCode.filePath);
 
     console.log(
       `\n> Done Generating types/schema for ${chalk.yellow(typeName)}`,
     );
-
-    outputFilepaths.push(outputFilepath);
   }
 
   return outputFilepaths;

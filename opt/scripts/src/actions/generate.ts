@@ -2,7 +2,6 @@ import { emptyDir, existsSync } from "jsr:@std/fs";
 import chalk from "npm:chalk";
 import { pascalCase } from "npm:string-ts";
 import { getFileConfig } from "../file/config.ts";
-import { writeSourceCode } from "../file/source-code.ts";
 import { ExcelFileExtension } from "../types.ts";
 import { convertXls } from "./convert.ts";
 import { writeExports } from "./exports/mod.ts";
@@ -55,26 +54,16 @@ export const generate = async (
       if (dataFile) {
         const typeName = pascalCase(fileConfig.name);
 
-        const generatedTypeSrcCode = await generateTypes({
+        const generatedOutput = await generateTypes({
           json: JSON.parse(await Deno.readTextFile(dataFile)),
           typeName,
+          directory: schemaDir,
         });
 
-        writeSourceCode({
-          sourceCode: generatedTypeSrcCode,
-          filename: `${typeName}.ts`,
-          dirPath: schemaDir,
-        });
-
-        const generatedSchemaSrcCode = generateZodSchema({
-          sourceText: generatedTypeSrcCode,
+        await generateZodSchema({
+          sourceText: generatedOutput.sourceCode,
           typesImportPath: `./${schemaDir}/${typeName}`,
-        });
-
-        writeSourceCode({
-          sourceCode: generatedSchemaSrcCode,
-          filename: `${typeName}.zod.ts`,
-          dirPath: schemaDir,
+          directory: schemaDir,
         });
 
         datafiles.push(dataFile);
