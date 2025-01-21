@@ -22,5 +22,7 @@ export const generateZodSchema = (
     .replace('import { z } from "zod";', 'import { z } from "npm:zod";')
     .replace(typesImportPath, `../${config.parentDir}/${config.name}.ts`);
 
+  console.log(`Generated Zod schema for ${config.name}`);
+
   return denoCompatibleCode;
 };

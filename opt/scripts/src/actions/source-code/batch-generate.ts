@@ -1,17 +1,17 @@
 import chalk from "npm:chalk";
 import { pascalCase } from "npm:string-ts";
 import { getFileConfig } from "../../file/config.ts";
-import { generateSchema } from "./generate-single.ts";
-import { generateZodSchema } from "./generate-zod.ts";
+import { generateZodSchema } from "./generate-schemas.ts";
+import { generateTypes } from "./generate-types.ts";
 
-interface GenerateSchemasOptions {
+interface BatchGenerateOptions {
   inputFiles: string[];
   filter?: string;
   outputDir: string;
 }
 
-export const generateSchemas = async (
-  { inputFiles, filter, outputDir }: GenerateSchemasOptions,
+export const batchGenerate = async (
+  { inputFiles, filter, outputDir }: BatchGenerateOptions,
 ): Promise<string[]> => {
   if (filter) {
     inputFiles = inputFiles.filter((file) => file.includes(filter));
@@ -29,7 +29,7 @@ export const generateSchemas = async (
       `\n\n> Generating types/schema for ${chalk.yellow(typeName)}\n`,
     );
 
-    const generatedCode = await generateSchema({
+    const generatedCode = await generateTypes({
       json: JSON.parse(data),
       typeName,
     });

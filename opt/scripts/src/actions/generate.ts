@@ -1,10 +1,14 @@
 import { emptyDir, existsSync } from "jsr:@std/fs";
 import chalk from "npm:chalk";
+import { pascalCase } from "npm:string-ts";
+import { getFileConfig } from "../file/config.ts";
+import { writeSourceCode } from "../file/source-code.ts";
 import { ExcelFileExtension } from "../types.ts";
 import { convertXls } from "./convert.ts";
 import { writeExports } from "./exports/mod.ts";
+import { generateTypes } from "./mod.ts";
 import { renameFile } from "./rename.ts";
-import { generateSchemas } from "./schemas/mod.ts";
+import { generateZodSchema } from "./source-code/mod.ts";
 
 interface Options {
   inputDir: string;
@@ -13,7 +17,7 @@ interface Options {
   fileExtension: ExcelFileExtension;
 }
 
-export const generateTypes = async (
+export const generate = async (
   { inputDir, dataDir, schemaDir, fileExtension }: Options,
 ) => {
   const files = Deno.readDirSync(inputDir);
@@ -40,32 +44,49 @@ export const generateTypes = async (
     const xlsFilename = await renameFile({ file, fileExtension });
 
     if (xlsFilename) {
-      const jsonFile = await convertXls({
+      const dataFile = await convertXls({
         filepath: `${inputDir}/${xlsFilename}`,
         outputDir: dataDir,
-        exportFileExtension: "json",
+        exports: { fileExtension: "json" },
       });
-      datafiles.push(jsonFile);
+
+      const fileConfig = getFileConfig(filepath);
+
+      if (dataFile) {
+        const typeName = pascalCase(fileConfig.name);
+
+        const generatedTypeSrcCode = await generateTypes({
+          json: JSON.parse(await Deno.readTextFile(dataFile)),
+          typeName,
+        });
+
+        writeSourceCode({
+          sourceCode: generatedTypeSrcCode,
+          filename: `${typeName}.ts`,
+          dirPath: schemaDir,
+        });
+
+        const generatedSchemaSrcCode = generateZodSchema({
+          sourceText: generatedTypeSrcCode,
+          typesImportPath: `./${schemaDir}/${typeName}`,
+        });
+
+        writeSourceCode({
+          sourceCode: generatedSchemaSrcCode,
+          filename: `${typeName}.zod.ts`,
+          dirPath: schemaDir,
+        });
+
+        datafiles.push(dataFile);
+      }
     }
 
     console.log(`\n> Done processing ${chalk.yellow(filepath)}`);
   }
 
-  const T4Type = await generateSchemas({
-    inputFiles: datafiles.sort(),
-    filter: "T4",
-    outputDir: schemaDir,
-  });
-
-  const X2Type = await generateSchemas({
-    inputFiles: datafiles.sort(),
-    filter: "X2",
-    outputDir: schemaDir,
-  });
-
   writeExports({
     outputDir: schemaDir,
-    files: [...T4Type, ...X2Type],
+    files: datafiles,
     exports: {
       types: true,
       schemas: true,

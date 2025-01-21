@@ -1,6 +1,6 @@
 import chalk from "npm:chalk";
 import figlet from "npm:figlet";
-import { generateTypes } from "./src/actions/generate.ts";
+import { generate } from "./src/actions/mod.ts";
 
 console.log(
   chalk.bold.yellow(
@@ -8,7 +8,7 @@ console.log(
   ),
 );
 
-await generateTypes({
+await generate({
   inputDir: "data/imports",
   dataDir: "data/json",
   schemaDir: "data/schemas",

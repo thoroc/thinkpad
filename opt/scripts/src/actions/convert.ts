@@ -8,21 +8,21 @@ import { ExportFileExtension } from "../types.ts";
 interface ConvertXlsOptions {
   filepath: string;
   outputDir: string;
-  exportFileExtension: ExportFileExtension;
+  exports: { fileExtension: ExportFileExtension };
   overwrite?: boolean;
 }
 
 export const convertXls = async (
-  { filepath, outputDir, exportFileExtension, overwrite }: ConvertXlsOptions,
+  { filepath, outputDir, exports, overwrite }: ConvertXlsOptions,
 ) => {
   console.log(
     `Converting ${chalk.green(filepath)} to ${
-      chalk.yellow(exportFileExtension.toLocaleUpperCase())
+      chalk.yellow(exports.fileExtension.toLocaleUpperCase())
     }`,
   );
 
   const filename = getFileConfig(filepath).name;
-  const outputFilepath = `${outputDir}/${filename}.${exportFileExtension}`;
+  const outputFilepath = `${outputDir}/${filename}.${exports.fileExtension}`;
 
   if (!await exists(outputFilepath) || overwrite) {
     // get only the filename from the path
@@ -30,8 +30,8 @@ export const convertXls = async (
     const data = await importSheet(file, "xls");
 
     await Deno.writeFile(
-      resolve(outputDir, `${filename}.${exportFileExtension}`),
-      exportSheet(data, exportFileExtension),
+      resolve(outputDir, `${filename}.${exports.fileExtension}`),
+      exportSheet(data, exports.fileExtension),
     );
     console.log(
       `Converted ${chalk.green(filepath)} to ${chalk.green(outputFilepath)}`,
