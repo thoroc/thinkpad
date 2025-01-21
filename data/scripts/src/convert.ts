@@ -24,7 +24,7 @@ export const convertXls = async (
   const filename = parts[parts.length - 1].split(".")[0];
   const outputFilepath = `${outputDir}/${filename}.${exportFileExtension}`;
 
-  if (!exists(outputFilepath) || overwrite) {
+  if (!await exists(outputFilepath) || overwrite) {
     // get only the filename from the path
     const file = await Deno.readFile(filepath);
     const data = await importSheet(file, "xls");
