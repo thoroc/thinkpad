@@ -22,6 +22,8 @@
     "npm:csvtojson@^2.0.10": "2.0.10",
     "npm:exceljs@*": "4.4.0",
     "npm:exceljs@^4.4.0": "4.4.0",
+    "npm:figlet@*": "1.8.0",
+    "npm:figlet@^1.8.0": "1.8.0",
     "npm:hyparquet@1.5.0": "1.5.0",
     "npm:quicktype-core@*": "23.0.170",
     "npm:quicktype-core@^23.0.170": "23.0.170",
@@ -1150,6 +1152,9 @@
       "dependencies": [
         "pend"
       ]
+    },
+    "figlet@1.8.0": {
+      "integrity": "sha512-chzvGjd+Sp7KUvPHZv6EXV5Ir3Q7kYNpCr4aHrRW79qFtTefmQZNny+W1pW9kf5zeE6dikku2W50W/wAH2xWgw=="
     },
     "figures@3.2.0": {
       "integrity": "sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==",
@@ -2642,6 +2647,7 @@
       "npm:chalk@^5.4.1",
       "npm:csvtojson@^2.0.10",
       "npm:exceljs@^4.4.0",
+      "npm:figlet@^1.8.0",
       "npm:quicktype-core@^23.0.170",
       "npm:quicktype@^23.0.170",
       "npm:string-ts@^2.2.0",

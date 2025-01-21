@@ -17,6 +17,7 @@
     "chalk": "npm:chalk@^5.4.1",
     "csvtojson": "npm:csvtojson@^2.0.10",
     "exceljs": "npm:exceljs@^4.4.0",
+    "figlet": "npm:figlet@^1.8.0",
     "quicktype": "npm:quicktype@^23.0.170",
     "quicktype-core": "npm:quicktype-core@^23.0.170",
     "string-ts": "npm:string-ts@^2.2.0",
