@@ -4,7 +4,7 @@
     "start": "deno run -A api/thinkpad.ts",
     "test": "deno test -A --unstable",
     "deploy": "denoctl deploy --entry-point api/thinkpad.ts --name thinkpad",
-    "data": "deno run --allow-read --allow-write --allow-env --allow-sys ./data/scripts/main.ts"
+    "data": "deno run --allow-read --allow-write --allow-env --allow-sys ./opt/scripts/main.ts"
   },
   "nodeModulesDir": "auto",
   "imports": {

@@ -2,6 +2,7 @@ import { exportSheet, importSheet } from "jsr:@psych/sheet";
 import { exists } from "jsr:@std/fs/exists";
 import { resolve } from "jsr:@std/path";
 import chalk from "npm:chalk";
+import { getFileConfig } from "./file/config.ts";
 import { ExportFileExtension } from "./types.ts";
 
 interface ConvertXlsOptions {
@@ -20,8 +21,7 @@ export const convertXls = async (
     }`,
   );
 
-  const parts = filepath.split("/");
-  const filename = parts[parts.length - 1].split(".")[0];
+  const filename = getFileConfig(filepath).name;
   const outputFilepath = `${outputDir}/${filename}.${exportFileExtension}`;
 
   if (!await exists(outputFilepath) || overwrite) {
