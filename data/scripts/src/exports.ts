@@ -1,5 +1,5 @@
+import { pascalCase } from "npm:string-ts";
 import { getFileConfig } from "./file/config.ts";
-import { pascalCase } from "./file/name.ts";
 
 interface WriteExportsOptions {
   outputDir: string;

@@ -3,7 +3,7 @@ import chalk from "npm:chalk";
 import { convertXls } from "./src/convert.ts";
 import { writeExports } from "./src/exports.ts";
 import { renameFile } from "./src/rename.ts";
-import { generateSchema } from "./src/schemas/mod.ts";
+import { generateSchemas } from "./src/schemas/mod.ts";
 import { ExcelFileExtension } from "./src/types.ts";
 
 interface Options {
@@ -55,23 +55,17 @@ export const main = async (
     console.log(`\n> Done processing ${chalk.yellow(filepath)}`);
   }
 
-  console.log(`${datafiles[0]}`);
-
-  const T4Type = await generateSchema({
+  const T4Type = await generateSchemas({
     inputFiles: datafiles,
     filter: "T4",
     outputDir: schemaDir,
   });
 
-  console.log(`\n\n> Generated schema for ${chalk.yellow(T4Type)}`);
-
-  const X2Type = await generateSchema({
+  const X2Type = await generateSchemas({
     inputFiles: datafiles,
     filter: "X2",
     outputDir: schemaDir,
   });
-
-  console.log(`> Generated schema for ${chalk.yellow(X2Type)}`);
 
   console.log(`\n\n> Generating exports`);
 

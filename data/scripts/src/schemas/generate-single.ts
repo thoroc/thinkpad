@@ -4,16 +4,15 @@ import {
   quicktype,
 } from "npm:quicktype-core";
 
-interface GenerateZodSchemasOptions {
+interface GenerateSchemaOptions {
   json: string;
   typeName: string;
 }
 
-export const generateZodSchemas = async (
-  { json, typeName }: GenerateZodSchemasOptions,
+export const generateSchema = async (
+  { json, typeName }: GenerateSchemaOptions,
 ): Promise<string> => {
   const jsonInput = jsonInputForTargetLanguage("typescript");
-
   const samples = [JSON.stringify(json)];
 
   await jsonInput.addSource({
@@ -27,7 +26,7 @@ export const generateZodSchemas = async (
   const { lines } = await quicktype({
     inputData,
     lang: "typescript",
-    rendererOptions: { framework: "zod" },
+    // rendererOptions: { framework: "zod" },
   });
 
   console.log(
