@@ -60,13 +60,13 @@ export const generateTypes = async (
   }
 
   const T4Type = await generateSchemas({
-    inputFiles: datafiles,
+    inputFiles: datafiles.sort(),
     filter: "T4",
     outputDir: schemaDir,
   });
 
   const X2Type = await generateSchemas({
-    inputFiles: datafiles,
+    inputFiles: datafiles.sort(),
     filter: "X2",
     outputDir: schemaDir,
   });
