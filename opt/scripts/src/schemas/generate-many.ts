@@ -37,7 +37,7 @@ export const generateSchemas = async (
     });
 
     const encoder = new TextEncoder();
-    const outputFilepath = `./${outputDir}/${typeName}.${"ts"}`;
+    const outputFilepath = `./${outputDir}/${typeName}.ts`;
 
     await Deno.writeFile(
       outputFilepath,
