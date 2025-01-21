@@ -44,6 +44,26 @@ describe("getFileConfig", () => {
         path: "src/foo/baa",
       },
     },
+    {
+      input: "./src/foo/baa/filename.ts",
+      expected: {
+        name: "filename",
+        extension: "ts",
+        parentDir: "baa",
+        root: "src",
+        path: "src/foo/baa",
+      },
+    },
+    {
+      input: "./src/foo/baa/filename",
+      expected: {
+        name: "filename",
+        extension: undefined,
+        parentDir: "baa",
+        root: "src",
+        path: "src/foo/baa",
+      },
+    },
   ];
 
   testCases.forEach(({ input, expected }) => {
