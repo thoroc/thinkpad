@@ -1,7 +1,7 @@
 import { emptyDir, existsSync } from "jsr:@std/fs";
 import chalk from "npm:chalk";
 import { convertXls } from "./convert.ts";
-import { writeExports } from "./exports.ts";
+import { writeExports } from "./exports/write.ts";
 import { renameFile } from "./rename.ts";
 import { generateSchemas } from "./schemas/mod.ts";
 import { ExcelFileExtension } from "./types.ts";
@@ -76,6 +76,10 @@ export const generateTypes = async (
   writeExports({
     outputDir: schemaDir,
     files: [...T4Type, ...X2Type],
+    exports: {
+      types: true,
+      schemas: true,
+    },
   });
 
   console.log("\n\n> Done");

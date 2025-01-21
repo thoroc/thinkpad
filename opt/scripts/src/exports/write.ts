@@ -1,24 +1,25 @@
-import { pascalCase } from "npm:string-ts";
-import { getFileConfig } from "./file/config.ts";
+import { getFileConfig } from "../file/config.ts";
+import { getExportStatement } from "./get-statement.ts";
 
 interface WriteExportsOptions {
   outputDir: string;
   files: string[];
+  exports: {
+    types: boolean;
+    schemas?: boolean;
+  };
 }
 
 export const writeExports = (
-  { outputDir, files }: WriteExportsOptions,
+  { outputDir, files, exports }: WriteExportsOptions,
 ) => {
   console.log(`\n\n> Writing ${files.length} exports to ${outputDir}/mod.ts`);
 
   const content = files.map((file) => {
-    const fileConfig = getFileConfig(file);
-    const typeName = pascalCase(fileConfig.name);
+    const config = getFileConfig(file);
 
-    return `export type { ${typeName} } from "./${fileConfig.name}.${fileConfig.extension}";`;
-  }).join(
-    "\n",
-  );
+    return getExportStatement(config, exports.schemas || true);
+  }).join("\n");
 
   console.log(`<<\n ${content} \n>>`);
 
