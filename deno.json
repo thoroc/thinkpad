@@ -4,6 +4,7 @@
     "start": "deno run -A api/thinkpad.ts",
     "deploy": "denoctl deploy --entry-point api/thinkpad.ts --name thinkpad",
     "data": "deno run --allow-read --allow-write --allow-env --allow-sys ./opt/scripts/main.ts",
+    "cli": "deno run --allow-read --allow-write --allow-env --allow-sys ./opt/scripts/cli.ts",
     "prepare": "deno install --allow-scripts=npm:lefthook@1.10.10"
   },
   "nodeModulesDir": "auto",
