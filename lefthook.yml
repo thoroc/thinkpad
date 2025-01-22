@@ -2,10 +2,10 @@ pre-commit:
   commands:
     format:
       glob: '*.{ts,js,json,md,yml}'
-      run: 'deno fmt {staged_files}'
+      run: 'deno fmt {staged_files} && git add {staged_files}'
     lint:
       glob: '*.{ts,js,json,md,yml}'
-      run: 'deno lint {staged_files}'
+      run: 'deno lint {staged_files} && git add {staged_files}'
 
 pre-push:
   commands:
