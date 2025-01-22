@@ -1,0 +1,14 @@
+pre-commit:
+  commands:
+    format:
+      glob: '*.{ts,js,json,md,yml}'
+      run: 'deno fmt {staged_files}'
+    lint:
+      glob: '*.{ts,js,json,md,yml}'
+      run: 'deno lint {staged_files}'
+
+pre-push:
+  commands:
+    test:
+      glob: '*.{ts,js,json,md,yml}'
+      run: 'deno test {push_files}'

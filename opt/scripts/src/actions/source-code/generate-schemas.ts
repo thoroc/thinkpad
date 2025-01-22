@@ -1,8 +1,8 @@
-import chalk from "npm:chalk";
-import { pascalCase } from "npm:string-ts";
-import { generate } from "npm:ts-to-zod";
-import { getFileConfig } from "../../file/config.ts";
-import { GenerateOutput } from "./types.ts";
+import chalk from 'npm:chalk';
+import { pascalCase } from 'npm:string-ts';
+import { generate } from 'npm:ts-to-zod';
+import { getFileConfig } from '../../file/config.ts';
+import { GenerateOutput } from './types.ts';
 
 interface GenerateZodSchemaOptions {
   sourceText: string;
@@ -55,9 +55,7 @@ export const generateZodSchema = async (
   await Deno.writeFile(filePath, encoder.encode(denoCompatibleCode));
 
   console.log(
-    `Generated Zod schema for ${chalk.yellow(config.name)} at ${
-      chalk.green(filePath)
-    }`,
+    `Generated Zod schema for ${chalk.yellow(config.name)} at ${chalk.green(filePath)}`,
   );
 
   return { sourceCode: denoCompatibleCode, filePath };

@@ -1,9 +1,9 @@
-import { exportSheet, importSheet } from "jsr:@psych/sheet";
-import { exists } from "jsr:@std/fs/exists";
-import { resolve } from "jsr:@std/path";
-import chalk from "npm:chalk";
-import { getFileConfig } from "../file/config.ts";
-import { ExportFileExtension } from "../types.ts";
+import { exportSheet, importSheet } from 'jsr:@psych/sheet';
+import { exists } from 'jsr:@std/fs/exists';
+import { resolve } from 'jsr:@std/path';
+import chalk from 'npm:chalk';
+import { getFileConfig } from '../file/config.ts';
+import { ExportFileExtension } from '../types.ts';
 
 interface ConvertXlsOptions {
   filepath: string;
@@ -27,7 +27,7 @@ export const convertXls = async (
 
   if (!fileExists || overwrite) {
     const file = await Deno.readFile(filepath);
-    const data = await importSheet(file, "xls");
+    const data = await importSheet(file, 'xls');
 
     await Deno.writeFile(
       resolve(outputDir, `${filename}.${exports.fileExtension}`),
@@ -38,9 +38,7 @@ export const convertXls = async (
     );
   } else {
     console.log(
-      `Skipping ${
-        chalk.green(filepath)
-      }: File existing and will not be overwriten`,
+      `Skipping ${chalk.green(filepath)}: File existing and will not be overwriten`,
     );
   }
 

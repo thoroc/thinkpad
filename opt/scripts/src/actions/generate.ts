@@ -1,13 +1,13 @@
-import { emptyDir, existsSync } from "jsr:@std/fs";
-import chalk from "npm:chalk";
-import { pascalCase } from "npm:string-ts";
-import { getFileConfig } from "../file/config.ts";
-import { ExcelFileExtension, ExportOptions } from "../types.ts";
-import { convertXls } from "./convert.ts";
-import { writeExports } from "./exports/mod.ts";
-import { generateTypes } from "./mod.ts";
-import { renameFile } from "./rename.ts";
-import { generateZodSchema } from "./source-code/mod.ts";
+import { emptyDir, existsSync } from 'jsr:@std/fs';
+import chalk from 'npm:chalk';
+import { pascalCase } from 'npm:string-ts';
+import { getFileConfig } from '../file/config.ts';
+import { ExcelFileExtension, ExportOptions } from '../types.ts';
+import { convertXls } from './convert.ts';
+import { writeExports } from './exports/mod.ts';
+import { generateTypes } from './mod.ts';
+import { renameFile } from './rename.ts';
+import { generateZodSchema } from './source-code/mod.ts';
 
 interface GenerateOptions {
   inputDir: string;
@@ -20,9 +20,7 @@ export const generate = async (
   { inputDir, dataDir, schemaDir, fileExtension }: GenerateOptions,
 ) => {
   const files = Deno.readDirSync(inputDir);
-  const orderedFiles = Array.from(files).sort((a, b) =>
-    a.name.localeCompare(b.name)
-  );
+  const orderedFiles = Array.from(files).sort((a, b) => a.name.localeCompare(b.name));
 
   if (!existsSync(dataDir)) {
     Deno.mkdirSync(dataDir, { recursive: true });
@@ -49,7 +47,7 @@ export const generate = async (
       const dataFile = await convertXls({
         filepath: `${inputDir}/${xlsFilename}`,
         outputDir: dataDir,
-        exports: { fileExtension: "json" },
+        exports: { fileExtension: 'json' },
       });
 
       const fileConfig = getFileConfig(filepath);
@@ -64,7 +62,7 @@ export const generate = async (
         });
         datafiles.push({
           filePath: generatedTypesOutput.filePath,
-          exportType: "type",
+          exportType: 'type',
         });
 
         const generatedSchemsOutput = await generateZodSchema({
@@ -75,7 +73,7 @@ export const generate = async (
 
         datafiles.push({
           filePath: generatedSchemsOutput.filePath,
-          exportType: "schema",
+          exportType: 'schema',
         });
       }
     }
@@ -90,5 +88,5 @@ export const generate = async (
 
   console.log(`\n\n> Generated exports`);
 
-  console.log("\n\n> Done");
+  console.log('\n\n> Done');
 };

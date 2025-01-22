@@ -1,6 +1,6 @@
-import { camelCase, pascalCase } from "npm:string-ts";
-import { FileConfig } from "../../file/config.ts";
-import { ExportType } from "../../types.ts";
+import { camelCase, pascalCase } from 'npm:string-ts';
+import { FileConfig } from '../../file/config.ts';
+import { ExportType } from '../../types.ts';
 
 interface GetExportStatementOptions {
   config: FileConfig;
@@ -22,11 +22,11 @@ export const getExportStatement = (
   const schemaName = `${camelCase(config.name)}Schema`;
 
   switch (exportType) {
-    case "type":
+    case 'type':
     default:
       return `export type { ${typeName} } from "./${config.name}.${config.extension}";`;
 
-    case "schema":
+    case 'schema':
       return `export { ${schemaName} } from "./${config.name}.zod.${config.extension}";`;
   }
 };

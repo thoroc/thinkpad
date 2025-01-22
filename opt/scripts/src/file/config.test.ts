@@ -1,67 +1,67 @@
-import { assertEquals } from "jsr:@std/assert";
-import { describe, it } from "jsr:@std/testing/bdd";
-import { getFileConfig } from "./config.ts";
+import { assertEquals } from 'jsr:@std/assert';
+import { describe, it } from 'jsr:@std/testing/bdd';
+import { getFileConfig } from './config.ts';
 
-describe("getFileConfig", () => {
+describe('getFileConfig', () => {
   const testCases = [
     {
-      input: "data/scripts/src/file/config.ts",
+      input: 'data/scripts/src/file/config.ts',
       expected: {
-        name: "config",
-        extension: "ts",
-        parentDir: "file",
-        path: "data/scripts/src/file",
-        root: "data",
+        name: 'config',
+        extension: 'ts',
+        parentDir: 'file',
+        path: 'data/scripts/src/file',
+        root: 'data',
       },
     },
     {
-      input: "data/scripts/src/file/name.ts",
+      input: 'data/scripts/src/file/name.ts',
       expected: {
-        name: "name",
-        extension: "ts",
-        parentDir: "file",
-        root: "data",
-        path: "data/scripts/src/file",
+        name: 'name',
+        extension: 'ts',
+        parentDir: 'file',
+        root: 'data',
+        path: 'data/scripts/src/file',
       },
     },
     {
-      input: "data/scripts/src/file/name.test.ts",
+      input: 'data/scripts/src/file/name.test.ts',
       expected: {
-        name: "name",
-        extension: "ts",
-        parentDir: "file",
-        root: "data",
-        path: "data/scripts/src/file",
+        name: 'name',
+        extension: 'ts',
+        parentDir: 'file',
+        root: 'data',
+        path: 'data/scripts/src/file',
       },
     },
     {
-      input: "src/foo/baa/filename.ts",
+      input: 'src/foo/baa/filename.ts',
       expected: {
-        name: "filename",
-        extension: "ts",
-        parentDir: "baa",
-        root: "src",
-        path: "src/foo/baa",
+        name: 'filename',
+        extension: 'ts',
+        parentDir: 'baa',
+        root: 'src',
+        path: 'src/foo/baa',
       },
     },
     {
-      input: "./src/foo/baa/filename.ts",
+      input: './src/foo/baa/filename.ts',
       expected: {
-        name: "filename",
-        extension: "ts",
-        parentDir: "baa",
-        root: "src",
-        path: "src/foo/baa",
+        name: 'filename',
+        extension: 'ts',
+        parentDir: 'baa',
+        root: 'src',
+        path: 'src/foo/baa',
       },
     },
     {
-      input: "./src/foo/baa/filename",
+      input: './src/foo/baa/filename',
       expected: {
-        name: "filename",
+        name: 'filename',
         extension: undefined,
-        parentDir: "baa",
-        root: "src",
-        path: "src/foo/baa",
+        parentDir: 'baa',
+        root: 'src',
+        path: 'src/foo/baa',
       },
     },
   ];

@@ -11,59 +11,58 @@ export interface ThinkPadT450S {
   Model: string;
   Product: Product;
   Region: Region;
-  "Machine Type": MachineType;
+  'Machine Type': MachineType;
   TopSeller: TopSeller;
   Processor: Processor;
   vPro: VPro;
   Graphics: Graphics;
-  "Memory (soldered+DIMM)": MemorySolderedDIMM;
+  'Memory (soldered+DIMM)': MemorySolderedDIMM;
   Display: Display;
-  "Multi-touch": MultiTouch;
+  'Multi-touch': MultiTouch;
   Storage: Storage;
-  "M.2 SSD": M2SSD;
+  'M.2 SSD': M2SSD;
   Optical: MultiTouch;
-  "WLAN & Bluetooth": WLANBluetooth;
+  'WLAN & Bluetooth': WLANBluetooth;
   WWAN: WWAN;
-  "SIM Card": MultiTouch;
-  "Smart Card Reader": SmartCardReader;
+  'SIM Card': MultiTouch;
+  'Smart Card Reader': SmartCardReader;
   Camera: Camera;
-  "Backlit Keyboard": BacklitKeyboard;
-  "Fingerprint Reader": FingerprintReader;
-  "Battery Cells (internal + external)": BatteryCellsInternalExternal;
-  "Power Adapter (watt)": PowerAdapterWatt;
+  'Backlit Keyboard': BacklitKeyboard;
+  'Fingerprint Reader': FingerprintReader;
+  'Battery Cells (internal + external)': BatteryCellsInternalExternal;
+  'Power Adapter (watt)': PowerAdapterWatt;
   Preload: Preload;
-  "Base Warranty": BaseWarranty;
+  'Base Warranty': BaseWarranty;
   Global: Global;
-  "Ann Date (mm/yy)": ANNDateMmYy;
+  'Ann Date (mm/yy)': ANNDateMmYy;
 }
 
 export enum ANNDateMmYy {
-  The0115 = "01/15",
-  The0315 = "03/15",
-  The0815 = "08/15",
-  The0915 = "09/15",
+  The0115 = '01/15',
+  The0315 = '03/15',
+  The0815 = '08/15',
+  The0915 = '09/15',
 }
 
 export enum BacklitKeyboard {
-  BacklitKeyboard = "Backlit Keyboard",
-  None = "None",
+  BacklitKeyboard = 'Backlit Keyboard',
+  None = 'None',
 }
 
 export enum BaseWarranty {
-  The1YearDepot = "1-year depot",
-  The3YearDepot = "3-year depot",
-  The3YearOnsite = "3-year onsite",
-  The3YearOnsiteOnsiteInternationalDelivery =
-    "3-year onsite, Onsite International Delivery",
+  The1YearDepot = '1-year depot',
+  The3YearDepot = '3-year depot',
+  The3YearOnsite = '3-year onsite',
+  The3YearOnsiteOnsiteInternationalDelivery = '3-year onsite, Onsite International Delivery',
 }
 
 export enum BatteryCellsInternalExternal {
-  The3Cell23Wh3Cell23Wh = "3-cell (23Wh) + 3-cell (23Wh)",
-  The3Cell23Wh6Cell48Wh = "3-cell (23Wh) + 6-cell (48wh)",
+  The3Cell23Wh3Cell23Wh = '3-cell (23Wh) + 3-cell (23Wh)',
+  The3Cell23Wh6Cell48Wh = '3-cell (23Wh) + 6-cell (48wh)',
 }
 
 export enum Camera {
-  The720P = "720p",
+  The720P = '720p',
 }
 
 export enum Display {
@@ -72,124 +71,122 @@ export enum Display {
 }
 
 export enum FingerprintReader {
-  FingerprintReader = "Fingerprint Reader",
+  FingerprintReader = 'Fingerprint Reader',
 }
 
 export enum Global {
-  No = "No",
-  Yes = "Yes",
+  No = 'No',
+  Yes = 'Yes',
 }
 
 export enum Graphics {
-  IntelHDGraphics5500 = "Intel HD Graphics 5500",
+  IntelHDGraphics5500 = 'Intel HD Graphics 5500',
 }
 
 export enum M2SSD {
-  None = "None",
-  The16GBSSD = "16GB SSD",
+  None = 'None',
+  The16GBSSD = '16GB SSD',
 }
 
 export enum MachineType {
-  The20BW = "20BW",
-  The20Bx = "20BX",
+  The20BW = '20BW',
+  The20Bx = '20BX',
 }
 
 export enum MemorySolderedDIMM {
-  The40GB = "4+0GB",
-  The42GB = "4+2GB",
-  The44GB = "4+4GB",
-  The48GB = "4+8GB",
+  The40GB = '4+0GB',
+  The42GB = '4+2GB',
+  The44GB = '4+4GB',
+  The48GB = '4+8GB',
 }
 
 export enum MultiTouch {
-  None = "None",
-  The10PointMultiTouch = "10-point multi-touch",
+  None = 'None',
+  The10PointMultiTouch = '10-point multi-touch',
 }
 
 export enum PowerAdapterWatt {
-  The45W = "45W",
+  The45W = '45W',
 }
 
 export enum Preload {
-  Windows10DGWindows7Pro64 = "Windows 10 DG Windows 7 Pro 64",
-  Windows10Pro64 = "Windows 10 Pro 64",
-  Windows81DGWindows7Pro64 = "Windows 8.1 DG Windows 7 Pro 64",
-  Windows81Pro64Bit = "Windows 8.1 Pro 64-bit",
+  Windows10DGWindows7Pro64 = 'Windows 10 DG Windows 7 Pro 64',
+  Windows10Pro64 = 'Windows 10 Pro 64',
+  Windows81DGWindows7Pro64 = 'Windows 8.1 DG Windows 7 Pro 64',
+  Windows81Pro64Bit = 'Windows 8.1 Pro 64-bit',
 }
 
 export enum Processor {
-  I55200U2C2227GHz3MB1600MHz = "i5-5200U (2C, 2.2 / 2.7GHz, 3MB, 1600MHz)",
-  I55300U2C2329GHz3MB1600MHz = "i5-5300U (2C, 2.3 / 2.9GHz, 3MB, 1600MHz)",
-  I75600U2C2632GHz4MB1600MHz = "i7-5600U (2C, 2.6 / 3.2GHz, 4MB, 1600MHz)",
+  I55200U2C2227GHz3MB1600MHz = 'i5-5200U (2C, 2.2 / 2.7GHz, 3MB, 1600MHz)',
+  I55300U2C2329GHz3MB1600MHz = 'i5-5300U (2C, 2.3 / 2.9GHz, 3MB, 1600MHz)',
+  I75600U2C2632GHz4MB1600MHz = 'i7-5600U (2C, 2.6 / 3.2GHz, 4MB, 1600MHz)',
 }
 
 export enum Product {
-  T450S = "T450s",
+  T450S = 'T450s',
 }
 
 export enum Region {
-  Us = "US",
-  We = "WE",
+  Us = 'US',
+  We = 'WE',
 }
 
 export enum SmartCardReader {
-  None = "None",
-  SmartCardReader = "Smart Card Reader",
+  None = 'None',
+  SmartCardReader = 'Smart Card Reader',
 }
 
 export enum Storage {
-  The128GBSSD = "128GB SSD",
-  The180GBSSDOpal2 = "180GB SSD Opal2",
-  The192GBSSD = "192GB SSD",
-  The1TB5400RPM = "1TB 5400rpm",
-  The240GBSSDOpal2 = "240GB SSD Opal2",
-  The256GBSSDOpal2 = "256GB SSD Opal2",
-  The500GB5400RPM8GBSSHD = "500GB 5400rpm + 8GB SSHD",
-  The500GB7200RPM = "500GB 7200rpm",
-  The512GBSSD = "512GB SSD",
+  The128GBSSD = '128GB SSD',
+  The180GBSSDOpal2 = '180GB SSD Opal2',
+  The192GBSSD = '192GB SSD',
+  The1TB5400RPM = '1TB 5400rpm',
+  The240GBSSDOpal2 = '240GB SSD Opal2',
+  The256GBSSDOpal2 = '256GB SSD Opal2',
+  The500GB5400RPM8GBSSHD = '500GB 5400rpm + 8GB SSHD',
+  The500GB7200RPM = '500GB 7200rpm',
+  The512GBSSD = '512GB SSD',
 }
 
 export enum TopSeller {
-  No = "No",
-  TopSeller = "TopSeller",
+  No = 'No',
+  TopSeller = 'TopSeller',
 }
 
 export enum WLANBluetooth {
-  Intel7265ABGNBT40 = "Intel 7265 a/b/g/n + BT4.0",
-  Intel7265ACBT40 = "Intel 7265 ac + BT4.0",
+  Intel7265ABGNBT40 = 'Intel 7265 a/b/g/n + BT4.0',
+  Intel7265ACBT40 = 'Intel 7265 ac + BT4.0',
 }
 
 export enum WWAN {
-  EricssonN5321 = "Ericsson N5321",
-  SierraEM7345 = "Sierra EM7345",
-  WWANUpgradable = "WWAN upgradable",
+  EricssonN5321 = 'Ericsson N5321',
+  SierraEM7345 = 'Sierra EM7345',
+  WWANUpgradable = 'WWAN upgradable',
 }
 
 export enum VPro {
-  No = "No",
-  VPro = "vPro",
+  No = 'No',
+  VPro = 'vPro',
 }
 
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
   public static toThinkPadT450S(json: string): ThinkPadT450S[] {
-    return cast(JSON.parse(json), a(r("ThinkPadT450S")));
+    return cast(JSON.parse(json), a(r('ThinkPadT450S')));
   }
 
   public static thinkPadT450SToJson(value: ThinkPadT450S[]): string {
-    return JSON.stringify(uncast(value, a(r("ThinkPadT450S"))), null, 2);
+    return JSON.stringify(uncast(value, a(r('ThinkPadT450S'))), null, 2);
   }
 }
 
-function invalidValue(typ: any, val: any, key: any, parent: any = ""): never {
+function invalidValue(typ: any, val: any, key: any, parent: any = ''): never {
   const prettyTyp = prettyTypeName(typ);
-  const parentText = parent ? ` on ${parent}` : "";
-  const keyText = key ? ` for key "${key}"` : "";
+  const parentText = parent ? ` on ${parent}` : '';
+  const keyText = key ? ` for key "${key}"` : '';
   throw Error(
-    `Invalid value${keyText}${parentText}. Expected ${prettyTyp} but got ${
-      JSON.stringify(val)
-    }`,
+    `Invalid value${keyText}${parentText}. Expected ${prettyTyp} but got ${JSON.stringify(val)}`,
   );
 }
 
@@ -201,10 +198,10 @@ function prettyTypeName(typ: any): string {
       return `one of [${
         typ.map((a) => {
           return prettyTypeName(a);
-        }).join(", ")
+        }).join(', ')
       }]`;
     }
-  } else if (typeof typ === "object" && typ.literal !== undefined) {
+  } else if (typeof typ === 'object' && typ.literal !== undefined) {
     return typ.literal;
   } else {
     return typeof typ;
@@ -233,8 +230,8 @@ function transform(
   val: any,
   typ: any,
   getProps: any,
-  key: any = "",
-  parent: any = "",
+  key: any = '',
+  parent: any = '',
 ): any {
   function transformPrimitive(typ: string, val: any): any {
     if (typeof typ === typeof val) return val;
@@ -267,7 +264,7 @@ function transform(
 
   function transformArray(typ: any, val: any): any {
     // val must be an array with no invalid elements
-    if (!Array.isArray(val)) return invalidValue(l("array"), val, key, parent);
+    if (!Array.isArray(val)) return invalidValue(l('array'), val, key, parent);
     return val.map((el) => transform(el, typ, getProps));
   }
 
@@ -277,7 +274,7 @@ function transform(
     }
     const d = new Date(val);
     if (isNaN(d.valueOf())) {
-      return invalidValue(l("Date"), val, key, parent);
+      return invalidValue(l('Date'), val, key, parent);
     }
     return d;
   }
@@ -287,15 +284,13 @@ function transform(
     additional: any,
     val: any,
   ): any {
-    if (val === null || typeof val !== "object" || Array.isArray(val)) {
-      return invalidValue(l(ref || "object"), val, key, parent);
+    if (val === null || typeof val !== 'object' || Array.isArray(val)) {
+      return invalidValue(l(ref || 'object'), val, key, parent);
     }
     const result: any = {};
     Object.getOwnPropertyNames(props).forEach((key) => {
       const prop = props[key];
-      const v = Object.prototype.hasOwnProperty.call(val, key)
-        ? val[key]
-        : undefined;
+      const v = Object.prototype.hasOwnProperty.call(val, key) ? val[key] : undefined;
       result[prop.key] = transform(v, prop.typ, getProps, key, ref);
     });
     Object.getOwnPropertyNames(val).forEach((key) => {
@@ -306,29 +301,29 @@ function transform(
     return result;
   }
 
-  if (typ === "any") return val;
+  if (typ === 'any') return val;
   if (typ === null) {
     if (val === null) return val;
     return invalidValue(typ, val, key, parent);
   }
   if (typ === false) return invalidValue(typ, val, key, parent);
   let ref: any = undefined;
-  while (typeof typ === "object" && typ.ref !== undefined) {
+  while (typeof typ === 'object' && typ.ref !== undefined) {
     ref = typ.ref;
     typ = typeMap[typ.ref];
   }
   if (Array.isArray(typ)) return transformEnum(typ, val);
-  if (typeof typ === "object") {
-    return typ.hasOwnProperty("unionMembers")
+  if (typeof typ === 'object') {
+    return typ.hasOwnProperty('unionMembers')
       ? transformUnion(typ.unionMembers, val)
-      : typ.hasOwnProperty("arrayItems")
+      : typ.hasOwnProperty('arrayItems')
       ? transformArray(typ.arrayItems, val)
-      : typ.hasOwnProperty("props")
+      : typ.hasOwnProperty('props')
       ? transformObject(getProps(typ), typ.additional, val)
       : invalidValue(typ, val, key, parent);
   }
   // Numbers can be parsed by Date but shouldn't be.
-  if (typ === Date && typeof val !== "number") return transformDate(val);
+  if (typ === Date && typeof val !== 'number') return transformDate(val);
   return transformPrimitive(typ, val);
 }
 
@@ -365,169 +360,169 @@ function r(name: string) {
 }
 
 const typeMap: any = {
-  "ThinkPadT450S": o([
-    { json: "Model", js: "Model", typ: "" },
-    { json: "Product", js: "Product", typ: r("Product") },
-    { json: "Region", js: "Region", typ: r("Region") },
-    { json: "Machine Type", js: "Machine Type", typ: r("MachineType") },
-    { json: "TopSeller", js: "TopSeller", typ: r("TopSeller") },
-    { json: "Processor", js: "Processor", typ: r("Processor") },
-    { json: "vPro", js: "vPro", typ: r("VPro") },
-    { json: "Graphics", js: "Graphics", typ: r("Graphics") },
+  'ThinkPadT450S': o([
+    { json: 'Model', js: 'Model', typ: '' },
+    { json: 'Product', js: 'Product', typ: r('Product') },
+    { json: 'Region', js: 'Region', typ: r('Region') },
+    { json: 'Machine Type', js: 'Machine Type', typ: r('MachineType') },
+    { json: 'TopSeller', js: 'TopSeller', typ: r('TopSeller') },
+    { json: 'Processor', js: 'Processor', typ: r('Processor') },
+    { json: 'vPro', js: 'vPro', typ: r('VPro') },
+    { json: 'Graphics', js: 'Graphics', typ: r('Graphics') },
     {
-      json: "Memory (soldered+DIMM)",
-      js: "Memory (soldered+DIMM)",
-      typ: r("MemorySolderedDIMM"),
+      json: 'Memory (soldered+DIMM)',
+      js: 'Memory (soldered+DIMM)',
+      typ: r('MemorySolderedDIMM'),
     },
-    { json: "Display", js: "Display", typ: r("Display") },
-    { json: "Multi-touch", js: "Multi-touch", typ: r("MultiTouch") },
-    { json: "Storage", js: "Storage", typ: r("Storage") },
-    { json: "M.2 SSD", js: "M.2 SSD", typ: r("M2SSD") },
-    { json: "Optical", js: "Optical", typ: r("MultiTouch") },
+    { json: 'Display', js: 'Display', typ: r('Display') },
+    { json: 'Multi-touch', js: 'Multi-touch', typ: r('MultiTouch') },
+    { json: 'Storage', js: 'Storage', typ: r('Storage') },
+    { json: 'M.2 SSD', js: 'M.2 SSD', typ: r('M2SSD') },
+    { json: 'Optical', js: 'Optical', typ: r('MultiTouch') },
     {
-      json: "WLAN & Bluetooth",
-      js: "WLAN & Bluetooth",
-      typ: r("WLANBluetooth"),
+      json: 'WLAN & Bluetooth',
+      js: 'WLAN & Bluetooth',
+      typ: r('WLANBluetooth'),
     },
-    { json: "WWAN", js: "WWAN", typ: r("WWAN") },
-    { json: "SIM Card", js: "SIM Card", typ: r("MultiTouch") },
+    { json: 'WWAN', js: 'WWAN', typ: r('WWAN') },
+    { json: 'SIM Card', js: 'SIM Card', typ: r('MultiTouch') },
     {
-      json: "Smart Card Reader",
-      js: "Smart Card Reader",
-      typ: r("SmartCardReader"),
+      json: 'Smart Card Reader',
+      js: 'Smart Card Reader',
+      typ: r('SmartCardReader'),
     },
-    { json: "Camera", js: "Camera", typ: r("Camera") },
+    { json: 'Camera', js: 'Camera', typ: r('Camera') },
     {
-      json: "Backlit Keyboard",
-      js: "Backlit Keyboard",
-      typ: r("BacklitKeyboard"),
-    },
-    {
-      json: "Fingerprint Reader",
-      js: "Fingerprint Reader",
-      typ: r("FingerprintReader"),
+      json: 'Backlit Keyboard',
+      js: 'Backlit Keyboard',
+      typ: r('BacklitKeyboard'),
     },
     {
-      json: "Battery Cells (internal + external)",
-      js: "Battery Cells (internal + external)",
-      typ: r("BatteryCellsInternalExternal"),
+      json: 'Fingerprint Reader',
+      js: 'Fingerprint Reader',
+      typ: r('FingerprintReader'),
     },
     {
-      json: "Power Adapter (watt)",
-      js: "Power Adapter (watt)",
-      typ: r("PowerAdapterWatt"),
+      json: 'Battery Cells (internal + external)',
+      js: 'Battery Cells (internal + external)',
+      typ: r('BatteryCellsInternalExternal'),
     },
-    { json: "Preload", js: "Preload", typ: r("Preload") },
-    { json: "Base Warranty", js: "Base Warranty", typ: r("BaseWarranty") },
-    { json: "Global", js: "Global", typ: r("Global") },
-    { json: "Ann Date (mm/yy)", js: "Ann Date (mm/yy)", typ: r("ANNDateMmYy") },
+    {
+      json: 'Power Adapter (watt)',
+      js: 'Power Adapter (watt)',
+      typ: r('PowerAdapterWatt'),
+    },
+    { json: 'Preload', js: 'Preload', typ: r('Preload') },
+    { json: 'Base Warranty', js: 'Base Warranty', typ: r('BaseWarranty') },
+    { json: 'Global', js: 'Global', typ: r('Global') },
+    { json: 'Ann Date (mm/yy)', js: 'Ann Date (mm/yy)', typ: r('ANNDateMmYy') },
   ], false),
-  "ANNDateMmYy": [
-    "01/15",
-    "03/15",
-    "08/15",
-    "09/15",
+  'ANNDateMmYy': [
+    '01/15',
+    '03/15',
+    '08/15',
+    '09/15',
   ],
-  "BacklitKeyboard": [
-    "Backlit Keyboard",
-    "None",
+  'BacklitKeyboard': [
+    'Backlit Keyboard',
+    'None',
   ],
-  "BaseWarranty": [
-    "1-year depot",
-    "3-year depot",
-    "3-year onsite",
-    "3-year onsite, Onsite International Delivery",
+  'BaseWarranty': [
+    '1-year depot',
+    '3-year depot',
+    '3-year onsite',
+    '3-year onsite, Onsite International Delivery',
   ],
-  "BatteryCellsInternalExternal": [
-    "3-cell (23Wh) + 3-cell (23Wh)",
-    "3-cell (23Wh) + 6-cell (48wh)",
+  'BatteryCellsInternalExternal': [
+    '3-cell (23Wh) + 3-cell (23Wh)',
+    '3-cell (23Wh) + 6-cell (48wh)',
   ],
-  "Camera": [
-    "720p",
+  'Camera': [
+    '720p',
   ],
-  "Display": [
+  'Display': [
     '14" FHD (1920x1080) IPS',
     '14" HD+ (1600x900)',
   ],
-  "FingerprintReader": [
-    "Fingerprint Reader",
+  'FingerprintReader': [
+    'Fingerprint Reader',
   ],
-  "Global": [
-    "No",
-    "Yes",
+  'Global': [
+    'No',
+    'Yes',
   ],
-  "Graphics": [
-    "Intel HD Graphics 5500",
+  'Graphics': [
+    'Intel HD Graphics 5500',
   ],
-  "M2SSD": [
-    "None",
-    "16GB SSD",
+  'M2SSD': [
+    'None',
+    '16GB SSD',
   ],
-  "MachineType": [
-    "20BW",
-    "20BX",
+  'MachineType': [
+    '20BW',
+    '20BX',
   ],
-  "MemorySolderedDIMM": [
-    "4+0GB",
-    "4+2GB",
-    "4+4GB",
-    "4+8GB",
+  'MemorySolderedDIMM': [
+    '4+0GB',
+    '4+2GB',
+    '4+4GB',
+    '4+8GB',
   ],
-  "MultiTouch": [
-    "None",
-    "10-point multi-touch",
+  'MultiTouch': [
+    'None',
+    '10-point multi-touch',
   ],
-  "PowerAdapterWatt": [
-    "45W",
+  'PowerAdapterWatt': [
+    '45W',
   ],
-  "Preload": [
-    "Windows 10 DG Windows 7 Pro 64",
-    "Windows 10 Pro 64",
-    "Windows 8.1 DG Windows 7 Pro 64",
-    "Windows 8.1 Pro 64-bit",
+  'Preload': [
+    'Windows 10 DG Windows 7 Pro 64',
+    'Windows 10 Pro 64',
+    'Windows 8.1 DG Windows 7 Pro 64',
+    'Windows 8.1 Pro 64-bit',
   ],
-  "Processor": [
-    "i5-5200U (2C, 2.2 / 2.7GHz, 3MB, 1600MHz)",
-    "i5-5300U (2C, 2.3 / 2.9GHz, 3MB, 1600MHz)",
-    "i7-5600U (2C, 2.6 / 3.2GHz, 4MB, 1600MHz)",
+  'Processor': [
+    'i5-5200U (2C, 2.2 / 2.7GHz, 3MB, 1600MHz)',
+    'i5-5300U (2C, 2.3 / 2.9GHz, 3MB, 1600MHz)',
+    'i7-5600U (2C, 2.6 / 3.2GHz, 4MB, 1600MHz)',
   ],
-  "Product": [
-    "T450s",
+  'Product': [
+    'T450s',
   ],
-  "Region": [
-    "US",
-    "WE",
+  'Region': [
+    'US',
+    'WE',
   ],
-  "SmartCardReader": [
-    "None",
-    "Smart Card Reader",
+  'SmartCardReader': [
+    'None',
+    'Smart Card Reader',
   ],
-  "Storage": [
-    "128GB SSD",
-    "180GB SSD Opal2",
-    "192GB SSD",
-    "1TB 5400rpm",
-    "240GB SSD Opal2",
-    "256GB SSD Opal2",
-    "500GB 5400rpm + 8GB SSHD",
-    "500GB 7200rpm",
-    "512GB SSD",
+  'Storage': [
+    '128GB SSD',
+    '180GB SSD Opal2',
+    '192GB SSD',
+    '1TB 5400rpm',
+    '240GB SSD Opal2',
+    '256GB SSD Opal2',
+    '500GB 5400rpm + 8GB SSHD',
+    '500GB 7200rpm',
+    '512GB SSD',
   ],
-  "TopSeller": [
-    "No",
-    "TopSeller",
+  'TopSeller': [
+    'No',
+    'TopSeller',
   ],
-  "WLANBluetooth": [
-    "Intel 7265 a/b/g/n + BT4.0",
-    "Intel 7265 ac + BT4.0",
+  'WLANBluetooth': [
+    'Intel 7265 a/b/g/n + BT4.0',
+    'Intel 7265 ac + BT4.0',
   ],
-  "WWAN": [
-    "Ericsson N5321",
-    "Sierra EM7345",
-    "WWAN upgradable",
+  'WWAN': [
+    'Ericsson N5321',
+    'Sierra EM7345',
+    'WWAN upgradable',
   ],
-  "VPro": [
-    "No",
-    "vPro",
+  'VPro': [
+    'No',
+    'vPro',
   ],
 };

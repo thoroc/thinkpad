@@ -19,20 +19,16 @@ export type FileConfig = {
  */
 export const getFileConfig = (filepath: string): FileConfig => {
   // if we have a leading `./` we remove it
-  if (filepath.startsWith("./")) {
+  if (filepath.startsWith('./')) {
     filepath = filepath.slice(2);
   }
 
-  const pathParts = filepath.split("/");
-  const nameParts = (pathParts.pop() as string).split(".");
-  const extension = nameParts.length > 1
-    ? nameParts.pop() as string
-    : undefined;
-  const name = nameParts.length > 1
-    ? nameParts.reverse().pop() as string
-    : nameParts[0];
+  const pathParts = filepath.split('/');
+  const nameParts = (pathParts.pop() as string).split('.');
+  const extension = nameParts.length > 1 ? nameParts.pop() as string : undefined;
+  const name = nameParts.length > 1 ? nameParts.reverse().pop() as string : nameParts[0];
   const root = pathParts[0] as string;
-  const path = pathParts.join("/") as string;
+  const path = pathParts.join('/') as string;
   const parentDir = pathParts.pop() as string;
 
   return {

@@ -11,8 +11,8 @@ export interface ThinkPadX270 {
   Model: string;
   Product: Product;
   Region: Region;
-  "Country/Region": CountryRegion;
-  "Machine Type": MachineType;
+  'Country/Region': CountryRegion;
+  'Machine Type': MachineType;
   TopSeller: TopSeller;
   Processor: Processor;
   Graphics: Graphics;
@@ -21,348 +21,334 @@ export interface ThinkPadX270 {
   Storage: Storage;
   Display: Display;
   Touchscreen: BundledAccessories;
-  "Media Reader": MediaReader;
+  'Media Reader': MediaReader;
   Ethernet: Ethernet;
   Optical: BundledAccessories;
-  "WLAN + Bluetooth": WLANBluetooth;
+  'WLAN + Bluetooth': WLANBluetooth;
   WWAN: WWAN;
-  "SIM Card": SIMCard;
-  "Smart Card Reader": SmartCardReader;
-  "Monitor Cable": MonitorCable;
-  "Bundled Accessories": BundledAccessories;
-  "Case Material": CaseMaterial;
+  'SIM Card': SIMCard;
+  'Smart Card Reader': SmartCardReader;
+  'Monitor Cable': MonitorCable;
+  'Bundled Accessories': BundledAccessories;
+  'Case Material': CaseMaterial;
   Camera: Camera;
   Microphone: Microphone;
   Docking: BundledAccessories;
   Color: Color;
   Keyboard: Keyboard;
-  "Fingerprint Reader": FingerprintReader;
+  'Fingerprint Reader': FingerprintReader;
   NFC: NFC;
   TPM: TPM;
   Battery: Battery;
-  "Power Adapter": PowerAdapter;
-  "System Management": SystemManagement;
-  "Operating System": string;
-  "Bundled Software": BundledSoftware;
-  "Base Warranty": BaseWarranty;
-  "Bundled Service": BundledAccessories;
-  "EAN / UPC / JAN": string;
-  "End of Support": Date;
-  "Announce Date": Date;
+  'Power Adapter': PowerAdapter;
+  'System Management': SystemManagement;
+  'Operating System': string;
+  'Bundled Software': BundledSoftware;
+  'Base Warranty': BaseWarranty;
+  'Bundled Service': BundledAccessories;
+  'EAN / UPC / JAN': string;
+  'End of Support': Date;
+  'Announce Date': Date;
 }
 
 export enum BaseWarranty {
-  The1YearDepot = "1-year, Depot",
-  The1YearDepotWith2YearSystemBoard = "1-year Depot with 2-year System Board",
-  The1YearOnsite = "1-year, Onsite",
-  The3YearDepot = "3-year, Depot",
-  The3YearOnsite = "3-year, Onsite",
+  The1YearDepot = '1-year, Depot',
+  The1YearDepotWith2YearSystemBoard = '1-year Depot with 2-year System Board',
+  The1YearOnsite = '1-year, Onsite',
+  The3YearDepot = '3-year, Depot',
+  The3YearOnsite = '3-year, Onsite',
 }
 
 export enum Battery {
-  Integrated23WhSwappable23Wh = "Integrated 23Wh + Swappable 23Wh",
-  Integrated23WhSwappable47Wh = "Integrated 23Wh + Swappable 47Wh",
-  Integrated23WhSwappable72Wh = "Integrated 23Wh + Swappable 72Wh",
-  Swappable23Wh = "Swappable 23Wh",
-  Swappable48Wh = "Swappable 48Wh",
-  Swappable72Wh = "Swappable 72Wh",
+  Integrated23WhSwappable23Wh = 'Integrated 23Wh + Swappable 23Wh',
+  Integrated23WhSwappable47Wh = 'Integrated 23Wh + Swappable 47Wh',
+  Integrated23WhSwappable72Wh = 'Integrated 23Wh + Swappable 72Wh',
+  Swappable23Wh = 'Swappable 23Wh',
+  Swappable48Wh = 'Swappable 48Wh',
+  Swappable72Wh = 'Swappable 72Wh',
 }
 
 export enum BundledAccessories {
-  None = "None",
-  The10PointMultiTouch = "10-point Multi-touch",
+  None = 'None',
+  The10PointMultiTouch = '10-point Multi-touch',
 }
 
 export enum BundledSoftware {
-  None = "None",
-  OfficeHomeAndBusiness2016 = "Office Home and Business 2016",
-  OfficeProfessional2016 = "Office Professional 2016",
+  None = 'None',
+  OfficeHomeAndBusiness2016 = 'Office Home and Business 2016',
+  OfficeProfessional2016 = 'Office Professional 2016',
 }
 
 export enum Camera {
-  The720P = "720p",
+  The720P = '720p',
 }
 
 export enum CaseMaterial {
-  GFRPTopGFRPBottom = "GFRP (Top), GFRP (Bottom)",
+  GFRPTopGFRPBottom = 'GFRP (Top), GFRP (Bottom)',
 }
 
 export enum Chipset {
-  IntelSoCPlatform = "Intel SoC Platform",
+  IntelSoCPlatform = 'Intel SoC Platform',
 }
 
 export enum Color {
-  Black = "Black",
+  Black = 'Black',
 }
 
 export enum CountryRegion {
-  AfricaFrenchPortuguese = "Africa-French-Portuguese",
-  AfricaUK = "Africa-UK",
-  Australia = "Australia",
-  Austria = "Austria",
-  Belgium = "Belgium",
-  Brazil = "Brazil",
-  Bulgaria = "Bulgaria",
-  Canada = "Canada",
-  Croatia = "Croatia",
-  Cyprus = "Cyprus",
-  CzechRepublic = "Czech Republic",
-  Denmark = "Denmark",
-  Egypt = "Egypt",
-  France = "France",
-  Germany = "Germany",
-  Greece = "Greece",
-  HongKongSAROfChina = "Hong Kong S.A.R. of China",
-  Hungary = "Hungary",
-  Iceland = "Iceland",
-  Indonesia = "Indonesia",
-  Israel = "Israel",
-  Italy = "Italy",
-  Japan = "Japan",
-  Korea = "Korea",
-  Luxembourg = "Luxembourg",
-  Malaysia = "Malaysia",
-  MiddleEASTEM = "Middle-EAST-EM",
-  Netherlands = "Netherlands",
-  Norway = "Norway",
-  Philippines = "Philippines",
-  Poland = "Poland",
-  Portugal = "Portugal",
-  Romania = "Romania",
-  Russia = "Russia",
-  SaudiArabia = "Saudi Arabia",
-  Serbia = "Serbia",
-  Singapore = "Singapore",
-  Slovakia = "Slovakia",
-  SouthAfrica = "South Africa",
-  Spain = "Spain",
-  Sweden = "Sweden",
-  Switzerland = "Switzerland",
-  TaiwanRegion = "Taiwan Region",
-  Thailand = "Thailand",
-  Turkey = "Turkey",
-  Uk = "UK",
-  Usa = "USA",
-  Vietnam = "Vietnam",
+  AfricaFrenchPortuguese = 'Africa-French-Portuguese',
+  AfricaUK = 'Africa-UK',
+  Australia = 'Australia',
+  Austria = 'Austria',
+  Belgium = 'Belgium',
+  Brazil = 'Brazil',
+  Bulgaria = 'Bulgaria',
+  Canada = 'Canada',
+  Croatia = 'Croatia',
+  Cyprus = 'Cyprus',
+  CzechRepublic = 'Czech Republic',
+  Denmark = 'Denmark',
+  Egypt = 'Egypt',
+  France = 'France',
+  Germany = 'Germany',
+  Greece = 'Greece',
+  HongKongSAROfChina = 'Hong Kong S.A.R. of China',
+  Hungary = 'Hungary',
+  Iceland = 'Iceland',
+  Indonesia = 'Indonesia',
+  Israel = 'Israel',
+  Italy = 'Italy',
+  Japan = 'Japan',
+  Korea = 'Korea',
+  Luxembourg = 'Luxembourg',
+  Malaysia = 'Malaysia',
+  MiddleEASTEM = 'Middle-EAST-EM',
+  Netherlands = 'Netherlands',
+  Norway = 'Norway',
+  Philippines = 'Philippines',
+  Poland = 'Poland',
+  Portugal = 'Portugal',
+  Romania = 'Romania',
+  Russia = 'Russia',
+  SaudiArabia = 'Saudi Arabia',
+  Serbia = 'Serbia',
+  Singapore = 'Singapore',
+  Slovakia = 'Slovakia',
+  SouthAfrica = 'South Africa',
+  Spain = 'Spain',
+  Sweden = 'Sweden',
+  Switzerland = 'Switzerland',
+  TaiwanRegion = 'Taiwan Region',
+  Thailand = 'Thailand',
+  Turkey = 'Turkey',
+  Uk = 'UK',
+  Usa = 'USA',
+  Vietnam = 'Vietnam',
 }
 
 export enum Display {
-  The125FHD1920X1080IPS300NitsAntiGlare =
-    '12.5" FHD (1920x1080) IPS 300nits Anti-glare',
-  The125HD1366X768IPS300NitsAntiGlare =
-    '12.5" HD (1366x768) IPS 300nits Anti-glare',
-  The125HD1366X768TN220NitsAntiGlare =
-    '12.5" HD (1366x768) TN 220nits Anti-glare',
+  The125FHD1920X1080IPS300NitsAntiGlare = '12.5" FHD (1920x1080) IPS 300nits Anti-glare',
+  The125HD1366X768IPS300NitsAntiGlare = '12.5" HD (1366x768) IPS 300nits Anti-glare',
+  The125HD1366X768TN220NitsAntiGlare = '12.5" HD (1366x768) TN 220nits Anti-glare',
 }
 
 export enum Ethernet {
-  The1001000M = "100/1000M",
+  The1001000M = '100/1000M',
 }
 
 export enum FingerprintReader {
-  None = "None",
-  TouchStyleMatchOnChip = "Touch Style, Match-on-Chip",
+  None = 'None',
+  TouchStyleMatchOnChip = 'Touch Style, Match-on-Chip',
 }
 
 export enum Graphics {
-  IntegratedIntelHDGraphics520 = "Integrated Intel HD Graphics 520",
-  IntegratedIntelHDGraphics620 = "Integrated Intel HD Graphics 620",
+  IntegratedIntelHDGraphics520 = 'Integrated Intel HD Graphics 520',
+  IntegratedIntelHDGraphics620 = 'Integrated Intel HD Graphics 620',
 }
 
 export enum Keyboard {
-  BacklitArabic = "Backlit, Arabic",
-  BacklitBelgian = "Backlit, Belgian",
-  BacklitBulgarian = "Backlit, Bulgarian",
-  BacklitCzech = "Backlit, Czech",
-  BacklitDanish = "Backlit, Danish",
-  BacklitDutch = "Backlit, Dutch",
-  BacklitEnglish = "Backlit, English",
-  BacklitEnglishEU = "Backlit, English (EU)",
-  BacklitEnglishUK = "Backlit, English (UK)",
-  BacklitFrench = "Backlit, French",
-  BacklitGerman = "Backlit, German",
-  BacklitGreek = "Backlit, Greek",
-  BacklitHebrew = "Backlit, Hebrew",
-  BacklitHungarian = "Backlit, Hungarian",
-  BacklitIcelandic = "Backlit, Icelandic",
-  BacklitItalian = "Backlit, Italian",
-  BacklitKorean = "Backlit, Korean",
-  BacklitNordicDKFINOSVEN = "Backlit, Nordic (DK/FI/NO/SV/EN)",
-  BacklitNorwegian = "Backlit, Norwegian",
-  BacklitPortuguese = "Backlit, Portuguese",
-  BacklitPortugueseBrazil = "Backlit, Portuguese (Brazil)",
-  BacklitRussian = "Backlit, Russian",
-  BacklitSlovak = "Backlit, Slovak",
-  BacklitSlovenian = "Backlit, Slovenian",
-  BacklitSpanish = "Backlit, Spanish",
-  BacklitSwedishFinnish = "Backlit, Swedish / Finnish",
-  BacklitSwiss = "Backlit, Swiss",
-  BacklitThai = "Backlit, Thai",
-  BacklitTraditionalChinese = "Backlit, Traditional Chinese",
-  BacklitTurkish = "Backlit, Turkish",
-  NonBacklitArabic = "Non-backlit, Arabic",
-  NonBacklitEnglish = "Non-backlit, English",
-  NonBacklitEnglishEU = "Non-backlit, English (EU)",
-  NonBacklitEnglishUK = "Non-backlit, English (UK)",
-  NonBacklitFrench = "Non-backlit, French",
-  NonBacklitJapanese = "Non-backlit, Japanese",
-  NonBacklitPortuguese = "Non-backlit, Portuguese",
-  NonBacklitPortugueseBrazil = "Non-backlit, Portuguese (Brazil)",
-  NonBacklitThai = "Non-backlit, Thai",
-  NonBacklitTraditionalChinese = "Non-backlit, Traditional Chinese",
+  BacklitArabic = 'Backlit, Arabic',
+  BacklitBelgian = 'Backlit, Belgian',
+  BacklitBulgarian = 'Backlit, Bulgarian',
+  BacklitCzech = 'Backlit, Czech',
+  BacklitDanish = 'Backlit, Danish',
+  BacklitDutch = 'Backlit, Dutch',
+  BacklitEnglish = 'Backlit, English',
+  BacklitEnglishEU = 'Backlit, English (EU)',
+  BacklitEnglishUK = 'Backlit, English (UK)',
+  BacklitFrench = 'Backlit, French',
+  BacklitGerman = 'Backlit, German',
+  BacklitGreek = 'Backlit, Greek',
+  BacklitHebrew = 'Backlit, Hebrew',
+  BacklitHungarian = 'Backlit, Hungarian',
+  BacklitIcelandic = 'Backlit, Icelandic',
+  BacklitItalian = 'Backlit, Italian',
+  BacklitKorean = 'Backlit, Korean',
+  BacklitNordicDKFINOSVEN = 'Backlit, Nordic (DK/FI/NO/SV/EN)',
+  BacklitNorwegian = 'Backlit, Norwegian',
+  BacklitPortuguese = 'Backlit, Portuguese',
+  BacklitPortugueseBrazil = 'Backlit, Portuguese (Brazil)',
+  BacklitRussian = 'Backlit, Russian',
+  BacklitSlovak = 'Backlit, Slovak',
+  BacklitSlovenian = 'Backlit, Slovenian',
+  BacklitSpanish = 'Backlit, Spanish',
+  BacklitSwedishFinnish = 'Backlit, Swedish / Finnish',
+  BacklitSwiss = 'Backlit, Swiss',
+  BacklitThai = 'Backlit, Thai',
+  BacklitTraditionalChinese = 'Backlit, Traditional Chinese',
+  BacklitTurkish = 'Backlit, Turkish',
+  NonBacklitArabic = 'Non-backlit, Arabic',
+  NonBacklitEnglish = 'Non-backlit, English',
+  NonBacklitEnglishEU = 'Non-backlit, English (EU)',
+  NonBacklitEnglishUK = 'Non-backlit, English (UK)',
+  NonBacklitFrench = 'Non-backlit, French',
+  NonBacklitJapanese = 'Non-backlit, Japanese',
+  NonBacklitPortuguese = 'Non-backlit, Portuguese',
+  NonBacklitPortugueseBrazil = 'Non-backlit, Portuguese (Brazil)',
+  NonBacklitThai = 'Non-backlit, Thai',
+  NonBacklitTraditionalChinese = 'Non-backlit, Traditional Chinese',
 }
 
 export enum MachineType {
-  The20Hm = "20HM",
-  The20Hn = "20HN",
-  The20K5 = "20K5",
-  The20K6 = "20K6",
+  The20Hm = '20HM',
+  The20Hn = '20HN',
+  The20K5 = '20K5',
+  The20K6 = '20K6',
 }
 
 export enum MediaReader {
-  The4In1CardReader = "4-in-1 Card Reader",
+  The4In1CardReader = '4-in-1 Card Reader',
 }
 
 export enum Memory {
-  The1X16GBSODIMMDDR42133 = "1x 16GB SO-DIMM DDR4-2133",
-  The1X4GBSODIMMDDR42133 = "1x 4GB SO-DIMM DDR4-2133",
-  The1X8GBSODIMMDDR42133 = "1x 8GB SO-DIMM DDR4-2133",
+  The1X16GBSODIMMDDR42133 = '1x 16GB SO-DIMM DDR4-2133',
+  The1X4GBSODIMMDDR42133 = '1x 4GB SO-DIMM DDR4-2133',
+  The1X8GBSODIMMDDR42133 = '1x 8GB SO-DIMM DDR4-2133',
 }
 
 export enum Microphone {
-  The2XArray = "2x, Array",
+  The2XArray = '2x, Array',
 }
 
 export enum MonitorCable {
-  None = "None",
-  The1XHDMIToVGA = "1x HDMI to VGA",
+  None = 'None',
+  The1XHDMIToVGA = '1x HDMI to VGA',
 }
 
 export enum NFC {
-  NFC = "NFC",
-  None = "None",
+  NFC = 'NFC',
+  None = 'None',
 }
 
 export enum PowerAdapter {
-  The45WSlimTip = "45W Slim Tip",
-  The45WUSBC = "45W USB-C",
-  The65WUSBC = "65W USB-C",
+  The45WSlimTip = '45W Slim Tip',
+  The45WUSBC = '45W USB-C',
+  The65WUSBC = '65W USB-C',
 }
 
 export enum Processor {
-  IntelCoreI36006U2C4T20GHz3MB = "Intel Core i3-6006U (2C / 4T, 2.0GHz, 3MB)",
-  IntelCoreI37100U2C4T24GHz3MB = "Intel Core i3-7100U (2C / 4T, 2.4GHz, 3MB)",
-  IntelCoreI56200U2C4T2328GHz3MB =
-    "Intel Core i5-6200U (2C / 4T, 2.3 / 2.8GHz, 3MB)",
-  IntelCoreI56300U2C4T2430GHz3MB =
-    "Intel Core i5-6300U (2C / 4T, 2.4 / 3.0GHz, 3MB)",
-  IntelCoreI57200U2C4T2531GHz3MB =
-    "Intel Core i5-7200U (2C / 4T, 2.5 / 3.1GHz, 3MB)",
-  IntelCoreI57300U2C4T2635GHz3MB =
-    "Intel Core i5-7300U (2C / 4T, 2.6 / 3.5GHz, 3MB)",
-  IntelCoreI76500U2C4T2531GHz4MB =
-    "Intel Core i7-6500U (2C / 4T, 2.5 / 3.1GHz, 4MB)",
-  IntelCoreI76600U2C4T2634GHz4MB =
-    "Intel Core i7-6600U (2C / 4T, 2.6 / 3.4GHz, 4MB)",
-  IntelCoreI77500U2C4T2735GHz4MB =
-    "Intel Core i7-7500U (2C / 4T, 2.7 / 3.5GHz, 4MB)",
-  IntelCoreI77600U2C4T2839GHz4MB =
-    "Intel Core i7-7600U (2C / 4T, 2.8 / 3.9GHz, 4MB)",
+  IntelCoreI36006U2C4T20GHz3MB = 'Intel Core i3-6006U (2C / 4T, 2.0GHz, 3MB)',
+  IntelCoreI37100U2C4T24GHz3MB = 'Intel Core i3-7100U (2C / 4T, 2.4GHz, 3MB)',
+  IntelCoreI56200U2C4T2328GHz3MB = 'Intel Core i5-6200U (2C / 4T, 2.3 / 2.8GHz, 3MB)',
+  IntelCoreI56300U2C4T2430GHz3MB = 'Intel Core i5-6300U (2C / 4T, 2.4 / 3.0GHz, 3MB)',
+  IntelCoreI57200U2C4T2531GHz3MB = 'Intel Core i5-7200U (2C / 4T, 2.5 / 3.1GHz, 3MB)',
+  IntelCoreI57300U2C4T2635GHz3MB = 'Intel Core i5-7300U (2C / 4T, 2.6 / 3.5GHz, 3MB)',
+  IntelCoreI76500U2C4T2531GHz4MB = 'Intel Core i7-6500U (2C / 4T, 2.5 / 3.1GHz, 4MB)',
+  IntelCoreI76600U2C4T2634GHz4MB = 'Intel Core i7-6600U (2C / 4T, 2.6 / 3.4GHz, 4MB)',
+  IntelCoreI77500U2C4T2735GHz4MB = 'Intel Core i7-7500U (2C / 4T, 2.7 / 3.5GHz, 4MB)',
+  IntelCoreI77600U2C4T2839GHz4MB = 'Intel Core i7-7600U (2C / 4T, 2.8 / 3.9GHz, 4MB)',
 }
 
 export enum Product {
-  ThinkPadX270 = "ThinkPad X270",
+  ThinkPadX270 = 'ThinkPad X270',
 }
 
 export enum Region {
-  Anz = "ANZ",
-  Asean = "ASEAN",
-  Brazil = "BRAZIL",
-  Eet = "EET",
-  Htk = "HTK",
-  Japan = "JAPAN",
-  Mea = "MEA",
-  Na = "NA",
-  Russia = "RUSSIA",
-  We = "WE",
+  Anz = 'ANZ',
+  Asean = 'ASEAN',
+  Brazil = 'BRAZIL',
+  Eet = 'EET',
+  Htk = 'HTK',
+  Japan = 'JAPAN',
+  Mea = 'MEA',
+  Na = 'NA',
+  Russia = 'RUSSIA',
+  We = 'WE',
 }
 
 export enum SIMCard {
-  MicroSIMCardLenovoConnect = "Micro-SIM Card Lenovo Connect",
-  None = "None",
+  MicroSIMCardLenovoConnect = 'Micro-SIM Card Lenovo Connect',
+  None = 'None',
 }
 
 export enum SmartCardReader {
-  None = "None",
-  SmartCardReader = "Smart Card Reader",
+  None = 'None',
+  SmartCardReader = 'Smart Card Reader',
 }
 
 export enum Storage {
   The128GBSSD25SATA6GBS = '128GB SSD 2.5" SATA6Gb/s',
-  The128GBSSDM22242SATA6GBS1TBHDD5400RPM25 =
-    '128GB SSD M.2 2242 SATA6Gb/s + 1TB HDD 5400rpm 2.5"',
+  The128GBSSDM22242SATA6GBS1TBHDD5400RPM25 = '128GB SSD M.2 2242 SATA6Gb/s + 1TB HDD 5400rpm 2.5"',
   The128GBSSDM22242SATA6GBS500GBHDD7200RPM25 =
     '128GB SSD M.2 2242 SATA6Gb/s + 500GB HDD 7200rpm 2.5"',
   The180GBSSD25SATA6GBSOpal2 = '180GB SSD 2.5" SATA6Gb/s Opal2',
   The1TBHDD5400RPM25 = '1TB HDD 5400rpm 2.5"',
-  The1TBSSDM22280PCIeNVMeOpal2 = "1TB SSD M.2 2280 PCIe NVMe Opal2",
+  The1TBSSDM22280PCIeNVMeOpal2 = '1TB SSD M.2 2280 PCIe NVMe Opal2',
   The256GBSSD25SATA6GBSOpal2 = '256GB SSD 2.5" SATA6Gb/s Opal2',
-  The256GBSSDM22280PCIeNVMeOpal2 = "256GB SSD M.2 2280 PCIe NVMe Opal2",
+  The256GBSSDM22280PCIeNVMeOpal2 = '256GB SSD M.2 2280 PCIe NVMe Opal2',
   The500GBHDD7200RPM25 = '500GB HDD 7200rpm 2.5"',
   The512GBSSD25SATA6GBSOpal2 = '512GB SSD 2.5" SATA6Gb/s Opal2',
-  The512GBSSDM22280PCIeNVMeOpal2 = "512GB SSD M.2 2280 PCIe NVMe Opal2",
+  The512GBSSDM22280PCIeNVMeOpal2 = '512GB SSD M.2 2280 PCIe NVMe Opal2',
 }
 
 export enum SystemManagement {
-  IntelVPro = "Intel vPro",
-  None = "None",
+  IntelVPro = 'Intel vPro',
+  None = 'None',
 }
 
 export enum TPM {
-  DiscreteTPM12 = "Discrete TPM 1.2",
-  DiscreteTPM20 = "Discrete TPM 2.0",
+  DiscreteTPM12 = 'Discrete TPM 1.2',
+  DiscreteTPM20 = 'Discrete TPM 2.0',
 }
 
 export enum TopSeller {
-  No = "No",
-  TopSeller = "TopSeller",
+  No = 'No',
+  TopSeller = 'TopSeller',
 }
 
 export enum WLANBluetooth {
-  Intel1826511AC2X2BT41 = "Intel 18265 11ac, 2x2 + BT4.1",
-  Intel826011AC2X2BT41 = "Intel 8260 11ac, 2x2 + BT4.1",
-  Intel826511AC2X2BT41 = "Intel 8265 11ac, 2x2 + BT4.1",
-  RTL8822BE11AC2X2BT41 = "RTL8822BE 11ac, 2x2 + BT4.1",
+  Intel1826511AC2X2BT41 = 'Intel 18265 11ac, 2x2 + BT4.1',
+  Intel826011AC2X2BT41 = 'Intel 8260 11ac, 2x2 + BT4.1',
+  Intel826511AC2X2BT41 = 'Intel 8265 11ac, 2x2 + BT4.1',
+  RTL8822BE11AC2X2BT41 = 'RTL8822BE 11ac, 2x2 + BT4.1',
 }
 
 export enum WWAN {
-  FibocomL831EAU = "Fibocom L831-EAU",
-  None = "None",
-  SierraEM7430 = "Sierra EM7430",
-  SierraEM7455 = "Sierra EM7455",
-  WWANUpgradable = "WWAN Upgradable",
+  FibocomL831EAU = 'Fibocom L831-EAU',
+  None = 'None',
+  SierraEM7430 = 'Sierra EM7430',
+  SierraEM7455 = 'Sierra EM7455',
+  WWANUpgradable = 'WWAN Upgradable',
 }
 
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
   public static toThinkPadX270(json: string): ThinkPadX270[] {
-    return cast(JSON.parse(json), a(r("ThinkPadX270")));
+    return cast(JSON.parse(json), a(r('ThinkPadX270')));
   }
 
   public static thinkPadX270ToJson(value: ThinkPadX270[]): string {
-    return JSON.stringify(uncast(value, a(r("ThinkPadX270"))), null, 2);
+    return JSON.stringify(uncast(value, a(r('ThinkPadX270'))), null, 2);
   }
 }
 
-function invalidValue(typ: any, val: any, key: any, parent: any = ""): never {
+function invalidValue(typ: any, val: any, key: any, parent: any = ''): never {
   const prettyTyp = prettyTypeName(typ);
-  const parentText = parent ? ` on ${parent}` : "";
-  const keyText = key ? ` for key "${key}"` : "";
+  const parentText = parent ? ` on ${parent}` : '';
+  const keyText = key ? ` for key "${key}"` : '';
   throw Error(
-    `Invalid value${keyText}${parentText}. Expected ${prettyTyp} but got ${
-      JSON.stringify(val)
-    }`,
+    `Invalid value${keyText}${parentText}. Expected ${prettyTyp} but got ${JSON.stringify(val)}`,
   );
 }
 
@@ -374,10 +360,10 @@ function prettyTypeName(typ: any): string {
       return `one of [${
         typ.map((a) => {
           return prettyTypeName(a);
-        }).join(", ")
+        }).join(', ')
       }]`;
     }
-  } else if (typeof typ === "object" && typ.literal !== undefined) {
+  } else if (typeof typ === 'object' && typ.literal !== undefined) {
     return typ.literal;
   } else {
     return typeof typ;
@@ -406,8 +392,8 @@ function transform(
   val: any,
   typ: any,
   getProps: any,
-  key: any = "",
-  parent: any = "",
+  key: any = '',
+  parent: any = '',
 ): any {
   function transformPrimitive(typ: string, val: any): any {
     if (typeof typ === typeof val) return val;
@@ -440,7 +426,7 @@ function transform(
 
   function transformArray(typ: any, val: any): any {
     // val must be an array with no invalid elements
-    if (!Array.isArray(val)) return invalidValue(l("array"), val, key, parent);
+    if (!Array.isArray(val)) return invalidValue(l('array'), val, key, parent);
     return val.map((el) => transform(el, typ, getProps));
   }
 
@@ -450,7 +436,7 @@ function transform(
     }
     const d = new Date(val);
     if (isNaN(d.valueOf())) {
-      return invalidValue(l("Date"), val, key, parent);
+      return invalidValue(l('Date'), val, key, parent);
     }
     return d;
   }
@@ -460,15 +446,13 @@ function transform(
     additional: any,
     val: any,
   ): any {
-    if (val === null || typeof val !== "object" || Array.isArray(val)) {
-      return invalidValue(l(ref || "object"), val, key, parent);
+    if (val === null || typeof val !== 'object' || Array.isArray(val)) {
+      return invalidValue(l(ref || 'object'), val, key, parent);
     }
     const result: any = {};
     Object.getOwnPropertyNames(props).forEach((key) => {
       const prop = props[key];
-      const v = Object.prototype.hasOwnProperty.call(val, key)
-        ? val[key]
-        : undefined;
+      const v = Object.prototype.hasOwnProperty.call(val, key) ? val[key] : undefined;
       result[prop.key] = transform(v, prop.typ, getProps, key, ref);
     });
     Object.getOwnPropertyNames(val).forEach((key) => {
@@ -479,29 +463,29 @@ function transform(
     return result;
   }
 
-  if (typ === "any") return val;
+  if (typ === 'any') return val;
   if (typ === null) {
     if (val === null) return val;
     return invalidValue(typ, val, key, parent);
   }
   if (typ === false) return invalidValue(typ, val, key, parent);
   let ref: any = undefined;
-  while (typeof typ === "object" && typ.ref !== undefined) {
+  while (typeof typ === 'object' && typ.ref !== undefined) {
     ref = typ.ref;
     typ = typeMap[typ.ref];
   }
   if (Array.isArray(typ)) return transformEnum(typ, val);
-  if (typeof typ === "object") {
-    return typ.hasOwnProperty("unionMembers")
+  if (typeof typ === 'object') {
+    return typ.hasOwnProperty('unionMembers')
       ? transformUnion(typ.unionMembers, val)
-      : typ.hasOwnProperty("arrayItems")
+      : typ.hasOwnProperty('arrayItems')
       ? transformArray(typ.arrayItems, val)
-      : typ.hasOwnProperty("props")
+      : typ.hasOwnProperty('props')
       ? transformObject(getProps(typ), typ.additional, val)
       : invalidValue(typ, val, key, parent);
   }
   // Numbers can be parsed by Date but shouldn't be.
-  if (typ === Date && typeof val !== "number") return transformDate(val);
+  if (typ === Date && typeof val !== 'number') return transformDate(val);
   return transformPrimitive(typ, val);
 }
 
@@ -538,322 +522,322 @@ function r(name: string) {
 }
 
 const typeMap: any = {
-  "ThinkPadX270": o([
-    { json: "Model", js: "Model", typ: "" },
-    { json: "Product", js: "Product", typ: r("Product") },
-    { json: "Region", js: "Region", typ: r("Region") },
-    { json: "Country/Region", js: "Country/Region", typ: r("CountryRegion") },
-    { json: "Machine Type", js: "Machine Type", typ: r("MachineType") },
-    { json: "TopSeller", js: "TopSeller", typ: r("TopSeller") },
-    { json: "Processor", js: "Processor", typ: r("Processor") },
-    { json: "Graphics", js: "Graphics", typ: r("Graphics") },
-    { json: "Chipset", js: "Chipset", typ: r("Chipset") },
-    { json: "Memory", js: "Memory", typ: r("Memory") },
-    { json: "Storage", js: "Storage", typ: r("Storage") },
-    { json: "Display", js: "Display", typ: r("Display") },
-    { json: "Touchscreen", js: "Touchscreen", typ: r("BundledAccessories") },
-    { json: "Media Reader", js: "Media Reader", typ: r("MediaReader") },
-    { json: "Ethernet", js: "Ethernet", typ: r("Ethernet") },
-    { json: "Optical", js: "Optical", typ: r("BundledAccessories") },
+  'ThinkPadX270': o([
+    { json: 'Model', js: 'Model', typ: '' },
+    { json: 'Product', js: 'Product', typ: r('Product') },
+    { json: 'Region', js: 'Region', typ: r('Region') },
+    { json: 'Country/Region', js: 'Country/Region', typ: r('CountryRegion') },
+    { json: 'Machine Type', js: 'Machine Type', typ: r('MachineType') },
+    { json: 'TopSeller', js: 'TopSeller', typ: r('TopSeller') },
+    { json: 'Processor', js: 'Processor', typ: r('Processor') },
+    { json: 'Graphics', js: 'Graphics', typ: r('Graphics') },
+    { json: 'Chipset', js: 'Chipset', typ: r('Chipset') },
+    { json: 'Memory', js: 'Memory', typ: r('Memory') },
+    { json: 'Storage', js: 'Storage', typ: r('Storage') },
+    { json: 'Display', js: 'Display', typ: r('Display') },
+    { json: 'Touchscreen', js: 'Touchscreen', typ: r('BundledAccessories') },
+    { json: 'Media Reader', js: 'Media Reader', typ: r('MediaReader') },
+    { json: 'Ethernet', js: 'Ethernet', typ: r('Ethernet') },
+    { json: 'Optical', js: 'Optical', typ: r('BundledAccessories') },
     {
-      json: "WLAN + Bluetooth",
-      js: "WLAN + Bluetooth",
-      typ: r("WLANBluetooth"),
+      json: 'WLAN + Bluetooth',
+      js: 'WLAN + Bluetooth',
+      typ: r('WLANBluetooth'),
     },
-    { json: "WWAN", js: "WWAN", typ: r("WWAN") },
-    { json: "SIM Card", js: "SIM Card", typ: r("SIMCard") },
+    { json: 'WWAN', js: 'WWAN', typ: r('WWAN') },
+    { json: 'SIM Card', js: 'SIM Card', typ: r('SIMCard') },
     {
-      json: "Smart Card Reader",
-      js: "Smart Card Reader",
-      typ: r("SmartCardReader"),
+      json: 'Smart Card Reader',
+      js: 'Smart Card Reader',
+      typ: r('SmartCardReader'),
     },
-    { json: "Monitor Cable", js: "Monitor Cable", typ: r("MonitorCable") },
+    { json: 'Monitor Cable', js: 'Monitor Cable', typ: r('MonitorCable') },
     {
-      json: "Bundled Accessories",
-      js: "Bundled Accessories",
-      typ: r("BundledAccessories"),
+      json: 'Bundled Accessories',
+      js: 'Bundled Accessories',
+      typ: r('BundledAccessories'),
     },
-    { json: "Case Material", js: "Case Material", typ: r("CaseMaterial") },
-    { json: "Camera", js: "Camera", typ: r("Camera") },
-    { json: "Microphone", js: "Microphone", typ: r("Microphone") },
-    { json: "Docking", js: "Docking", typ: r("BundledAccessories") },
-    { json: "Color", js: "Color", typ: r("Color") },
-    { json: "Keyboard", js: "Keyboard", typ: r("Keyboard") },
+    { json: 'Case Material', js: 'Case Material', typ: r('CaseMaterial') },
+    { json: 'Camera', js: 'Camera', typ: r('Camera') },
+    { json: 'Microphone', js: 'Microphone', typ: r('Microphone') },
+    { json: 'Docking', js: 'Docking', typ: r('BundledAccessories') },
+    { json: 'Color', js: 'Color', typ: r('Color') },
+    { json: 'Keyboard', js: 'Keyboard', typ: r('Keyboard') },
     {
-      json: "Fingerprint Reader",
-      js: "Fingerprint Reader",
-      typ: r("FingerprintReader"),
+      json: 'Fingerprint Reader',
+      js: 'Fingerprint Reader',
+      typ: r('FingerprintReader'),
     },
-    { json: "NFC", js: "NFC", typ: r("NFC") },
-    { json: "TPM", js: "TPM", typ: r("TPM") },
-    { json: "Battery", js: "Battery", typ: r("Battery") },
-    { json: "Power Adapter", js: "Power Adapter", typ: r("PowerAdapter") },
+    { json: 'NFC', js: 'NFC', typ: r('NFC') },
+    { json: 'TPM', js: 'TPM', typ: r('TPM') },
+    { json: 'Battery', js: 'Battery', typ: r('Battery') },
+    { json: 'Power Adapter', js: 'Power Adapter', typ: r('PowerAdapter') },
     {
-      json: "System Management",
-      js: "System Management",
-      typ: r("SystemManagement"),
+      json: 'System Management',
+      js: 'System Management',
+      typ: r('SystemManagement'),
     },
-    { json: "Operating System", js: "Operating System", typ: "" },
+    { json: 'Operating System', js: 'Operating System', typ: '' },
     {
-      json: "Bundled Software",
-      js: "Bundled Software",
-      typ: r("BundledSoftware"),
+      json: 'Bundled Software',
+      js: 'Bundled Software',
+      typ: r('BundledSoftware'),
     },
-    { json: "Base Warranty", js: "Base Warranty", typ: r("BaseWarranty") },
+    { json: 'Base Warranty', js: 'Base Warranty', typ: r('BaseWarranty') },
     {
-      json: "Bundled Service",
-      js: "Bundled Service",
-      typ: r("BundledAccessories"),
+      json: 'Bundled Service',
+      js: 'Bundled Service',
+      typ: r('BundledAccessories'),
     },
-    { json: "EAN / UPC / JAN", js: "EAN / UPC / JAN", typ: "" },
-    { json: "End of Support", js: "End of Support", typ: Date },
-    { json: "Announce Date", js: "Announce Date", typ: Date },
+    { json: 'EAN / UPC / JAN', js: 'EAN / UPC / JAN', typ: '' },
+    { json: 'End of Support', js: 'End of Support', typ: Date },
+    { json: 'Announce Date', js: 'Announce Date', typ: Date },
   ], false),
-  "BaseWarranty": [
-    "1-year, Depot",
-    "1-year Depot with 2-year System Board",
-    "1-year, Onsite",
-    "3-year, Depot",
-    "3-year, Onsite",
+  'BaseWarranty': [
+    '1-year, Depot',
+    '1-year Depot with 2-year System Board',
+    '1-year, Onsite',
+    '3-year, Depot',
+    '3-year, Onsite',
   ],
-  "Battery": [
-    "Integrated 23Wh + Swappable 23Wh",
-    "Integrated 23Wh + Swappable 47Wh",
-    "Integrated 23Wh + Swappable 72Wh",
-    "Swappable 23Wh",
-    "Swappable 48Wh",
-    "Swappable 72Wh",
+  'Battery': [
+    'Integrated 23Wh + Swappable 23Wh',
+    'Integrated 23Wh + Swappable 47Wh',
+    'Integrated 23Wh + Swappable 72Wh',
+    'Swappable 23Wh',
+    'Swappable 48Wh',
+    'Swappable 72Wh',
   ],
-  "BundledAccessories": [
-    "None",
-    "10-point Multi-touch",
+  'BundledAccessories': [
+    'None',
+    '10-point Multi-touch',
   ],
-  "BundledSoftware": [
-    "None",
-    "Office Home and Business 2016",
-    "Office Professional 2016",
+  'BundledSoftware': [
+    'None',
+    'Office Home and Business 2016',
+    'Office Professional 2016',
   ],
-  "Camera": [
-    "720p",
+  'Camera': [
+    '720p',
   ],
-  "CaseMaterial": [
-    "GFRP (Top), GFRP (Bottom)",
+  'CaseMaterial': [
+    'GFRP (Top), GFRP (Bottom)',
   ],
-  "Chipset": [
-    "Intel SoC Platform",
+  'Chipset': [
+    'Intel SoC Platform',
   ],
-  "Color": [
-    "Black",
+  'Color': [
+    'Black',
   ],
-  "CountryRegion": [
-    "Africa-French-Portuguese",
-    "Africa-UK",
-    "Australia",
-    "Austria",
-    "Belgium",
-    "Brazil",
-    "Bulgaria",
-    "Canada",
-    "Croatia",
-    "Cyprus",
-    "Czech Republic",
-    "Denmark",
-    "Egypt",
-    "France",
-    "Germany",
-    "Greece",
-    "Hong Kong S.A.R. of China",
-    "Hungary",
-    "Iceland",
-    "Indonesia",
-    "Israel",
-    "Italy",
-    "Japan",
-    "Korea",
-    "Luxembourg",
-    "Malaysia",
-    "Middle-EAST-EM",
-    "Netherlands",
-    "Norway",
-    "Philippines",
-    "Poland",
-    "Portugal",
-    "Romania",
-    "Russia",
-    "Saudi Arabia",
-    "Serbia",
-    "Singapore",
-    "Slovakia",
-    "South Africa",
-    "Spain",
-    "Sweden",
-    "Switzerland",
-    "Taiwan Region",
-    "Thailand",
-    "Turkey",
-    "UK",
-    "USA",
-    "Vietnam",
+  'CountryRegion': [
+    'Africa-French-Portuguese',
+    'Africa-UK',
+    'Australia',
+    'Austria',
+    'Belgium',
+    'Brazil',
+    'Bulgaria',
+    'Canada',
+    'Croatia',
+    'Cyprus',
+    'Czech Republic',
+    'Denmark',
+    'Egypt',
+    'France',
+    'Germany',
+    'Greece',
+    'Hong Kong S.A.R. of China',
+    'Hungary',
+    'Iceland',
+    'Indonesia',
+    'Israel',
+    'Italy',
+    'Japan',
+    'Korea',
+    'Luxembourg',
+    'Malaysia',
+    'Middle-EAST-EM',
+    'Netherlands',
+    'Norway',
+    'Philippines',
+    'Poland',
+    'Portugal',
+    'Romania',
+    'Russia',
+    'Saudi Arabia',
+    'Serbia',
+    'Singapore',
+    'Slovakia',
+    'South Africa',
+    'Spain',
+    'Sweden',
+    'Switzerland',
+    'Taiwan Region',
+    'Thailand',
+    'Turkey',
+    'UK',
+    'USA',
+    'Vietnam',
   ],
-  "Display": [
+  'Display': [
     '12.5" FHD (1920x1080) IPS 300nits Anti-glare',
     '12.5" HD (1366x768) IPS 300nits Anti-glare',
     '12.5" HD (1366x768) TN 220nits Anti-glare',
   ],
-  "Ethernet": [
-    "100/1000M",
+  'Ethernet': [
+    '100/1000M',
   ],
-  "FingerprintReader": [
-    "None",
-    "Touch Style, Match-on-Chip",
+  'FingerprintReader': [
+    'None',
+    'Touch Style, Match-on-Chip',
   ],
-  "Graphics": [
-    "Integrated Intel HD Graphics 520",
-    "Integrated Intel HD Graphics 620",
+  'Graphics': [
+    'Integrated Intel HD Graphics 520',
+    'Integrated Intel HD Graphics 620',
   ],
-  "Keyboard": [
-    "Backlit, Arabic",
-    "Backlit, Belgian",
-    "Backlit, Bulgarian",
-    "Backlit, Czech",
-    "Backlit, Danish",
-    "Backlit, Dutch",
-    "Backlit, English",
-    "Backlit, English (EU)",
-    "Backlit, English (UK)",
-    "Backlit, French",
-    "Backlit, German",
-    "Backlit, Greek",
-    "Backlit, Hebrew",
-    "Backlit, Hungarian",
-    "Backlit, Icelandic",
-    "Backlit, Italian",
-    "Backlit, Korean",
-    "Backlit, Nordic (DK/FI/NO/SV/EN)",
-    "Backlit, Norwegian",
-    "Backlit, Portuguese",
-    "Backlit, Portuguese (Brazil)",
-    "Backlit, Russian",
-    "Backlit, Slovak",
-    "Backlit, Slovenian",
-    "Backlit, Spanish",
-    "Backlit, Swedish / Finnish",
-    "Backlit, Swiss",
-    "Backlit, Thai",
-    "Backlit, Traditional Chinese",
-    "Backlit, Turkish",
-    "Non-backlit, Arabic",
-    "Non-backlit, English",
-    "Non-backlit, English (EU)",
-    "Non-backlit, English (UK)",
-    "Non-backlit, French",
-    "Non-backlit, Japanese",
-    "Non-backlit, Portuguese",
-    "Non-backlit, Portuguese (Brazil)",
-    "Non-backlit, Thai",
-    "Non-backlit, Traditional Chinese",
+  'Keyboard': [
+    'Backlit, Arabic',
+    'Backlit, Belgian',
+    'Backlit, Bulgarian',
+    'Backlit, Czech',
+    'Backlit, Danish',
+    'Backlit, Dutch',
+    'Backlit, English',
+    'Backlit, English (EU)',
+    'Backlit, English (UK)',
+    'Backlit, French',
+    'Backlit, German',
+    'Backlit, Greek',
+    'Backlit, Hebrew',
+    'Backlit, Hungarian',
+    'Backlit, Icelandic',
+    'Backlit, Italian',
+    'Backlit, Korean',
+    'Backlit, Nordic (DK/FI/NO/SV/EN)',
+    'Backlit, Norwegian',
+    'Backlit, Portuguese',
+    'Backlit, Portuguese (Brazil)',
+    'Backlit, Russian',
+    'Backlit, Slovak',
+    'Backlit, Slovenian',
+    'Backlit, Spanish',
+    'Backlit, Swedish / Finnish',
+    'Backlit, Swiss',
+    'Backlit, Thai',
+    'Backlit, Traditional Chinese',
+    'Backlit, Turkish',
+    'Non-backlit, Arabic',
+    'Non-backlit, English',
+    'Non-backlit, English (EU)',
+    'Non-backlit, English (UK)',
+    'Non-backlit, French',
+    'Non-backlit, Japanese',
+    'Non-backlit, Portuguese',
+    'Non-backlit, Portuguese (Brazil)',
+    'Non-backlit, Thai',
+    'Non-backlit, Traditional Chinese',
   ],
-  "MachineType": [
-    "20HM",
-    "20HN",
-    "20K5",
-    "20K6",
+  'MachineType': [
+    '20HM',
+    '20HN',
+    '20K5',
+    '20K6',
   ],
-  "MediaReader": [
-    "4-in-1 Card Reader",
+  'MediaReader': [
+    '4-in-1 Card Reader',
   ],
-  "Memory": [
-    "1x 16GB SO-DIMM DDR4-2133",
-    "1x 4GB SO-DIMM DDR4-2133",
-    "1x 8GB SO-DIMM DDR4-2133",
+  'Memory': [
+    '1x 16GB SO-DIMM DDR4-2133',
+    '1x 4GB SO-DIMM DDR4-2133',
+    '1x 8GB SO-DIMM DDR4-2133',
   ],
-  "Microphone": [
-    "2x, Array",
+  'Microphone': [
+    '2x, Array',
   ],
-  "MonitorCable": [
-    "None",
-    "1x HDMI to VGA",
+  'MonitorCable': [
+    'None',
+    '1x HDMI to VGA',
   ],
-  "NFC": [
-    "NFC",
-    "None",
+  'NFC': [
+    'NFC',
+    'None',
   ],
-  "PowerAdapter": [
-    "45W Slim Tip",
-    "45W USB-C",
-    "65W USB-C",
+  'PowerAdapter': [
+    '45W Slim Tip',
+    '45W USB-C',
+    '65W USB-C',
   ],
-  "Processor": [
-    "Intel Core i3-6006U (2C / 4T, 2.0GHz, 3MB)",
-    "Intel Core i3-7100U (2C / 4T, 2.4GHz, 3MB)",
-    "Intel Core i5-6200U (2C / 4T, 2.3 / 2.8GHz, 3MB)",
-    "Intel Core i5-6300U (2C / 4T, 2.4 / 3.0GHz, 3MB)",
-    "Intel Core i5-7200U (2C / 4T, 2.5 / 3.1GHz, 3MB)",
-    "Intel Core i5-7300U (2C / 4T, 2.6 / 3.5GHz, 3MB)",
-    "Intel Core i7-6500U (2C / 4T, 2.5 / 3.1GHz, 4MB)",
-    "Intel Core i7-6600U (2C / 4T, 2.6 / 3.4GHz, 4MB)",
-    "Intel Core i7-7500U (2C / 4T, 2.7 / 3.5GHz, 4MB)",
-    "Intel Core i7-7600U (2C / 4T, 2.8 / 3.9GHz, 4MB)",
+  'Processor': [
+    'Intel Core i3-6006U (2C / 4T, 2.0GHz, 3MB)',
+    'Intel Core i3-7100U (2C / 4T, 2.4GHz, 3MB)',
+    'Intel Core i5-6200U (2C / 4T, 2.3 / 2.8GHz, 3MB)',
+    'Intel Core i5-6300U (2C / 4T, 2.4 / 3.0GHz, 3MB)',
+    'Intel Core i5-7200U (2C / 4T, 2.5 / 3.1GHz, 3MB)',
+    'Intel Core i5-7300U (2C / 4T, 2.6 / 3.5GHz, 3MB)',
+    'Intel Core i7-6500U (2C / 4T, 2.5 / 3.1GHz, 4MB)',
+    'Intel Core i7-6600U (2C / 4T, 2.6 / 3.4GHz, 4MB)',
+    'Intel Core i7-7500U (2C / 4T, 2.7 / 3.5GHz, 4MB)',
+    'Intel Core i7-7600U (2C / 4T, 2.8 / 3.9GHz, 4MB)',
   ],
-  "Product": [
-    "ThinkPad X270",
+  'Product': [
+    'ThinkPad X270',
   ],
-  "Region": [
-    "ANZ",
-    "ASEAN",
-    "BRAZIL",
-    "EET",
-    "HTK",
-    "JAPAN",
-    "MEA",
-    "NA",
-    "RUSSIA",
-    "WE",
+  'Region': [
+    'ANZ',
+    'ASEAN',
+    'BRAZIL',
+    'EET',
+    'HTK',
+    'JAPAN',
+    'MEA',
+    'NA',
+    'RUSSIA',
+    'WE',
   ],
-  "SIMCard": [
-    "Micro-SIM Card Lenovo Connect",
-    "None",
+  'SIMCard': [
+    'Micro-SIM Card Lenovo Connect',
+    'None',
   ],
-  "SmartCardReader": [
-    "None",
-    "Smart Card Reader",
+  'SmartCardReader': [
+    'None',
+    'Smart Card Reader',
   ],
-  "Storage": [
+  'Storage': [
     '128GB SSD 2.5" SATA6Gb/s',
     '128GB SSD M.2 2242 SATA6Gb/s + 1TB HDD 5400rpm 2.5"',
     '128GB SSD M.2 2242 SATA6Gb/s + 500GB HDD 7200rpm 2.5"',
     '180GB SSD 2.5" SATA6Gb/s Opal2',
     '1TB HDD 5400rpm 2.5"',
-    "1TB SSD M.2 2280 PCIe NVMe Opal2",
+    '1TB SSD M.2 2280 PCIe NVMe Opal2',
     '256GB SSD 2.5" SATA6Gb/s Opal2',
-    "256GB SSD M.2 2280 PCIe NVMe Opal2",
+    '256GB SSD M.2 2280 PCIe NVMe Opal2',
     '500GB HDD 7200rpm 2.5"',
     '512GB SSD 2.5" SATA6Gb/s Opal2',
-    "512GB SSD M.2 2280 PCIe NVMe Opal2",
+    '512GB SSD M.2 2280 PCIe NVMe Opal2',
   ],
-  "SystemManagement": [
-    "Intel vPro",
-    "None",
+  'SystemManagement': [
+    'Intel vPro',
+    'None',
   ],
-  "TPM": [
-    "Discrete TPM 1.2",
-    "Discrete TPM 2.0",
+  'TPM': [
+    'Discrete TPM 1.2',
+    'Discrete TPM 2.0',
   ],
-  "TopSeller": [
-    "No",
-    "TopSeller",
+  'TopSeller': [
+    'No',
+    'TopSeller',
   ],
-  "WLANBluetooth": [
-    "Intel 18265 11ac, 2x2 + BT4.1",
-    "Intel 8260 11ac, 2x2 + BT4.1",
-    "Intel 8265 11ac, 2x2 + BT4.1",
-    "RTL8822BE 11ac, 2x2 + BT4.1",
+  'WLANBluetooth': [
+    'Intel 18265 11ac, 2x2 + BT4.1',
+    'Intel 8260 11ac, 2x2 + BT4.1',
+    'Intel 8265 11ac, 2x2 + BT4.1',
+    'RTL8822BE 11ac, 2x2 + BT4.1',
   ],
-  "WWAN": [
-    "Fibocom L831-EAU",
-    "None",
-    "Sierra EM7430",
-    "Sierra EM7455",
-    "WWAN Upgradable",
+  'WWAN': [
+    'Fibocom L831-EAU',
+    'None',
+    'Sierra EM7430',
+    'Sierra EM7455',
+    'WWAN Upgradable',
   ],
 };

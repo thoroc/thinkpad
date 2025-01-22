@@ -1,1 +1,1 @@
-export * from "./write.ts";
+export * from './write.ts';

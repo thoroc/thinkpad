@@ -1,8 +1,8 @@
-import chalk from "npm:chalk";
-import { pascalCase } from "npm:string-ts";
-import { getFileConfig } from "../../file/config.ts";
-import { generateZodSchema } from "./generate-schemas.ts";
-import { generateTypes } from "./generate-types.ts";
+import chalk from 'npm:chalk';
+import { pascalCase } from 'npm:string-ts';
+import { getFileConfig } from '../../file/config.ts';
+import { generateZodSchema } from './generate-schemas.ts';
+import { generateTypes } from './generate-types.ts';
 
 interface BatchGenerateOptions {
   inputFiles: string[];

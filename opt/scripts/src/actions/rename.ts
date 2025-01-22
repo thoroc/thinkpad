@@ -1,5 +1,5 @@
-import chalk from "npm:chalk";
-import { ExcelFileExtension } from "../types.ts";
+import chalk from 'npm:chalk';
+import { ExcelFileExtension } from '../types.ts';
 
 interface RenameFileOptions {
   file: Deno.DirEntry;
@@ -10,10 +10,10 @@ export const renameFile = async (
   { file, fileExtension }: RenameFileOptions,
 ): Promise<string | void> => {
   // only get the last part of the file name as extension
-  const extension = file.name.split(".").findLast(() => true);
+  const extension = file.name.split('.').findLast(() => true);
 
   if (file.isFile && extension === fileExtension) {
-    const parts = file.name.split(" ");
+    const parts = file.name.split(' ');
 
     console.log(`Renaming ${chalk.green(file.name)}`);
 

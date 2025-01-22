@@ -1,6 +1,6 @@
-import { getFileConfig } from "../../file/config.ts";
-import { ExportOptions } from "../../types.ts";
-import { getExportStatement } from "./get-statement.ts";
+import { getFileConfig } from '../../file/config.ts';
+import { ExportOptions } from '../../types.ts';
+import { getExportStatement } from './get-statement.ts';
 
 interface WriteExportsOptions {
   outputDir: string;
@@ -36,7 +36,7 @@ export const writeExports = (
     return getExportStatement({ config, exportType: file.exportType });
   });
 
-  console.debug(`<<\n${content.join("\n")}\n>>`);
+  console.debug(`<<\n${content.join('\n')}\n>>`);
 
   console.log(`\n\n> Writing ${content.length} exports to ${outputDir}/mod.ts`);
 
@@ -45,6 +45,6 @@ export const writeExports = (
 
   Deno.writeFileSync(
     outputFilepath,
-    encoder.encode(content.join("\n")),
+    encoder.encode(content.join('\n')),
   );
 };
