@@ -3,15 +3,11 @@ import { exists } from 'jsr:@std/fs';
 import { resolve } from 'jsr:@std/path';
 import chalk from 'npm:chalk';
 import { getFileConfig } from '../../utils/mod.ts';
-
-interface ExtractFileOptions {
-  outputDir?: string;
-  fileExtension?: string;
-}
+import { ExtractOptions } from './types.ts';
 
 export const extractFile = async (
   filePath: string,
-  options: ExtractFileOptions,
+  options: ExtractOptions,
 ): Promise<void> => {
   const fileExtension = options.fileExtension || 'json';
 
@@ -24,6 +20,10 @@ export const extractFile = async (
 
     if (!fileExists) {
       throw new Error(`File not found: ${filePath}`);
+    }
+
+    if (!filePath.endsWith('.xls') && !filePath.endsWith('.xlsx')) {
+      throw new Error(`File is not an Excel file: ${filePath}`);
     }
 
     const file = await Deno.readFile(filePath);
