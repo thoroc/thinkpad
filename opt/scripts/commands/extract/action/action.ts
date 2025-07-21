@@ -2,14 +2,10 @@ import chalk from 'npm:chalk';
 import figlet from 'npm:figlet';
 import { extractDirectory } from './directory.ts';
 import { extractFile } from './file.ts';
-
-interface ExtractActionOptions {
-  outputDir?: string;
-  fileExtension?: string;
-}
+import { ExtractOptions } from './types.ts';
 
 export const extractAction = async (
-  options: ExtractActionOptions,
+  options: ExtractOptions,
   source: string,
 ) => {
   console.debug(
