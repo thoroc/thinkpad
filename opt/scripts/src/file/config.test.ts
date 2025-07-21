@@ -66,7 +66,7 @@ describe('getFileConfig', () => {
     },
   ];
 
-  testCases.forEach(({ input, expected }) => {
+  for (const { input, expected } of testCases) {
     it(`should return the file config for ${input}`, () => {
       // Act
       const actual = getFileConfig(input);
@@ -74,5 +74,5 @@ describe('getFileConfig', () => {
       // Assert
       assertEquals(actual, expected);
     });
-  });
+  }
 });
