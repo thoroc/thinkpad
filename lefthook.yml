@@ -1,14 +1,43 @@
+assert_lefthook_installed: true
+
 pre-commit:
   commands:
-    format:
-      glob: '*.{ts,js,json,md,yml}'
-      run: 'deno fmt {staged_files} && git add {staged_files}'
-    lint:
-      glob: '*.{ts,js,json,md,yml}'
-      run: 'deno lint {staged_files} && git add {staged_files}'
+    '0. Health check':
+      glob: '*.{ts,json,md,yml}'
+      interactive: true
+      run: |
+        deno --version
+        echo "STAGED FILES:" {staged_files}
+      stage_fixed: false
+
+    '1. Lint code':
+      glob: '*.{ts}'
+      interactive: true
+      run: deno lint {staged_files} --fix
+      stage_fixed: true
+
+    '2. regenerate documentation':
+      glob: '**/*.{ts,md},!opt'
+      interactive: true
+      run: deno run --allow-read --allow-env --allow-write ./opt/doc-gen.ts -A
+      stage_fixed: true
+
+    '3. Format code and documentation':
+      glob: '*.{ts,json,md,yml}'
+      interactive: true
+      run: deno fmt {staged_files}
+      stage_fixed: true
+
+    '4. lint docs':
+      glob: '**/*.md'
+      interactive: true
+      run: deno run --allow-read --allow-sys --allow-env --allow-write npm:markdownlint-cli2 --fix {staged_files}
+      stage_fixed: true
 
 pre-push:
   commands:
-    test:
-      glob: '*.{ts,js,json,md,yml}'
-      run: 'deno test {push_files}'
+    '1. Run tests':
+      glob: '*.{ts,json,md,yml}'
+      interactive: true
+      run: deno test
+      stage_fixed: false

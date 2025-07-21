@@ -9,7 +9,7 @@
   },
   "nodeModulesDir": "auto",
   "imports": {
-    "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
+    "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.8",
     "@hono/hono": "jsr:@hono/hono@^4.6.17",
     "@hono/zod-validator": "npm:@hono/zod-validator@^0.4.2",
     "@psych/sheet": "jsr:@psych/sheet@^1.0.6",
@@ -21,6 +21,7 @@
     "quicktype": "npm:quicktype@^23.0.170",
     "quicktype-core": "npm:quicktype-core@^23.0.170",
     "string-ts": "npm:string-ts@^2.2.0",
+    "transform_json_keys": "npm:transform_json_keys@^1.0.8",
     "ts-to-zod": "npm:ts-to-zod@^3.15.0",
     "zod": "npm:zod@^3.24.1"
   },
