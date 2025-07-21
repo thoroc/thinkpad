@@ -1,5 +1,6 @@
 import { Command } from 'jsr:@cliffy/command@1.0.0-rc.7';
-import { promptinatorCommand } from '../../cli/mod.ts';
+import { existsSync } from 'jsr:@std/fs';
+import { dataImporterCommand } from '../../data-importer/cli.ts';
 import { MarkdownService } from '../services/markdown/service.ts';
 import { ProjectService } from '../services/project/service.ts';
 import { generateCommandUsage } from './command-usage/generate.ts';
@@ -20,6 +21,24 @@ export const docGenActions = (options: DocGenActionOptions) => {
 
   verbose && console.log('Verbose mode enabled');
   verbose && force && console.log('Force mode enabled');
+
+  const readmeFilePath = 'README.md';
+  verbose && console.log(`Using README file: ${readmeFilePath}`);
+
+  if (
+    !existsSync(readmeFilePath) || !Deno.statSync(readmeFilePath).isFile
+  ) {
+    console.error(
+      `Error: The file ${readmeFilePath} does not exist or is not a file.`,
+    );
+    Deno.writeFileSync(
+      readmeFilePath,
+      new TextEncoder().encode(
+        '# Documentation\n\nThis is the documentation file.',
+      ),
+    );
+    console.log(`Created a new README file at ${readmeFilePath}`);
+  }
 
   const readmeService = MarkdownService.fromFile('README.md');
 
@@ -42,7 +61,7 @@ export const docGenActions = (options: DocGenActionOptions) => {
     verbose && console.log('Generate command usage');
     generateCommandUsage(
       readmeService,
-      promptinatorCommand as unknown as Command,
+      dataImporterCommand as unknown as Command,
     );
   }
 

@@ -1,4 +1,4 @@
-import { colors } from 'jsr:@cliffy/ansi@1.0.0-rc.7/colors';
+import { colors } from 'jsr:@cliffy/ansi@1.0.0-rc.8/colors';
 import { assertEquals } from 'jsr:@std/assert';
 import { describe, it } from 'jsr:@std/testing/bdd';
 import { MarkdownService } from './service.ts';
