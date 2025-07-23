@@ -6,6 +6,18 @@ interface RenameFileOptions {
   fileExtension: ExcelFileExtension;
 }
 
+/**
+ * Renames a file in the `data/imports/` directory by removing spaces from its name,
+ * keeping only the first part before any spaces, and ensuring the file has the specified extension.
+ *
+ * If the file is already in the correct format (no spaces in the name), the function skips renaming.
+ * If the file is not a file or does not have the specified extension, the function also skips renaming.
+ *
+ * @param options - An object containing the file to rename and the required file extension.
+ * @param options.file - The file object to be renamed. Must have `name` and `isFile` properties.
+ * @param options.fileExtension - The required file extension (without the dot).
+ * @returns The new file name if renamed, the original file name if skipped due to correct format, or void if not applicable.
+ */
 export const renameFile = async (
   { file, fileExtension }: RenameFileOptions,
 ): Promise<string | void> => {

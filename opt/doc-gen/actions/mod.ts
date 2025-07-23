@@ -1,4 +1,4 @@
-import { Command } from 'jsr:@cliffy/command@1.0.0-rc.7';
+import { Command } from 'jsr:@cliffy/command@1.0.0-rc.8';
 import { existsSync } from 'jsr:@std/fs';
 import { dataImporterCommand } from '../../data-importer/cli.ts';
 import { MarkdownService } from '../services/markdown/service.ts';

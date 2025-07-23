@@ -4,7 +4,7 @@ import figlet from 'npm:figlet';
 import denoConfig from '../../deno.json' with { type: 'json' };
 import { extractCommand, loadCommand, transformCommand } from './commands/mod.ts';
 
-const appName = 'Data Importer';
+const appName = 'DataImporter';
 
 if (import.meta.main) {
   const version = (denoConfig as { version?: string }).version || '0.0.0';

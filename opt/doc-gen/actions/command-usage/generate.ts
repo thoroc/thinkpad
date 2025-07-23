@@ -1,4 +1,4 @@
-import { Command } from 'jsr:@cliffy/command@1.0.0-rc.7';
+import { Command } from 'jsr:@cliffy/command@1.0.0-rc.8';
 import { MarkdownService } from '../../services/markdown/service.ts';
 
 /**

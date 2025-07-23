@@ -1,4 +1,4 @@
-import { Command } from 'jsr:@cliffy/command@^1.0.0-rc.7';
+import { Command } from 'jsr:@cliffy/command@^1.0.0-rc.8';
 import { toString } from '../utils/mod.ts';
 import { transformAction } from './action/action.ts';
 

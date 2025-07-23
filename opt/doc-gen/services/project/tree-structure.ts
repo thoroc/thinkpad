@@ -8,6 +8,26 @@ interface TreeStructureOptions {
   excludes?: string[]; // Exclude patterns
 }
 
+/**
+ * Represents a utility for building, sorting, and rendering a directory tree structure.
+ *
+ * The `TreeStructure` class provides methods to recursively walk a file system directory,
+ * construct a tree representation of its structure, exclude specified files or directories,
+ * and render the tree as a formatted string.
+ *
+ * @remarks
+ * - Excludes can be specified to filter out files or directories from the tree.
+ * - The tree is built lazily and cached for subsequent accesses.
+ * - Supports verbose logging for debugging purposes.
+ *
+ * @example
+ * ```typescript
+ * const tree = new TreeStructure({ rootPath: '/my/project', excludes: ['node_modules'], verbose: true });
+ * console.log(tree.renderTree());
+ * ```
+ *
+ * @public
+ */
 export class TreeStructure {
   private _tree: TreeNode;
   private _excludes: string[];
