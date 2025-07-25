@@ -1,7 +1,9 @@
+import { toBoolean } from './boolean.ts';
 import { Display, toDisplay } from './display.ts';
 import { Memory, toMemory } from './memory.ts';
 import { toMultiTouch } from './multi-touch.ts';
 import { Processor, toProcessor } from './processor.ts';
+import { Storage, toStorage } from './storage.ts';
 
 interface ThinkpadData {
   Model?: string;
@@ -109,12 +111,7 @@ export class ThinkpadTransformer {
   }
 
   public get topSeller(): boolean {
-    if (
-      this._topSeller.toUpperCase() === 'YES' || this._topSeller === 'TopSeller'
-    ) {
-      return true;
-    }
-    return false;
+    return this._topSeller === 'TopSeller';
   }
 
   public get processor(): Processor {
@@ -122,12 +119,7 @@ export class ThinkpadTransformer {
   }
 
   public get vPro(): boolean {
-    if (
-      this._vPro.toUpperCase() === 'YES' || this._vPro === 'vPro'
-    ) {
-      return true;
-    }
-    return false;
+    return this._vPro === 'vPro';
   }
 
   public get graphics(): string {
@@ -146,8 +138,8 @@ export class ThinkpadTransformer {
     return toMultiTouch(this._multiTouch);
   }
 
-  public get storage(): string {
-    return this._storage;
+  public get storage(): Storage {
+    return toStorage(this._storage);
   }
 
   public get optical(): string {
@@ -174,16 +166,16 @@ export class ThinkpadTransformer {
     return this._camera;
   }
 
-  public get backlitKeyboard(): string {
-    return this._backlitKeyboard;
+  public get backlitKeyboard(): boolean {
+    return this._backlitKeyboard === 'Backlit Keyboard';
   }
 
-  public get fingerprintReader(): string {
-    return this._fingerprintReader;
+  public get fingerprintReader(): boolean {
+    return this._fingerprintReader === 'Fingerprint Reader';
   }
 
-  public get nfc(): string {
-    return this._nfc;
+  public get nfc(): boolean {
+    return toBoolean(this._nfc);
   }
 
   public get batteryCells(): string {
