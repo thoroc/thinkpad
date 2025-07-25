@@ -1,4 +1,5 @@
 import { BatteryCells, toBatteryCells } from './battery-cells.ts';
+import { Bluetooth, toBluetooth } from './bluetooth.ts';
 import { toBoolean } from './boolean.ts';
 import { Display, toDisplay } from './display.ts';
 import { Memory, toMemory } from './memory.ts';
@@ -7,7 +8,7 @@ import { Processor, toProcessor } from './processor.ts';
 import { Storage, toStorage } from './storage.ts';
 import { toWLANDevice, WLANDevice } from './wlan-device.ts';
 
-interface ThinkpadData {
+export interface ThinkpadData {
   Model?: string;
   Product?: string;
   Region?: string;
@@ -148,12 +149,12 @@ export class ThinkpadTransformer {
     return this._optical;
   }
 
-  public get wlanBluetooth(): string {
-    return this._wlanBluetooth;
+  public get wlan(): WLANDevice {
+    return toWLANDevice(this._wlanBluetooth);
   }
 
-  public get bluetooth(): boolean {
-    return this._wlanBluetooth.includes('Bluetooth');
+  public get bluetooth(): Bluetooth {
+    return toBluetooth(this._wlanBluetooth);
   }
 
   public get wwanM2Ssd(): string {
