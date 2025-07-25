@@ -1,9 +1,14 @@
-import { exportSheet, importSheet } from 'jsr:@psych/sheet';
-import { exists } from 'jsr:@std/fs/exists';
-import { resolve } from 'jsr:@std/path';
-import chalk from 'npm:chalk';
-import { getFileConfig } from '../file/config.ts';
-import { ExportFileExtension } from '../types.ts';
+import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
+import {
+  exportSheet,
+  ExportTypes,
+  importSheet,
+  ImportTypes,
+} from "jsr:@psych/sheet";
+import { exists } from "jsr:@std/fs/exists";
+import { resolve } from "jsr:@std/path";
+import { getFileConfig } from "../file/config.ts";
+import { ExportFileExtension } from "../types.ts";
 
 interface ConvertXlsOptions {
   filepath: string;
@@ -16,8 +21,8 @@ export const convertXls = async (
   { filepath, outputDir, exports, overwrite }: ConvertXlsOptions,
 ) => {
   console.log(
-    `Converting ${chalk.green(filepath)} to ${
-      chalk.yellow(exports.fileExtension.toLocaleUpperCase())
+    `Converting ${colors.green(filepath)} to ${
+      colors.yellow(exports.fileExtension.toLocaleUpperCase())
     }`,
   );
 
@@ -27,18 +32,20 @@ export const convertXls = async (
 
   if (!fileExists || overwrite) {
     const file = await Deno.readFile(filepath);
-    const data = await importSheet(file, 'xls');
+    const data = await importSheet(file.buffer, ImportTypes.XLS);
 
     await Deno.writeFile(
       resolve(outputDir, `${filename}.${exports.fileExtension}`),
-      exportSheet(data, exports.fileExtension),
+      exportSheet(data, exports.fileExtension as ExportTypes),
     );
     console.log(
-      `Converted ${chalk.green(filepath)} to ${chalk.green(outputFilepath)}`,
+      `Converted ${colors.green(filepath)} to ${colors.green(outputFilepath)}`,
     );
   } else {
     console.log(
-      `Skipping ${chalk.green(filepath)}: File existing and will not be overwriten`,
+      `Skipping ${
+        colors.green(filepath)
+      }: File existing and will not be overwriten`,
     );
   }
 

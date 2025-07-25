@@ -1,18 +1,18 @@
-import { exportSheet, ExportTypes, importSheet } from 'jsr:@psych/sheet';
-import { exists } from 'jsr:@std/fs';
-import { resolve } from 'jsr:@std/path';
-import chalk from 'npm:chalk';
-import { getFileConfig } from '../../utils/mod.ts';
-import { ExtractOptions } from './types.ts';
+import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
+import { exportSheet, ExportTypes, importSheet } from "jsr:@psych/sheet";
+import { exists } from "jsr:@std/fs";
+import { resolve } from "jsr:@std/path";
+import { getFileConfig } from "../../utils/mod.ts";
+import { ExtractOptions } from "./types.ts";
 
 export const extractFile = async (
   filePath: string,
   options: ExtractOptions,
 ): Promise<void> => {
-  const fileExtension = options.fileExtension || 'json';
+  const fileExtension = options.fileExtension || "json";
 
   console.log(
-    `Converting ${chalk.green(filePath)} to ${chalk.yellow(fileExtension)}`,
+    `Converting ${colors.green(filePath)} to ${colors.yellow(fileExtension)}`,
   );
 
   try {
@@ -22,7 +22,7 @@ export const extractFile = async (
       throw new Error(`File not found: ${filePath}`);
     }
 
-    if (!filePath.endsWith('.xls') && !filePath.endsWith('.xlsx')) {
+    if (!filePath.endsWith(".xls") && !filePath.endsWith(".xlsx")) {
       throw new Error(`File is not an Excel file: ${filePath}`);
     }
 
@@ -36,7 +36,7 @@ export const extractFile = async (
       Deno.mkdir(outputDir, { recursive: true });
     }
 
-    const data = await importSheet(file, 'xls');
+    const data = await importSheet(file, "xls");
     const outputFilepath = resolve(
       outputDir,
       `${fileConfig.name}.${fileExtension}`,
@@ -44,13 +44,13 @@ export const extractFile = async (
 
     await Deno.writeFile(
       outputFilepath,
-      exportSheet(data, 'json' as ExportTypes),
+      exportSheet(data, "json" as ExportTypes),
     );
 
     console.log(
-      `Converted ${chalk.green(filePath)} to ${chalk.green(outputFilepath)}`,
+      `Converted ${colors.green(filePath)} to ${colors.green(outputFilepath)}`,
     );
   } catch (error) {
-    console.error(chalk.red(error));
+    console.error(colors.red(error));
   }
 };

@@ -1,6 +1,6 @@
-import chalk from 'npm:chalk';
-import { pascalCase } from 'npm:string-ts';
-import type { JsonStructure } from 'npm:transform_json_keys';
+import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
+import { pascalCase } from "npm:string-ts";
+import type { JsonStructure } from "npm:transform_json_keys";
 
 export type SplitSchema = Record<
   string,
@@ -9,14 +9,14 @@ export type SplitSchema = Record<
 export type SplitJsonStructure = Record<string, Record<string, string>>;
 
 const _example = {
-  'Memory (soldered + DIMM)': { 'Memory': ['soldered', 'DIMM'] },
-  'WLAN & Bluetooth': { 'WLANBluetooth': ['WLAN', 'Bluetooth'] },
-  'WWAN / M.2 SSD': { 'WWANM2Ssd': ['WWAN', 'M.2 SSD'] },
-  'Smart Card Reader / M.2 SSD': {
-    'SmartCardReaderM2Ssd': ['Smart Card Reader', 'M.2 SSD'],
+  "Memory (soldered + DIMM)": { "Memory": ["soldered", "DIMM"] },
+  "WLAN & Bluetooth": { "WLANBluetooth": ["WLAN", "Bluetooth"] },
+  "WWAN / M.2 SSD": { "WWANM2Ssd": ["WWAN", "M.2 SSD"] },
+  "Smart Card Reader / M.2 SSD": {
+    "SmartCardReaderM2Ssd": ["Smart Card Reader", "M.2 SSD"],
   },
-  'Battery Cells (internal + external)': {
-    'BatteryCells': ['internal', 'external'],
+  "Battery Cells (internal + external)": {
+    "BatteryCells": ["internal", "external"],
   },
 };
 
@@ -36,7 +36,7 @@ export const splitJsonKeys = (
 
     const originalValue: string = data[key as keyof JsonStructure];
     // console.log("original value:", originalValue);
-    const splitValues = originalValue.split('+');
+    const splitValues = originalValue.split("+");
     // console.log("split values:", splitValues);
 
     if (schema[key] instanceof Array) {
@@ -74,17 +74,17 @@ export const keysToBoolean = (data: JsonStructure) => {
     const value = data[key as keyof JsonStructure];
 
     if (
-      value === 'Yes' ||
+      value === "Yes" ||
       pascalCase(key) === pascalCase(value)
     ) {
       console.log(
-        chalk.yellow(`Setting ${key} to true where value is ${value}`),
+        colors.yellow(`Setting ${key} to true where value is ${value}`),
       );
 
       (data as Record<string, boolean>)[key] = true;
-    } else if (['No', 'None'].includes(value)) {
+    } else if (["No", "None"].includes(value)) {
       console.log(
-        chalk.yellow(`Setting ${key} to false where value is ${value}`),
+        colors.yellow(`Setting ${key} to false where value is ${value}`),
       );
 
       (data as Record<string, boolean>)[key] = false;

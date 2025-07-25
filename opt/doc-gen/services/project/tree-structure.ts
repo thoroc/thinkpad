@@ -1,11 +1,12 @@
-import { colors } from 'jsr:@cliffy/ansi@1.0.0-rc.7/colors';
-import { walkSync } from 'jsr:@std/fs/walk';
-import { defaultExcludes, treeChars, TreeNode } from './types.ts';
+import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.7/colors";
+import { walkSync } from "jsr:@std/fs/walk";
+import { defaultExcludes, treeChars, TreeNode } from "./types.ts";
 
 interface TreeStructureOptions {
   rootPath: string;
   verbose?: boolean;
   excludes?: string[]; // Exclude patterns
+  ignoreHidden?: boolean; // Whether to ignore hidden files and directories
 }
 
 /**
@@ -55,21 +56,23 @@ export class TreeStructure {
 
   private _buildTree = (): TreeNode => {
     const tree: TreeNode = {};
-    const skip: RegExp[] = this._excludes.map((pattern) => new RegExp(`/${pattern}/`));
+    const skip: RegExp[] = this._excludes.map((pattern) =>
+      new RegExp(`/${pattern}/`)
+    );
 
     this._verbose && console.log(
       `Building project tree for ${this._rootPath} with excludes: ${
-        this._excludes.map((exclude) => colors.yellow(exclude)).join(', ')
+        this._excludes.map((exclude) => colors.yellow(exclude)).join(", ")
       }`,
     );
 
     // Walk the directory tree
     for (const entry of walkSync(this._rootPath, { skip })) {
-      const relativePath = entry.path.replace(this._rootPath, '').replace(
+      const relativePath = entry.path.replace(this._rootPath, "").replace(
         /^\//,
-        '',
+        "",
       ); // Remove rootPath and leading slash
-      const parts = relativePath.split('/'); // Split into directory and file parts
+      const parts = relativePath.split("/"); // Split into directory and file parts
 
       let currentNode = tree;
 
@@ -83,11 +86,11 @@ export class TreeStructure {
 
           // If it's the last part, determine if it's a file, directory, or symlink
           if (entry.isFile) {
-            currentNode[part] = 'file';
+            currentNode[part] = "file";
           } else if (entry.isDirectory) {
             currentNode[part] = {};
           } else if (entry.isSymlink) {
-            currentNode[part] = 'symlink';
+            currentNode[part] = "symlink";
           }
         } else {
           // Otherwise, it's a directory
@@ -104,14 +107,14 @@ export class TreeStructure {
 
   private _sortTree = (node: TreeNode): TreeNode => {
     const sortedKeys = Object.keys(node).sort((a, b) => {
-      if (node[a] === 'file' && node[b] !== 'file') return 1;
-      if (node[a] !== 'file' && node[b] === 'file') return -1;
+      if (node[a] === "file" && node[b] !== "file") return 1;
+      if (node[a] !== "file" && node[b] === "file") return -1;
       return a.localeCompare(b);
     });
 
     const sortedNode: TreeNode = {};
     for (const key of sortedKeys) {
-      if (typeof node[key] === 'object') {
+      if (typeof node[key] === "object") {
         sortedNode[key] = this._sortTree(node[key] as TreeNode);
       } else {
         sortedNode[key] = node[key];
@@ -127,21 +130,21 @@ export class TreeStructure {
    * @param {string} prefix - The prefix to use for each line
    * @returns The rendered tree as a string
    */
-  public renderTree = (tree?: TreeNode, prefix = ''): string => {
+  public renderTree = (tree?: TreeNode, prefix = ""): string => {
     const entries = Object.entries(tree ?? this.tree);
     const totalEntries = entries.length;
 
     return entries
       .map(([key, value], index) => {
         if (!key) {
-          return '';
+          return "";
         }
 
         const isLast = index === totalEntries - 1;
         const connector = isLast ? treeChars.LastBranch : treeChars.Branch;
         const childPrefix = isLast ? treeChars.Space : treeChars.Pipe;
 
-        if (value === 'file') {
+        if (value === "file") {
           return `${prefix}${connector}${key}`;
         } else {
           return `${prefix}${connector}${key}\n${
@@ -152,6 +155,6 @@ export class TreeStructure {
           }`;
         }
       }).filter(Boolean) // Filter out empty strings
-      .join('\n');
+      .join("\n");
   };
 }

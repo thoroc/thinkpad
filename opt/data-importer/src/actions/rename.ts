@@ -1,5 +1,5 @@
-import chalk from 'npm:chalk';
-import { ExcelFileExtension } from '../types.ts';
+import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
+import { ExcelFileExtension } from "../types.ts";
 
 interface RenameFileOptions {
   file: Deno.DirEntry;
@@ -22,16 +22,18 @@ export const renameFile = async (
   { file, fileExtension }: RenameFileOptions,
 ): Promise<string | void> => {
   // only get the last part of the file name as extension
-  const extension = file.name.split('.').findLast(() => true);
+  const extension = file.name.split(".").findLast(() => true);
 
   if (file.isFile && extension === fileExtension) {
-    const parts = file.name.split(' ');
+    const parts = file.name.split(" ");
 
-    console.log(`Renaming ${chalk.green(file.name)}`);
+    console.log(`Renaming ${colors.green(file.name)}`);
 
     if (parts.length === 1) {
       console.log(
-        `Skipping ${chalk.cyan(file.name)}: File already in the correct format`,
+        `Skipping ${
+          colors.cyan(file.name)
+        }: File already in the correct format`,
       );
       return file.name;
     }
@@ -49,8 +51,8 @@ export const renameFile = async (
   }
 
   console.log(
-    `Skipping ${chalk.cyan(file.name)}: either not a file or not a ${
-      chalk.cyan(fileExtension)
+    `Skipping ${colors.cyan(file.name)}: either not a file or not a ${
+      colors.cyan(fileExtension)
     } file`,
   );
 };

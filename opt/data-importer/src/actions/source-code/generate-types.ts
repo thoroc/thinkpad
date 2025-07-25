@@ -1,6 +1,10 @@
-import chalk from 'npm:chalk';
-import { InputData, jsonInputForTargetLanguage, quicktype } from 'npm:quicktype-core';
-import { GenerateOutput } from './types.ts';
+import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
+import {
+  InputData,
+  jsonInputForTargetLanguage,
+  quicktype,
+} from "npm:quicktype-core";
+import { GenerateOutput } from "./types.ts";
 
 interface GenerateTypesOptions {
   json: string;
@@ -34,7 +38,7 @@ interface GenerateTypesOptions {
 export const generateTypes = async (
   { json, typeName, directory }: GenerateTypesOptions,
 ): Promise<GenerateOutput> => {
-  const jsonInput = jsonInputForTargetLanguage('typescript');
+  const jsonInput = jsonInputForTargetLanguage("typescript");
   const samples = [JSON.stringify(json)];
 
   await jsonInput.addSource({
@@ -47,17 +51,19 @@ export const generateTypes = async (
 
   const { lines } = await quicktype({
     inputData,
-    lang: 'typescript',
+    lang: "typescript",
   });
 
   const encoder = new TextEncoder();
   const filePath = `${directory}/${typeName}.ts`;
-  const sourceCode = lines.join('\n');
+  const sourceCode = lines.join("\n");
 
   await Deno.writeFile(filePath, encoder.encode(sourceCode));
 
   console.log(
-    `Generated type for ${chalk.yellow(typeName)} to ${chalk.green(filePath)}`,
+    `Generated type for ${colors.yellow(typeName)} to ${
+      colors.green(filePath)
+    }`,
   );
 
   return { sourceCode, filePath };

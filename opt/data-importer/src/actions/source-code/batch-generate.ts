@@ -1,8 +1,8 @@
-import chalk from 'npm:chalk';
-import { pascalCase } from 'npm:string-ts';
-import { getFileConfig } from '../../file/config.ts';
-import { generateZodSchema } from './generate-schemas.ts';
-import { generateTypes } from './generate-types.ts';
+import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
+import { pascalCase } from "npm:string-ts";
+import { getFileConfig } from "../../file/config.ts";
+import { generateZodSchema } from "./generate-schemas.ts";
+import { generateTypes } from "./generate-types.ts";
 
 interface BatchGenerateOptions {
   inputFiles: string[];
@@ -26,7 +26,7 @@ export const batchGenerate = async (
     const typeName = pascalCase(config.name);
 
     console.log(
-      `\n\n> Generating types/schema for ${chalk.yellow(typeName)}\n`,
+      `\n\n> Generating types/schema for ${colors.yellow(typeName)}\n`,
     );
 
     const generatedCode = await generateTypes({
@@ -46,7 +46,7 @@ export const batchGenerate = async (
     outputFilepaths.push(generatedZodCode.filePath);
 
     console.log(
-      `\n> Done Generating types/schema for ${chalk.yellow(typeName)}`,
+      `\n> Done Generating types/schema for ${colors.yellow(typeName)}`,
     );
   }
 

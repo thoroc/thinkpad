@@ -1,4 +1,4 @@
-interface Processor {
+export interface Processor {
   name: string;
   cores: number;
   hyperThreading: boolean;
@@ -9,7 +9,20 @@ interface Processor {
   cache: string;
 }
 
-export const transformToProcessor = (source: string): Processor => {
+/**
+ * Transforms a processor description string into a `Processor` object.
+ *
+ * The input string should follow the format:
+ * ```
+ * <name> (<cores>C / <threads>T, <min_speed> / <max_speed>..., <cache>MB
+ * ```
+ * Example: `"Intel i7 (4C/8T, 2.6/4.5GHz, 8192MB"`
+ *
+ * @param source - The processor description string to parse.
+ * @returns A `Processor` object with extracted properties: name, cores, hyperThreading, speed, and cache.
+ * @throws {Error} If the input string does not match the expected format.
+ */
+export const toProcessor = (source: string): Processor => {
   const pattern = new RegExp(
     /(.*)\s\((\d)C\s?\/?\s?(\d)?T?,\s?(\d\.\d)\s?\/\s?(\d\.\d).*,\s?(\d+)MB/,
   );
