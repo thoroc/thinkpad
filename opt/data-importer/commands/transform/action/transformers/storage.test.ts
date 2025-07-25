@@ -54,7 +54,7 @@ describe('toStorage', () => {
     assertEquals(result.size.unit, 'GB');
   });
 
-  it('should handle a hybrid storage string', () => {
+  it('should handle a hybrid storage string (1)', () => {
     // Arrange
     const input = '500GB HDD + 8GB SSD';
 
@@ -66,6 +66,22 @@ describe('toStorage', () => {
     assertEquals(result.size.value, 500);
     assertEquals(result.size.unit, 'GB');
     assertEquals(result.hybrid, true);
+    assertEquals(result.cache?.value, 8);
+    assertEquals(result.cache?.unit, 'GB');
+  });
+
+  it('should handle a hybrid storage string (2)', () => {
+    // Arrange
+    const input = '500GB (8GB) SSHD 5400rpm';
+
+    // Act
+    const result = toStorage(input);
+
+    // Assert
+    assertEquals(result.type, { name: 'SSHD' });
+    assertEquals(result.size.value, 500);
+    assertEquals(result.size.unit, 'GB');
+    assertEquals(result.speed, 5400);
     assertEquals(result.cache?.value, 8);
     assertEquals(result.cache?.unit, 'GB');
   });
