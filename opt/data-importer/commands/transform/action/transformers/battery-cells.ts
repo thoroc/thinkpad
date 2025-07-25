@@ -8,6 +8,19 @@ export interface BatteryCells {
   external?: BatteryCell;
 }
 
+/**
+ * Parses a battery cell description string and returns a `BatteryCells` object
+ * representing the internal and/or external battery cell configurations.
+ *
+ * The input string is expected to describe battery cells in the following formats:
+ * - "3-cell (45Wh)" for internal batteries
+ * - "+ 6-cell (72Wh)" for external batteries
+ *
+ * Both internal and external batteries may be present in the string.
+ *
+ * @param batteryCellsString - The string describing the battery cells, e.g., "3-cell (45Wh) + 6-cell (72Wh)".
+ * @returns A `BatteryCells` object with `internal` and/or `external` properties populated if present in the input string.
+ */
 export const toBatteryCells = (
   batteryCellsString: string,
 ): BatteryCells => {

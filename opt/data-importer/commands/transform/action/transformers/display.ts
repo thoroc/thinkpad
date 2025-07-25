@@ -17,6 +17,19 @@ export interface Display {
   antiGlare?: boolean;
 }
 
+/**
+ * Parses a display specification string and extracts structured display information.
+ *
+ * The function supports parsing display size, resolution, panel type, brightness, and anti-glare features
+ * from strings such as:
+ * - "14\" HD+ (1600x900)"
+ * - "14\" FHD (1920x1080) IPS"
+ * - "14\" FHD (1920x1080) WVA 250nits Anti-glare"
+ * - "12.5\" FHD (1920x1080) WVA 300nits Anti-glare"
+ *
+ * @param displayString - The display specification string to parse.
+ * @returns A `Display` object containing the extracted properties.
+ */
 export const toDisplay = (displayString: string): Display => {
   const display = {} as Display;
 

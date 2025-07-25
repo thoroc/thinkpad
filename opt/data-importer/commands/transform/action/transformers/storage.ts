@@ -6,6 +6,20 @@ export interface Storage {
   cache?: { value: number; unit?: string };
 }
 
+/**
+ * Parses a storage description string and returns a `Storage` object with extracted properties.
+ *
+ * The function supports various storage string formats, including:
+ * - Cache size indicated by "+8GB", "+ 8GB", "/8GB", "/ 8GB", or "(8GB)"
+ * - Storage size and unit (e.g., "512GB", "1TB")
+ * - Storage type (e.g., "SSD", "HDD", "SSHD", "Hybrid")
+ * - Connector type for SSDs (e.g., "M.2", "SATA", "PCIe")
+ * - Additional SSD type details (e.g., "Opal", "NVMe", "SATA")
+ * - Rotational speed for HDDs (e.g., "7200rpm")
+ *
+ * @param storageString - The string describing the storage configuration.
+ * @returns A `Storage` object with parsed properties such as size, cache, type, connector, and speed.
+ */
 export const toStorage = (storageString: string): Storage => {
   const storage = {} as Storage;
 

@@ -5,6 +5,7 @@ import { Memory, toMemory } from './memory.ts';
 import { toMultiTouch } from './multi-touch.ts';
 import { Processor, toProcessor } from './processor.ts';
 import { Storage, toStorage } from './storage.ts';
+import { toWLANDevice, WLANDevice } from './wlan-device.ts';
 
 interface ThinkpadData {
   Model?: string;
@@ -163,11 +164,10 @@ export class ThinkpadTransformer {
     return this._simCard;
   }
 
-  public get expansionSlots(): Array<string> {
-    return this._wwanM2Ssd
-      .split(',')
-      .map((slot) => slot.trim())
-      .filter((slot) => slot.length > 0);
+  public get expansionSlots(): Record<string, WLANDevice> {
+    return {
+      wlan: toWLANDevice(this._wlanBluetooth),
+    };
   }
 
   public get smartCardReaderM2Ssd(): string {
