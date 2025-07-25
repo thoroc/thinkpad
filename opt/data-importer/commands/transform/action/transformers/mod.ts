@@ -2,6 +2,7 @@ import { BatteryCells, toBatteryCells } from './battery-cells.ts';
 import { Bluetooth, toBluetooth } from './bluetooth.ts';
 import { toBoolean } from './boolean.ts';
 import { Display, toDisplay } from './display.ts';
+import { Graphics, toGraphics } from './graphics.ts';
 import { Memory, toMemory } from './memory.ts';
 import { toMultiTouch } from './multi-touch.ts';
 import { Processor, toProcessor } from './processor.ts';
@@ -125,8 +126,8 @@ export class ThinkpadTransformer {
     return this._vPro === 'vPro';
   }
 
-  public get graphics(): string {
-    return this._graphics;
+  public get graphics(): Graphics {
+    return toGraphics(this._graphics);
   }
 
   public get memory(): Memory {
