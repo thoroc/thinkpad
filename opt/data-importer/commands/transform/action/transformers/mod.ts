@@ -1,3 +1,4 @@
+import { BatteryCells, toBatteryCells } from './battery-cells.ts';
 import { toBoolean } from './boolean.ts';
 import { Display, toDisplay } from './display.ts';
 import { Memory, toMemory } from './memory.ts';
@@ -150,12 +151,23 @@ export class ThinkpadTransformer {
     return this._wlanBluetooth;
   }
 
+  public get bluetooth(): boolean {
+    return this._wlanBluetooth.includes('Bluetooth');
+  }
+
   public get wwanM2Ssd(): string {
     return this._wwanM2Ssd;
   }
 
   public get simCard(): string {
     return this._simCard;
+  }
+
+  public get expansionSlots(): Array<string> {
+    return this._wwanM2Ssd
+      .split(',')
+      .map((slot) => slot.trim())
+      .filter((slot) => slot.length > 0);
   }
 
   public get smartCardReaderM2Ssd(): string {
@@ -178,8 +190,8 @@ export class ThinkpadTransformer {
     return toBoolean(this._nfc);
   }
 
-  public get batteryCells(): string {
-    return this._batteryCells;
+  public get batteryCells(): BatteryCells {
+    return toBatteryCells(this._batteryCells);
   }
 
   public get powerAdapter(): string {
