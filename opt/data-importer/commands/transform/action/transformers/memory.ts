@@ -1,6 +1,6 @@
 interface MemoryUnit {
   size: number;
-  unit: string;
+  unit?: string;
   type?: string;
 }
 
@@ -24,22 +24,35 @@ export interface Memory {
  * @param value - The memory specification string to parse.
  * @returns A `Memory` object containing `soldered` and/or `dimms` properties with their respective `MemoryUnit` details.
  */
-export const toMemory = (value: string): Memory => {
+export const toMemory = (memoryString: string): Memory => {
   const memory = {} as Memory;
 
   // if we have only one value, we assume it's soldered memory
-  if (!value.includes('+') && toMemoryUnit(value)) {
-    memory.soldered = toMemoryUnit(value);
+  if (!memoryString.includes('+') && toMemoryUnit(memoryString)) {
+    memory.soldered = toMemoryUnit(memoryString);
   }
 
-  const [solderedValue, dimmsValue] = value.split('+');
+  const solderedMatch = memoryString.match(/^(\d+\s?[\w\d-\s]*)+\+/);
 
-  if (solderedValue && toMemoryUnit(solderedValue)) {
-    memory.soldered = toMemoryUnit(solderedValue);
+  if (solderedMatch && solderedMatch[0] && toMemoryUnit(solderedMatch[0])) {
+    memory.soldered = toMemoryUnit(solderedMatch[0]);
+  }
+  const dimmsMatch = memoryString.match(/\+\s*(\d+\s?[\w\d-\s]*)/);
+
+  if (dimmsMatch && dimmsMatch[1] && toMemoryUnit(dimmsMatch[1])) {
+    memory.dimms = toMemoryUnit(dimmsMatch[1]);
   }
 
-  if (dimmsValue && toMemoryUnit(dimmsValue)) {
-    memory.dimms = toMemoryUnit(dimmsValue);
+  // validate that we have unit on both soldered and dimms
+  if (!memory.soldered?.unit && !memory.dimms?.unit) {
+    throw new Error(`Invalid memory string: ${memoryString}`);
+  }
+
+  const unit = memory.soldered?.unit || memory.dimms?.unit;
+
+  if (unit) {
+    if (memory.soldered) memory.soldered.unit = unit.toUpperCase();
+    if (memory.dimms) memory.dimms.unit = unit.toUpperCase();
   }
 
   return memory;
@@ -70,13 +83,13 @@ export const toMemoryUnit = (memoryString: string): MemoryUnit | undefined => {
   // Unit is following the size, which can be "GB", "MB", etc.
   // We remove all digits and spaces to get the unit
   // and convert it to uppercase for consistency
-  const unitMatch = memoryString.match(/[\d\s]+([A-Za-z]+)/);
-  if (!unitMatch) return undefined;
+  const unitMatch = memoryString.match(/[\d\s]+([A-Za-z]{1}[Bb])/);
 
-  const unitString = unitMatch[1].trim();
-  if (!unitString) return undefined;
+  const unitString = unitMatch ? unitMatch[1] : undefined;
 
-  unitDetails.unit = unitString.toUpperCase();
+  if (unitString) {
+    unitDetails.unit = unitString.trim().toUpperCase();
+  }
 
   // Type is optional and can be found in the string, e.g., "DDR4-2400"
   // We look for patterns like "DDR4", "DDR3", "DDR5-3600" etc.

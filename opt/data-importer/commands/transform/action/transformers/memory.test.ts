@@ -62,6 +62,18 @@ describe('toMemoryUnit', () => {
     assertEquals(actual, expected);
   });
 
+  it('should only return size when no unit is provided', () => {
+    // Arrange
+    const input = '16';
+    const expected = { size: 16 }; // Defaulting to GB if no unit is provided
+
+    // Act
+    const actual = toMemoryUnit(input);
+
+    // Assert
+    assertEquals(actual, expected);
+  });
+
   it('should return undefined for empty string', () => {
     // Arrange
     const input = '';
@@ -101,6 +113,36 @@ describe('toMemory', () => {
     assertEquals(actual, expected);
   });
 
+  it('should transform when no unit is provided for soldered memory', () => {
+    // Arrange
+    const input = '8+16GB';
+    const expected = {
+      soldered: { size: 8, unit: 'GB' },
+      dimms: { size: 16, unit: 'GB' },
+    };
+
+    // Act
+    const actual = toMemory(input);
+
+    // Assert
+    assertEquals(actual, expected);
+  });
+
+  it('should transform when no unit is provided for dimms memory', () => {
+    // Arrange
+    const input = '8GB+16';
+    const expected = {
+      soldered: { size: 8, unit: 'GB' },
+      dimms: { size: 16, unit: 'GB' },
+    };
+
+    // Act
+    const actual = toMemory(input);
+
+    // Assert
+    assertEquals(actual, expected);
+  });
+
   it('should transform when both values are provided but dimms value is 0', () => {
     // Arrange
     const input = '8GB+0GB';
@@ -121,6 +163,21 @@ describe('toMemory', () => {
     const expected = {
       soldered: { size: 8, unit: 'GB' },
       dimms: { size: 16, unit: 'GB' },
+    };
+
+    // Act
+    const actual = toMemory(input);
+
+    // Assert
+    assertEquals(actual, expected);
+  });
+
+  it('should transform when two values are provided with detailed types', () => {
+    // Arrange
+    const input = '4GB Soldered DDR4-2400 + 4GB SO-DIMM DDR4-2400';
+    const expected = {
+      soldered: { size: 4, unit: 'GB', type: 'DDR4-2400' },
+      dimms: { size: 4, unit: 'GB', type: 'DDR4-2400' },
     };
 
     // Act
