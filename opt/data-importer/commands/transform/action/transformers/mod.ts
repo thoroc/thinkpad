@@ -8,6 +8,7 @@ import { toMultiTouch } from './multi-touch.ts';
 import { Processor, toProcessor } from './processor.ts';
 import { Storage, toStorage } from './storage.ts';
 import { toWLANDevice, WLANDevice } from './wlan-device.ts';
+import { toWWANDevice, WWANDevice } from './wwan-device.ts';
 
 export interface ThinkpadData {
   Model?: string;
@@ -158,8 +159,8 @@ export class ThinkpadTransformer {
     return toBluetooth(this._wlanBluetooth);
   }
 
-  public get wwan(): string {
-    return this._wwanM2Ssd;
+  public get wwan(): WWANDevice {
+    return toWWANDevice(this._wwanM2Ssd);
   }
 
   public get simCard(): string {

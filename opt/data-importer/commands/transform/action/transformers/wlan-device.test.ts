@@ -21,8 +21,6 @@ describe('toWLANDevice', () => {
     // Act
     const result = toWLANDevice(input);
 
-    console.log(result);
-
     // Assert
     assertEquals(result.vendor, 'Intel');
     assertEquals(result.chipset, '8260');
