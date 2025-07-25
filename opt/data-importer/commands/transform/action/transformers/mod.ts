@@ -157,7 +157,7 @@ export class ThinkpadTransformer {
     return toBluetooth(this._wlanBluetooth);
   }
 
-  public get wwanM2Ssd(): string {
+  public get wwan(): string {
     return this._wwanM2Ssd;
   }
 
@@ -171,8 +171,8 @@ export class ThinkpadTransformer {
     };
   }
 
-  public get smartCardReaderM2Ssd(): string {
-    return this._smartCardReaderM2Ssd;
+  public get smartCardReader(): boolean {
+    return this._smartCardReaderM2Ssd === 'Smart Card Reader';
   }
 
   public get camera(): string {
@@ -203,12 +203,12 @@ export class ThinkpadTransformer {
     return this._preload;
   }
 
-  public get baseWarranty(): string {
+  public get warranty(): string {
     return this._baseWarranty;
   }
 
-  public get global(): string {
-    return this._global;
+  public get global(): boolean {
+    return toBoolean(this._global);
   }
 
   public get annDate(): string {
