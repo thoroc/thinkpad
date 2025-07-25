@@ -1,4 +1,4 @@
-interface MemoryUnit {
+export interface MemoryUnit {
   size: number;
   unit?: string;
   type?: string;

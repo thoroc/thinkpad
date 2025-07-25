@@ -1,37 +1,26 @@
-import { pascalCase } from "npm:string-ts";
-import type { Transformed } from "./types.ts";
-import { TransformerOptions } from "./types.ts";
+export const POSITIVE_VALUES = ['YES', 'TRUE', 'Y'];
+export const NEGATIVE_VALUES = ['NO', 'NONE', 'N'];
 
 /**
- * Transforms a value into a boolean representation based on specific rules.
+ * Converts a string representation of a boolean value to a boolean.
  *
- * - If the `Value` is already a boolean, returns it as is.
- * - If the `Value` (case-insensitive) is "YES" or matches the `Key` (in PascalCase), returns `true`.
- * - If the `Value` (case-insensitive) is "NO" or "NONE", returns `false`.
- * - Otherwise, returns the original `Value`.
+ * Recognizes "YES", "TRUE", and "Y" (case-insensitive) as `true`.
+ * Recognizes "NO" and "NONE" (case-insensitive) as `false`.
+ * Returns `false` for any other input.
  *
- * @param options - An object containing `Key` and `Value` to be transformed.
- * @returns An object with the transformed value assigned to the given `Key`.
+ * @param booleanString - The string to convert to a boolean.
+ * @returns `true` if the input matches a positive value, otherwise `false`.
  */
 export const toBoolean = (
-  { Key, Value }: TransformerOptions,
-): Transformed => {
-  if (typeof Value === "boolean") {
-    return { [Key]: Value };
+  booleanString: string,
+): boolean => {
+  if (POSITIVE_VALUES.includes(booleanString.toUpperCase())) {
+    return true;
   }
 
-  if (
-    Value.toUpperCase() === "YES" ||
-    pascalCase(Key) === pascalCase(Value)
-  ) {
-    return { [Key]: true };
+  if (NEGATIVE_VALUES.includes(booleanString.toUpperCase())) {
+    return false;
   }
 
-  const negativeValues = ["NO", "NONE"];
-
-  if (negativeValues.includes(Value.toUpperCase())) {
-    return { [Key]: false };
-  }
-
-  return { [Key]: Value };
+  return false;
 };
