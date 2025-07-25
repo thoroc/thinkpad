@@ -1,6 +1,6 @@
-import { toBoolean } from './boolean.ts';
 import { Display, toDisplay } from './display.ts';
 import { Memory, toMemory } from './memory.ts';
+import { toMultiTouch } from './multi-touch.ts';
 import { Processor, toProcessor } from './processor.ts';
 
 interface ThinkpadData {
@@ -142,8 +142,8 @@ export class ThinkpadTransformer {
     return toDisplay(this._display);
   }
 
-  public get multiTouch(): boolean {
-    return toBoolean(this._multiTouch);
+  public get multiTouch(): boolean | string {
+    return toMultiTouch(this._multiTouch);
   }
 
   public get storage(): string {
