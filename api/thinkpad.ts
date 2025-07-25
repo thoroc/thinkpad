@@ -1,9 +1,11 @@
-#!/usr/bin/env deno run
+import { Hono } from 'jsr:@hono/hono';
 
-export default async (_req: Request): Promise<Response> => {
-  const responseBody = { message: "Hello, Deno on Vercel!" };
+const app = new Hono().basePath('/api');
 
-  return new Response(JSON.stringify(responseBody), {
-    headers: { "Content-Type": "application/json" },
+app.get('/hello', (c) => {
+  return c.json({
+    message: c.text('Hello Deno!'),
   });
-};
+});
+
+Deno.serve(app.fetch);
