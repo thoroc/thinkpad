@@ -39,5 +39,5 @@ pre-push:
     '1. Run tests':
       glob: '*.{ts,json,md,yml}'
       interactive: true
-      run: deno test
+      run: deno test -A
       stage_fixed: false
