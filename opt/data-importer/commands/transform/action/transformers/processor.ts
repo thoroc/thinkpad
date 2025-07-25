@@ -24,25 +24,25 @@ export interface Processor {
  */
 export const toProcessor = (source: string): Processor => {
   const pattern = new RegExp(
-    /(.*)\s\((\d)C\s?\/?\s?(\d)?T?,\s?(\d\.\d)\s?\/\s?(\d\.\d).*,\s?(\d+)MB/,
+    /(?<name>.*)\s\((?<cores>\d)C\s?\/?\s?(?<threads>\d)?T?,\s?(?<min>\d\.\d)\s?\/\s?(?<max>\d\.\d).*,\s?(?<cache>\d+)MB/,
   );
 
   const processor = pattern.exec(source);
 
-  if (!processor) {
+  if (!processor || !processor.groups) {
     throw new Error(`Invalid source: ${source}`);
   }
 
-  const [, name, cores, withHyperThreading, min, max, memory] = processor;
+  const { name, cores, threads, min, max, cache } = processor.groups;
 
   return {
     name,
     cores: parseInt(cores),
-    hyperThreading: parseInt(withHyperThreading) ? true : false,
+    hyperThreading: parseInt(threads) ? true : false,
     speed: {
       min: `${parseFloat(min)} Ghz`,
       max: `${parseFloat(max)} Ghz`,
     },
-    cache: `${parseInt(memory)}Mb`,
+    cache: `${parseInt(cache)}Mb`,
   };
 };

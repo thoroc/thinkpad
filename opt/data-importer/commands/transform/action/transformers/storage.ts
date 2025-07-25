@@ -10,30 +10,43 @@ export const toStorage = (storageString: string): Storage => {
   const storage = {} as Storage;
 
   // 1. Find cache in "+ 8GB" or "+8GB"
-  const cacheMatch = storageString.match(/\+\s?(\d+)\s*(GB|MB)/);
-  if (cacheMatch) {
+  const cacheMatch = storageString.match(
+    /\+\s?(?<cacheValue>\d+)\s*(?<cacheUnit>GB|MB)/i,
+  );
+  if (cacheMatch?.groups) {
     storage.hybrid = true;
-    storage.cache = { value: parseInt(cacheMatch[1], 10), unit: cacheMatch[2] };
+    storage.cache = {
+      value: parseInt(cacheMatch.groups.cacheValue, 10),
+      unit: cacheMatch.groups.cacheUnit.toUpperCase(),
+    };
   }
 
   // 2. Find cache in "/8GB" or "/ 8GB"
   const sizeMatch = storageString.match(
-    /(\d+)\s*(GB|TB|MB)\s?(\/(\d+)\s*(GB|TB|MB))?/,
+    /(?<sizeValue>\d+)\s*(?<sizeUnit>GB|TB|MB)\s?(\/(?<cacheValue>\d+)\s*(?<cacheUnit>GB|TB|MB))?/i,
   );
-  if (sizeMatch) {
-    storage.size = { value: parseInt(sizeMatch[1], 10), unit: sizeMatch[2] };
-    if (sizeMatch[4]) {
-      storage.cache = { value: parseInt(sizeMatch[4], 10), unit: sizeMatch[5] };
+  if (sizeMatch?.groups) {
+    storage.size = {
+      value: parseInt(sizeMatch.groups.sizeValue, 10),
+      unit: sizeMatch.groups.sizeUnit.toUpperCase(),
+    };
+    if (sizeMatch.groups.cacheValue && sizeMatch.groups.cacheUnit) {
+      storage.cache = {
+        value: parseInt(sizeMatch.groups.cacheValue, 10),
+        unit: sizeMatch.groups.cacheUnit.toUpperCase(),
+      };
       storage.hybrid = true;
     }
   }
 
   // 3. Find cache in "(8GB)" or "(8 MB)"
-  const parenCacheMatch = storageString.match(/\((\d+)\s*(GB|MB)\)/i);
-  if (parenCacheMatch) {
+  const parenCacheMatch = storageString.match(
+    /\((?<cacheValue>\d+)\s*(?<cacheUnit>GB|MB)\)/i,
+  );
+  if (parenCacheMatch?.groups) {
     storage.cache = {
-      value: parseInt(parenCacheMatch[1], 10),
-      unit: parenCacheMatch[2].toUpperCase(),
+      value: parseInt(parenCacheMatch.groups.cacheValue, 10),
+      unit: parenCacheMatch.groups.cacheUnit.toUpperCase(),
     };
     storage.hybrid = true;
   }
@@ -57,9 +70,9 @@ export const toStorage = (storageString: string): Storage => {
     }
   }
 
-  const speedMatch = storageString.match(/(\d+)\s*rpm/);
-  if (speedMatch) {
-    const speed = parseInt(speedMatch[1], 10);
+  const speedMatch = storageString.match(/(?<speed>\d+)\s*rpm/i);
+  if (speedMatch?.groups?.speed) {
+    const speed = parseInt(speedMatch.groups.speed, 10);
     if (!storage.type?.name) storage.type = { name: 'HDD' };
     storage.speed = speed;
   }

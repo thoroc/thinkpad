@@ -72,10 +72,10 @@ export const toMemoryUnit = (memoryString: string): MemoryUnit | undefined => {
   memoryString = memoryString.trim();
 
   // Size is the first few digits in the string
-  const sizeMatch = memoryString.match(/^\d+/);
-  if (!sizeMatch) return undefined;
+  const sizeMatch = memoryString.match(/^(?<size>\d+)/);
+  if (!sizeMatch?.groups?.size) return undefined;
 
-  const size = parseInt(sizeMatch[0], 10);
+  const size = parseInt(sizeMatch.groups.size, 10);
   if (size === 0) return undefined;
 
   unitDetails.size = size;
@@ -83,9 +83,8 @@ export const toMemoryUnit = (memoryString: string): MemoryUnit | undefined => {
   // Unit is following the size, which can be "GB", "MB", etc.
   // We remove all digits and spaces to get the unit
   // and convert it to uppercase for consistency
-  const unitMatch = memoryString.match(/[\d\s]+([A-Za-z]{1}[Bb])/);
-
-  const unitString = unitMatch ? unitMatch[1] : undefined;
+  const unitMatch = memoryString.match(/[\d\s]+(?<unit>[A-Za-z]{1}[Bb])/);
+  const unitString = unitMatch?.groups?.unit;
 
   if (unitString) {
     unitDetails.unit = unitString.trim().toUpperCase();
@@ -93,10 +92,9 @@ export const toMemoryUnit = (memoryString: string): MemoryUnit | undefined => {
 
   // Type is optional and can be found in the string, e.g., "DDR4-2400"
   // We look for patterns like "DDR4", "DDR3", "DDR5-3600" etc.
-  const typeMatch = memoryString.match(/(DDR\d+(-\d+)?)/i);
-
-  if (typeMatch) {
-    unitDetails.type = typeMatch[0].toUpperCase();
+  const typeMatch = memoryString.match(/(?<type>DDR\d+(-\d+)?)/i);
+  if (typeMatch?.groups?.type) {
+    unitDetails.type = typeMatch.groups.type.toUpperCase();
   }
 
   return unitDetails;

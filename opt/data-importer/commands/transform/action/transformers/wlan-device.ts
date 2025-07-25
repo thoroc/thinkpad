@@ -9,15 +9,19 @@ export const toWLANDevice = (
 ): WLANDevice => {
   const wlanDevice = {} as WLANDevice;
 
-  // Extract all the fields before the "+"
-  const pattern = wlanAndBluetoothString.match(
-    /([A-Za-z\s]+)\s+(\d+)\s+([\w/]+)\s*\+?/,
-  );
+  const pattern = /(?<vendor>[A-Za-z]+)\s+(?<chipset>\d+)\s+(?<standard>[\w/]+)\s*\+?/;
 
-  if (pattern) {
-    wlanDevice.vendor = pattern[1];
-    wlanDevice.chipset = pattern[2];
-    wlanDevice.standard = pattern[3];
+  // Extract all the fields before the "+"
+  const matches = pattern.exec(wlanAndBluetoothString);
+
+  if (matches === null) {
+    return {} as WLANDevice; // Return empty object if no match found
+  }
+
+  if (matches.groups) {
+    wlanDevice.vendor = matches.groups.vendor;
+    wlanDevice.chipset = matches.groups.chipset;
+    wlanDevice.standard = matches.groups.standard;
   }
 
   return wlanDevice;

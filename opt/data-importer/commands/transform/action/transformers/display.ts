@@ -26,30 +26,32 @@ export const toDisplay = (displayString: string): Display => {
   // "14\" FHD (1920x1080) WVA 250nits Anti-glare"
   // "12.5\" FHD (1920x1080) WVA 300nits Anti-glare"
 
-  const sizeMatch = displayString.match(/(\d+(\.\d+)?)\s*\"/);
-  if (sizeMatch && sizeMatch[1]) {
-    display.size = sizeMatch[1];
+  const sizeMatch = displayString.match(/(?<size>\d+(\.\d+)?)\s*\"/);
+  if (sizeMatch?.groups?.size) {
+    display.size = sizeMatch.groups.size;
   }
 
-  const resolutionMatch = displayString.match(/(\w+)\s+\((\d+)x(\d+)\)/);
-  if (resolutionMatch) {
+  const resolutionMatch = displayString.match(
+    /(?<name>\w+)\s+\((?<width>\d+)x(?<height>\d+)\)/,
+  );
+  if (resolutionMatch?.groups) {
     display.resolution = {
-      name: resolutionMatch[1],
-      width: parseInt(resolutionMatch[2], 10),
-      height: parseInt(resolutionMatch[3], 10),
+      name: resolutionMatch.groups.name,
+      width: parseInt(resolutionMatch.groups.width, 10),
+      height: parseInt(resolutionMatch.groups.height, 10),
     };
   }
 
-  const panelTypeMatch = displayString.match(/(IPS|TN|WVA)/i);
-  if (panelTypeMatch && panelTypeMatch[0]) {
-    display.panelType = panelTypeMatch[0].toUpperCase();
+  const panelTypeMatch = displayString.match(/(?<panelType>IPS|TN|WVA)/i);
+  if (panelTypeMatch?.groups?.panelType) {
+    display.panelType = panelTypeMatch.groups.panelType.toUpperCase();
   }
 
-  const brightnessMatch = displayString.match(/(\d+)\s*(nits)/i);
-  if (brightnessMatch && brightnessMatch[1]) {
+  const brightnessMatch = displayString.match(/(?<value>\d+)\s*(?<unit>nits)/i);
+  if (brightnessMatch?.groups?.value) {
     display.brightness = {
-      value: brightnessMatch[1],
-      unit: brightnessMatch[2] || 'nits',
+      value: brightnessMatch.groups.value,
+      unit: brightnessMatch.groups.unit || 'nits',
     };
   }
 

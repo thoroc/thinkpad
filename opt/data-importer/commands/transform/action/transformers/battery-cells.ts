@@ -14,31 +14,37 @@ export const toBatteryCells = (
   const batteryCells = {} as BatteryCells;
 
   const internalCellMatch = batteryCellsString.match(
-    /(\d+)\s*-*cell?\s\(([\d\.]+Wh)\)+\s*\+?/i,
+    /(?<cells>\d+)\s*-*cell?\s*\((?<type>[\d\.]+[a-zA-Z]+)\)+\s*\+?/i,
   );
   const externalCellMatch = batteryCellsString.match(
-    /\+\s*(\d+)\s*-*cell?\s\(([\d\.]+Wh)\)/i,
+    /\+\s*(?<cells>\d+)\s*-*cell?\s*\((?<type>[\d\.]+[a-zA-Z]+)\)/i,
   );
 
-  if (internalCellMatch) {
+  if (internalCellMatch?.groups) {
+    const { cells, type } = internalCellMatch.groups;
     batteryCells.internal = {
-      cells: parseInt(internalCellMatch[1], 10),
-      type: internalCellMatch[2]
+      cells: parseInt(cells, 10),
+      type: type
         ? (() => {
-          const match = internalCellMatch[2].match(/^([\d\.]+)([a-zA-Z]+)$/);
-          return match ? { value: parseFloat(match[1]), unit: match[2] } : undefined;
+          const match = type.match(/^(?<value>[\d\.]+)(?<unit>[a-zA-Z]+)/);
+          return match?.groups
+            ? { value: parseFloat(match.groups.value), unit: match.groups.unit }
+            : undefined;
         })()
         : undefined,
     };
   }
 
-  if (externalCellMatch) {
+  if (externalCellMatch?.groups) {
+    const { cells, type } = externalCellMatch.groups;
     batteryCells.external = {
-      cells: parseInt(externalCellMatch[1], 10),
-      type: externalCellMatch[2]
+      cells: parseInt(cells, 10),
+      type: type
         ? (() => {
-          const match = externalCellMatch[2].match(/^([\d\.]+)([a-zA-Z]+)$/);
-          return match ? { value: parseFloat(match[1]), unit: match[2] } : undefined;
+          const match = type.match(/^(?<value>[\d\.]+)(?<unit>[a-zA-Z]+)/);
+          return match?.groups
+            ? { value: parseFloat(match.groups.value), unit: match.groups.unit }
+            : undefined;
         })()
         : undefined,
     };
