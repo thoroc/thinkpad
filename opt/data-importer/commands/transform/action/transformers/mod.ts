@@ -2,6 +2,7 @@ import { BatteryCells, toBatteryCells } from './battery-cells.ts';
 import { Bluetooth, toBluetooth } from './bluetooth.ts';
 import { toBoolean } from './boolean.ts';
 import { Display, toDisplay } from './display.ts';
+import { FingerprintReader, toFingerprintReader } from './finger-print-reader.ts';
 import { Graphics, toGraphics } from './graphics.ts';
 import { Memory, toMemory } from './memory.ts';
 import { toMultiTouch } from './multi-touch.ts';
@@ -185,8 +186,8 @@ export class ThinkpadTransformer {
     return this._backlitKeyboard === 'Backlit Keyboard';
   }
 
-  public get fingerprintReader(): boolean {
-    return this._fingerprintReader === 'Fingerprint Reader';
+  public get fingerprintReader(): FingerprintReader {
+    return toFingerprintReader(this._fingerprintReader);
   }
 
   public get nfc(): boolean {
