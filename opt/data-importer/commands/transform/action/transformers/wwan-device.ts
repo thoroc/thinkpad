@@ -1,22 +1,20 @@
 export interface WWANDevice {
   vendor?: string;
   model?: string;
-  upgradable?: boolean;
+  upgradable: boolean;
 }
 
 export const toWWANDevice = (
   wwanString: string,
 ): WWANDevice => {
-  const wwan: WWANDevice = {};
+  const wwan = {} as WWANDevice;
 
-  if (wwanString === 'None') {
-    return wwan; // Return empty object if no WWAN device
+  if (wwanString.toUpperCase() === 'NONE') {
+    return { upgradable: false };
   }
 
-  if (wwanString === 'WWAN Upgradable') {
-    wwan.upgradable = true;
-
-    return wwan;
+  if (wwanString.toUpperCase() === 'WWAN UPGRADABLE') {
+    return { upgradable: true };
   }
 
   // Regex to match vendor, model, and optional upgradable status
@@ -26,7 +24,7 @@ export const toWWANDevice = (
   if (matches?.groups) {
     wwan.vendor = matches.groups.vendor.trim();
     wwan.model = matches.groups.model.trim();
-    wwan.upgradable = wwanString.includes('(Upgradable)');
+    wwan.upgradable = true; // Assume upgradable if vendor and model are found
   }
 
   return wwan;
