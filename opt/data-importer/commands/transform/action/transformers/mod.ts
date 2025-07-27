@@ -1,6 +1,7 @@
 import { BatteryCells, toBatteryCells } from './battery-cells.ts';
 import { Bluetooth, toBluetooth } from './bluetooth.ts';
 import { toBoolean } from './boolean.ts';
+import { Camera, toCamera } from './camera.ts';
 import { Display, toDisplay } from './display.ts';
 import { FingerprintReader, toFingerprintReader } from './finger-print-reader.ts';
 import { Graphics, toGraphics } from './graphics.ts';
@@ -178,8 +179,8 @@ export class ThinkpadTransformer {
     return this._smartCardReaderM2Ssd === 'Smart Card Reader';
   }
 
-  public get camera(): string {
-    return this._camera;
+  public get camera(): Camera {
+    return toCamera(this._camera);
   }
 
   public get backlitKeyboard(): boolean {
