@@ -15,6 +15,7 @@ export interface Display {
   panelType?: string;
   brightness?: Brightness;
   antiGlare?: boolean;
+  privacyGuard?: boolean;
 }
 
 /**
@@ -33,19 +34,18 @@ export interface Display {
 export const toDisplay = (displayString: string): Display => {
   const display = {} as Display;
 
-  // examples
-  // "14\" HD+ (1600x900)"
-  // "14\" FHD (1920x1080) IPS"
-  // "14\" FHD (1920x1080) WVA 250nits Anti-glare"
-  // "12.5\" FHD (1920x1080) WVA 300nits Anti-glare"
-
   const sizeMatch = displayString.match(/(?<size>\d+(\.\d+)?)\s*\"/);
   if (sizeMatch?.groups?.size) {
     display.size = sizeMatch.groups.size;
   }
 
+  const privacyGuardMatch = displayString.match(/Privacy Guard/i);
+  if (privacyGuardMatch) {
+    display.privacyGuard = true;
+  }
+
   const resolutionMatch = displayString.match(
-    /(?<name>\w+)\s+\((?<width>\d+)x(?<height>\d+)\)/,
+    /(?<name>\w+\+?)\s+\((?<width>\d+)x(?<height>\d+)\)/,
   );
   if (resolutionMatch?.groups) {
     display.resolution = {
