@@ -7,6 +7,7 @@ import { FingerprintReader, toFingerprintReader } from './finger-print-reader.ts
 import { Graphics, toGraphics } from './graphics.ts';
 import { Memory, toMemory } from './memory.ts';
 import { toMultiTouch } from './multi-touch.ts';
+import { PowerAdapter, toPowerAdapter } from './power-adapter.ts';
 import { Processor, toProcessor } from './processor.ts';
 import { Storage, toStorage } from './storage.ts';
 import { toWLANDevice, WLANDevice } from './wlan-device.ts';
@@ -199,8 +200,8 @@ export class ThinkpadTransformer {
     return toBatteryCells(this._batteryCells);
   }
 
-  public get powerAdapter(): string {
-    return this._powerAdapter;
+  public get powerAdapter(): PowerAdapter {
+    return toPowerAdapter(this._powerAdapter);
   }
 
   public get preload(): string {
