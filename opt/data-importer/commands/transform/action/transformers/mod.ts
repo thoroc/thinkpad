@@ -8,6 +8,7 @@ import { Graphics, toGraphics } from './graphics.ts';
 import { Memory, toMemory } from './memory.ts';
 import { toMultiTouch } from './multi-touch.ts';
 import { PowerAdapter, toPowerAdapter } from './power-adapter.ts';
+import { PreloadedOS, toPreloadedOS } from './preload-os.ts';
 import { Processor, toProcessor } from './processor.ts';
 import { Storage, toStorage } from './storage.ts';
 import { toWLANDevice, WLANDevice } from './wlan-device.ts';
@@ -170,12 +171,6 @@ export class ThinkpadTransformer {
     return this._simCard;
   }
 
-  public get expansionSlots(): Record<string, WLANDevice> {
-    return {
-      wlan: toWLANDevice(this._wlanBluetooth),
-    };
-  }
-
   public get smartCardReader(): boolean {
     return this._smartCardReaderM2Ssd === 'Smart Card Reader';
   }
@@ -204,8 +199,8 @@ export class ThinkpadTransformer {
     return toPowerAdapter(this._powerAdapter);
   }
 
-  public get preload(): string {
-    return this._preload;
+  public get preload(): PreloadedOS[] {
+    return toPreloadedOS(this._preload);
   }
 
   public get warranty(): string {
