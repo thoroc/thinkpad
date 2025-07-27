@@ -11,6 +11,7 @@ import { PowerAdapter, toPowerAdapter } from './power-adapter.ts';
 import { PreloadedOS, toPreloadedOS } from './preload-os.ts';
 import { Processor, toProcessor } from './processor.ts';
 import { Storage, toStorage } from './storage.ts';
+import { toWarranty, Warranty } from './warranty.ts';
 import { toWLANDevice, WLANDevice } from './wlan-device.ts';
 import { toWWANDevice, WWANDevice } from './wwan-device.ts';
 
@@ -203,7 +204,11 @@ export class ThinkpadTransformer {
     return toPreloadedOS(this._preload);
   }
 
-  public get warranty(): string {
+  public get warranty(): Warranty {
+    return toWarranty(this._baseWarranty);
+  }
+
+  public get baseWarranty(): string {
     return this._baseWarranty;
   }
 
