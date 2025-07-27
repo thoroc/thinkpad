@@ -1,7 +1,7 @@
 export interface WLANDevice {
-  vendor: string;
-  chipset: string;
-  standard: string[];
+  vendor?: string;
+  chipset?: string;
+  standard?: string[];
   antenna?: string;
 }
 
@@ -22,24 +22,42 @@ export const toWLANDevice = (
 ): WLANDevice => {
   const wlanDevice = {} as WLANDevice;
 
-  const pattern = new RegExp(
-    /^(?<vendor>\w+)\s+(?<chipset>\d+)\s+(?<standard>[\d\w\/]+)(?:,\s*(?<antenna>\d+x\d+))?/,
-  );
-
-  // Extract all the fields before the "+"
-  const matches = pattern.exec(wlanAndBluetoothString);
-
-  if (matches === null) {
-    return {} as WLANDevice; // Return empty object if no match found
+  if (wlanAndBluetoothString === 'None') {
+    return wlanDevice;
   }
 
-  if (matches.groups) {
+  // Remove Bluetooth info
+  const cleaned = wlanAndBluetoothString.split('+')[0].trim();
+
+  // Try: vendor chipset standard[, antenna]
+  let pattern =
+    /^(?<vendor>[\w\d]+)\s+(?<chipset>[\w\d]+)\s+(?<standard>[\w\/\-]+)(?:,\s*(?<antenna>\d+x\d+))?/;
+  let matches = pattern.exec(cleaned);
+  if (matches?.groups) {
     wlanDevice.vendor = matches.groups.vendor;
     wlanDevice.chipset = matches.groups.chipset;
-    wlanDevice.standard = matches.groups.standard.split('/');
-    if (matches.groups.antenna) {
-      wlanDevice.antenna = matches.groups.antenna;
-    }
+    wlanDevice.standard = matches.groups.standard ? matches.groups.standard.split('/') : undefined;
+    if (matches.groups.antenna) wlanDevice.antenna = matches.groups.antenna;
+    return wlanDevice;
+  }
+
+  // Try: vendor standard[, antenna] (chipset missing)
+  pattern = /^(?<vendor>[\w\d]+)\s+(?<standard>[\w\/\-]+)(?:,\s*(?<antenna>\d+x\d+))?/;
+  matches = pattern.exec(cleaned);
+  if (matches?.groups) {
+    wlanDevice.vendor = matches.groups.vendor;
+    wlanDevice.standard = matches.groups.standard ? matches.groups.standard.split('/') : undefined;
+    if (matches.groups.antenna) wlanDevice.antenna = matches.groups.antenna;
+    return wlanDevice;
+  }
+
+  // Try: standard[, antenna] (vendor/chipset missing)
+  pattern = /^(?<standard>[\w\/\-]+)(?:,\s*(?<antenna>\d+x\d+))?/;
+  matches = pattern.exec(cleaned);
+  if (matches?.groups) {
+    wlanDevice.standard = matches.groups.standard ? matches.groups.standard.split('/') : undefined;
+    if (matches.groups.antenna) wlanDevice.antenna = matches.groups.antenna;
+    return wlanDevice;
   }
 
   return wlanDevice;
