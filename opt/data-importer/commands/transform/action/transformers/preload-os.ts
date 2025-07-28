@@ -1,7 +1,9 @@
+import { Languages, toLanguages } from './languages/mod.ts';
+
 export interface PreloadedOS {
   name: string;
   version: string;
-  languages: string[]; // Optional, e.g., ["Turkish", "English"]
+  languages: Languages;
 }
 
 export const toPreloadedOS = (osString: string): PreloadedOS[] => {
@@ -13,12 +15,12 @@ export const toPreloadedOS = (osString: string): PreloadedOS[] => {
     osArray.push({
       name: match.groups!.name.trim(),
       version: match.groups!.version.trim(),
-      languages: [], // will fill later
+      languages: {} as Languages, // will fill later
     });
   }
   // Parse languages after last OS/version
   const langMatch = osString.match(/,\s*([^\n]+)/);
-  const languages = langMatch ? langMatch[1].split('/').map((l) => l.trim()) : [];
+  const languages = langMatch ? toLanguages(langMatch[1]) : {} as Languages;
   // Assign languages to all OS objects
   for (const os of osArray) {
     os.languages = languages;

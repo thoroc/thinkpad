@@ -9,14 +9,6 @@ export const LanguagesFamilyMap: Record<string, string> = {
   'WE': 'Western European',
 };
 
-export const Code = (languageName: string): string => {
-  // flip language map to get code
-  const codeMap = Object.fromEntries(
-    Object.entries(LanguagesFamilyMap).map(([k, v]) => [v, k]),
-  );
-  return codeMap[languageName] || languageName.toUpperCase();
-};
-
 export const toLanguages = (languageString: string): Languages => {
   const languages = {} as Languages;
 
