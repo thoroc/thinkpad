@@ -18,7 +18,6 @@ export const toLanguages = (languageString: string): Languages => {
 
   const pattern =
     /^(?<language>[A-Za-z]+)\s*\((?<region>[A-Za-z]+)\)$|^(?:(?<family>[A-Za-z]+)\s*\((?<codes>[A-Za-z\/]+)\))|(?<values>[A-Za-z\s]+(?:\s*\/\s*[\(\)A-Za-z\s]+)*)$/;
-  // /^(?:(?<family>[A-Za-z]+)\s*\((?<codes>[A-Za-z\/]+)\))|(?<values>[A-Za-z\s]+(?:\s*\/\s*[\(\)A-Za-z\s]+)*)$/;
   const match = pattern.exec(languageString);
 
   if (!match) return languages;
@@ -30,12 +29,7 @@ export const toLanguages = (languageString: string): Languages => {
     languages.family = LanguagesFamilyMap[match.groups.family.trim()] ||
       match.groups.family.trim();
     languages.values = match.groups.codes.split('/').map((code) => {
-      const language = {} as Language;
-
-      language.name = toLanguage({ code }).name;
-      language.code = code.trim().toLowerCase();
-
-      return language;
+      return toLanguage({ code });
     });
 
     return languages;
@@ -55,10 +49,7 @@ export const toLanguages = (languageString: string): Languages => {
 
   if (match.groups?.values) {
     languages.values = match.groups.values.split('/').map((value) => {
-      return {
-        name: value.trim(),
-        code: toLanguage({ name: value }).code,
-      };
+      return toLanguage({ name: value.trim() });
     });
   }
 

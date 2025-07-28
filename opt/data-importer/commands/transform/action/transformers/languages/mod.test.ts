@@ -206,6 +206,17 @@ describe('toLanguages', () => {
         ],
       },
     },
+    // Traditional Chinese / Simplified Chinese / English
+    {
+      input: 'Traditional Chinese / Simplified Chinese / English',
+      expected: {
+        values: [
+          { name: 'Mandarin Chinese (Traditional)', code: 'zh-tw' },
+          { name: 'Mandarin Chinese (Simplified)', code: 'zh-cn' },
+          { name: 'English', code: 'en' },
+        ],
+      },
+    },
   ];
 
   for (const { input, expected } of testCases) {
