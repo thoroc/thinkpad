@@ -357,7 +357,7 @@ describe('toPreloadedOS', () => {
           version: 'DG',
           languages: {
             values: [
-              { name: 'Portuguese (Brazil)', code: 'pt', region: 'Brazil' },
+              { name: 'Portuguese', code: 'pt', region: 'Brazil' },
             ],
           },
         },
@@ -366,7 +366,7 @@ describe('toPreloadedOS', () => {
           version: 'Pro 64',
           languages: {
             values: [
-              { name: 'Portuguese (Brazil)', code: 'pt', region: 'Brazil' },
+              { name: 'Portuguese', code: 'pt', region: 'Brazil' },
             ],
           },
         },
@@ -1062,7 +1062,9 @@ describe('toPreloadedOS', () => {
         {
           name: 'Windows 10',
           version: 'Pro 64',
-          languages: { values: [{ name: 'Portuguese', code: 'pt-BR' }] },
+          languages: {
+            values: [{ name: 'Portuguese', code: 'pt', region: 'Brazil' }],
+          },
         },
       ],
     },
