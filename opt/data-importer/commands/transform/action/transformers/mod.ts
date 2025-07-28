@@ -5,7 +5,7 @@ import { Camera, toCamera } from './camera.ts';
 import { Display, toDisplay } from './display.ts';
 import { FingerprintReader, toFingerprintReader } from './finger-print-reader.ts';
 import { Graphics, toGraphics } from './graphics.ts';
-import { Memory, toMemory } from './memory.ts';
+import { SystemMemory, toSystemMemory } from './memory/mod.ts';
 import { toMultiTouch } from './multi-touch.ts';
 import { PowerAdapter, toPowerAdapter } from './power-adapter.ts';
 import { PreloadedOS, toPreloadedOS } from './preload-os.ts';
@@ -136,8 +136,8 @@ export class ThinkpadTransformer {
     return toGraphics(this._graphics);
   }
 
-  public get memory(): Memory {
-    return toMemory(this._memory);
+  public get memory(): SystemMemory {
+    return toSystemMemory(this._memory);
   }
 
   public get display(): Display {
