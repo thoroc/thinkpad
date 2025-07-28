@@ -41,6 +41,12 @@ export const toLanguage = (
       case 'dk':
         language.name = 'Danish';
         break;
+      case 'zh-cn':
+        language.name = 'Mandarin Chinese (Simplified)';
+        break;
+      case 'zh-tw':
+        language.name = 'Mandarin Chinese (Traditional)';
+        break;
       default:
         if (subtag) {
           language.name = subtag.data.record.Description[0];
@@ -63,12 +69,25 @@ export const toLanguage = (
       cleanName.toLowerCase(),
     );
 
+    if (name.includes('Chinese')) {
+      // Handle Chinese separately to avoid ambiguity
+      console.log('Chinese', 'name', name, 'subtags', subtags);
+    }
+
     switch (cleanName) {
       case 'Greek':
         language.code = 'el';
         break;
       case 'Danish':
         language.code = 'dk';
+        break;
+      case 'Simplified Chinese':
+        language.code = 'zh-cn';
+        language.name = 'Mandarin Chinese (Simplified)';
+        break;
+      case 'Traditional Chinese':
+        language.code = 'zh-tw';
+        language.name = 'Mandarin Chinese (Traditional)';
         break;
       default:
         if (subtags) {

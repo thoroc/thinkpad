@@ -10,6 +10,14 @@ describe('toLanguage', () => {
         input: 'Portuguese (Brazil)',
         expected: { name: 'Portuguese', code: 'pt' },
       },
+      {
+        input: 'Traditional Chinese',
+        expected: { name: 'Mandarin Chinese (Traditional)', code: 'zh-tw' },
+      },
+      {
+        input: 'Simplified Chinese',
+        expected: { name: 'Mandarin Chinese (Simplified)', code: 'zh-cn' },
+      },
       { input: 'Chinese', expected: { name: 'Chinese', code: 'zh' } },
       { input: 'Czech', expected: { name: 'Czech', code: 'cs' } },
       { input: 'Danish', expected: { name: 'Danish', code: 'dk' } },
@@ -50,6 +58,14 @@ describe('toLanguage', () => {
   describe('with code', () => {
     const testCases: Array<{ input: string; expected: Language }> = [
       { input: 'ar', expected: { name: 'Arabic', code: 'ar' } },
+      {
+        input: 'zh-cn',
+        expected: { name: 'Mandarin Chinese (Simplified)', code: 'zh-cn' },
+      },
+      {
+        input: 'zh-tw',
+        expected: { name: 'Mandarin Chinese (Traditional)', code: 'zh-tw' },
+      },
       { input: 'zh', expected: { name: 'Chinese', code: 'zh' } },
       { input: 'cs', expected: { name: 'Czech', code: 'cs' } },
       { input: 'dk', expected: { name: 'Danish', code: 'dk' } },
