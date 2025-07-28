@@ -29,8 +29,6 @@ export const toLanguage = (
       code.toLowerCase(),
     );
 
-    // console.log("code to subtag", subtag);
-
     switch (code.toLowerCase()) {
       case 'gr':
       case 'grek':
@@ -68,11 +66,6 @@ export const toLanguage = (
     const subtags: Array<iana.Subtag> | undefined = iana.search(
       cleanName.toLowerCase(),
     );
-
-    if (name.includes('Chinese')) {
-      // Handle Chinese separately to avoid ambiguity
-      console.log('Chinese', 'name', name, 'subtags', subtags);
-    }
 
     switch (cleanName) {
       case 'Greek':

@@ -827,8 +827,8 @@ describe('toPreloadedOS', () => {
           version: 'Home 64',
           languages: {
             values: [
-              { name: 'Traditional Chinese', code: 'zh-tw' },
-              { name: 'Simplified Chinese', code: 'zh-cn' },
+              { name: 'Mandarin Chinese (Traditional)', code: 'zh-tw' },
+              { name: 'Mandarin Chinese (Simplified)', code: 'zh-cn' },
               { name: 'English', code: 'en' },
             ],
           },
@@ -1163,7 +1163,7 @@ describe('toPreloadedOS', () => {
           version: 'Pro 64',
           languages: {
             values: [
-              { name: 'Traditional Chinese', code: 'zh-TW' },
+              { name: 'Mandarin Chinese (Traditional)', code: 'zh-tw' },
               { name: 'English', code: 'en' },
             ],
           },
@@ -1179,8 +1179,8 @@ describe('toPreloadedOS', () => {
           version: 'Pro 64',
           languages: {
             values: [
-              { name: 'Traditional Chinese', code: 'zh-TW' },
-              { name: 'Simplified Chinese', code: 'zh-CN' },
+              { name: 'Mandarin Chinese (Traditional)', code: 'zh-tw' },
+              { name: 'Mandarin Chinese (Simplified)', code: 'zh-cn' },
               { name: 'English', code: 'en' },
             ],
           },
