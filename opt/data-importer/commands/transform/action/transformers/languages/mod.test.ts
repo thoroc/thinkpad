@@ -117,7 +117,9 @@ describe('toLanguages', () => {
     // Portuguese (Brazil)
     {
       input: 'Portuguese (Brazil)',
-      expected: { values: [{ name: 'Brazil', code: 'br' }] },
+      expected: {
+        values: [{ name: 'Portuguese', code: 'pt', region: 'Brazil' }],
+      },
     },
     // Portuguese / English
     {

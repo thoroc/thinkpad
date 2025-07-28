@@ -3,6 +3,7 @@ import * as iana from 'npm:language-tags';
 export interface Language {
   name: string;
   code?: string;
+  region?: string; // Optional, e.g., "pt-br"
 }
 
 export const toLanguage = (
@@ -28,6 +29,8 @@ export const toLanguage = (
       code.toLowerCase(),
     );
 
+    // console.log("code to subtag", subtag);
+
     switch (code.toLowerCase()) {
       case 'gr':
       case 'grek':
@@ -49,12 +52,18 @@ export const toLanguage = (
 
     return language;
   } else if (name && !code) {
-    language.name = name;
+    // !warning we are stripping the information about the region
+    // e.g., "Portuguese (Brazil)" will become "Portuguese"
+    // and we will not be able to distinguish it from "Portuguese (Portugal)"
+
+    const cleanName = name.replace(/\s*\(.*?\)/, '').trim();
+    language.name = cleanName;
+
     const subtags: Array<iana.Subtag> | undefined = iana.search(
-      name.toLowerCase(),
+      cleanName.toLowerCase(),
     );
 
-    switch (name) {
+    switch (cleanName) {
       case 'Greek':
         language.code = 'el';
         break;

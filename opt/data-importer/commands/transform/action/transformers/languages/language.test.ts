@@ -6,6 +6,10 @@ describe('toLanguage', () => {
   describe('with name', () => {
     const testCases: Array<{ input: string; expected: Language }> = [
       { input: 'Arabic', expected: { name: 'Arabic', code: 'ar' } },
+      {
+        input: 'Portuguese (Brazil)',
+        expected: { name: 'Portuguese', code: 'pt' },
+      },
       { input: 'Chinese', expected: { name: 'Chinese', code: 'zh' } },
       { input: 'Czech', expected: { name: 'Czech', code: 'cs' } },
       { input: 'Danish', expected: { name: 'Danish', code: 'dk' } },
