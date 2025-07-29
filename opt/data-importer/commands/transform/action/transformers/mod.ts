@@ -5,7 +5,7 @@ import { Camera, toCamera } from './camera.ts';
 import { Display, toDisplay } from './display.ts';
 import { FingerprintReader, toFingerprintReader } from './finger-print-reader.ts';
 import { Graphics, toGraphics } from './graphics.ts';
-import { SystemMemory, toSystemMemory } from './memory/mod.ts';
+import { SystemMemory, toSystemMemory } from './memory/system.ts';
 import { toMultiTouch } from './multi-touch.ts';
 import { PowerAdapter, toPowerAdapter } from './power-adapter.ts';
 import { PreloadedOS, toPreloadedOS } from './preload-os.ts';

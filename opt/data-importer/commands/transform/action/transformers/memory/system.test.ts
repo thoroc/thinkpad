@@ -1,6 +1,6 @@
 import { assertEquals } from 'jsr:@std/assert';
 import { describe, it } from 'jsr:@std/testing/bdd';
-import { SystemMemory, toSystemMemory } from './mod.ts';
+import { SystemMemory, toSystemMemory } from './system.ts';
 // import { MemoryModule, toMemoryModule } from "./module.ts";
 
 describe('toSystemMemory', () => {
@@ -11,7 +11,7 @@ describe('toSystemMemory', () => {
     // 16GB Soldered DDR4-2400,
     {
       input: '16GB Soldered DDR4-2400',
-      expected: { dimms: [{ size: 16, unit: 'GB', type: 'DDR4-2400' }] },
+      expected: { soldered: [{ size: 16, unit: 'GB', type: 'DDR4-2400' }] },
     },
     // 16GBx1,
     {
@@ -149,7 +149,7 @@ describe('toSystemMemory', () => {
         soldered: [{ size: 4, unit: 'GB' }],
       },
     },
-    // 4GB Soldered + 16GB DIMM,
+    // 4GBds Soldered + 16GB DIMM,
     {
       input: '4GB Soldered + 16GB DIMM',
       expected: {
@@ -327,7 +327,6 @@ describe('toSystemMemory', () => {
     {
       input: '0+4GB',
       expected: {
-        soldered: [{ size: 0, unit: 'GB' }],
         dimms: [{ size: 4, unit: 'GB' }],
       },
     },
@@ -335,7 +334,6 @@ describe('toSystemMemory', () => {
     {
       input: '0+8GB',
       expected: {
-        soldered: [{ size: 0, unit: 'GB' }],
         dimms: [{ size: 8, unit: 'GB' }],
       },
     },
@@ -344,7 +342,6 @@ describe('toSystemMemory', () => {
       input: '4+0GB',
       expected: {
         soldered: [{ size: 4, unit: 'GB' }],
-        dimms: [{ size: 0, unit: 'GB' }],
       },
     },
     // 4+2GB,
