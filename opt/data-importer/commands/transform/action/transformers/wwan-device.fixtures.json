@@ -1,110 +1,110 @@
 [
   {
+    "input": "Ericsson N5321",
     "expected": {
       "model": "N5321",
-      "upgradable": true,
-      "vendor": "Ericsson"
-    },
-    "input": "Ericsson N5321"
+      "vendor": "Ericsson",
+      "upgradable": true
+    }
   },
   {
+    "input": "Fibocom L830-EB",
     "expected": {
       "model": "L830-EB",
-      "upgradable": true,
-      "vendor": "Fibocom"
-    },
-    "input": "Fibocom L830-EB"
+      "vendor": "Fibocom",
+      "upgradable": true
+    }
   },
   {
+    "input": "Fibocom L831-EAU",
     "expected": {
       "model": "L831-EAU",
-      "upgradable": true,
-      "vendor": "Fibocom"
-    },
-    "input": "Fibocom L831-EAU"
+      "vendor": "Fibocom",
+      "upgradable": true
+    }
   },
   {
+    "input": "Fibocom L850-GL",
     "expected": {
       "model": "L850-GL",
-      "upgradable": true,
-      "vendor": "Fibocom"
-    },
-    "input": "Fibocom L850-GL"
+      "vendor": "Fibocom",
+      "upgradable": true
+    }
   },
   {
+    "input": "HUAWEI ME906S",
     "expected": {
       "model": "ME906S",
-      "upgradable": true,
-      "vendor": "HUAWEI"
-    },
-    "input": "HUAWEI ME906S"
+      "vendor": "HUAWEI",
+      "upgradable": true
+    }
   },
   {
+    "input": "None",
     "expected": {
       "upgradable": false
-    },
-    "input": "None"
+    }
   },
   {
+    "input": "Sierra EM7345",
     "expected": {
       "model": "EM7345",
-      "upgradable": true,
-      "vendor": "Sierra"
-    },
-    "input": "Sierra EM7345"
+      "vendor": "Sierra",
+      "upgradable": true
+    }
   },
   {
+    "input": "Sierra EM7355",
     "expected": {
       "model": "EM7355",
-      "upgradable": true,
-      "vendor": "Sierra"
-    },
-    "input": "Sierra EM7355"
+      "vendor": "Sierra",
+      "upgradable": true
+    }
   },
   {
+    "input": "Sierra EM7430",
     "expected": {
       "model": "EM7430",
-      "upgradable": true,
-      "vendor": "Sierra"
-    },
-    "input": "Sierra EM7430"
+      "vendor": "Sierra",
+      "upgradable": true
+    }
   },
   {
+    "input": "Sierra EM7455",
     "expected": {
       "model": "EM7455",
-      "upgradable": true,
-      "vendor": "Sierra"
-    },
-    "input": "Sierra EM7455"
+      "vendor": "Sierra",
+      "upgradable": true
+    }
   },
   {
+    "input": "WWAN Upgradable",
     "expected": {
       "upgradable": true
-    },
-    "input": "WWAN Upgradable"
+    }
   },
   {
+    "input": "WWAN upgradable",
     "expected": {
       "upgradable": true
-    },
-    "input": "WWAN upgradable"
+    }
   },
   {
+    "input": "16GB",
     "expected": {
       "upgradable": true
-    },
-    "input": "16GB"
+    }
   },
   {
+    "input": "16GB SSD",
     "expected": {
       "upgradable": true
-    },
-    "input": "16GB SSD"
+    }
   },
   {
+    "input": "No",
     "expected": {
       "upgradable": false
-    },
-    "input": "No"
+    }
   }
 ]

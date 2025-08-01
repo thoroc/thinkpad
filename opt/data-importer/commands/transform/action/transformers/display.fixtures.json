@@ -3,27 +3,27 @@
     "input": "12.5\" FHD (1920x1080) IPS",
     "expected": {
       "size": 12.5,
+      "panelType": "IPS",
       "resolution": {
-        "name": "FHD",
+        "height": 1080,
         "width": 1920,
-        "height": 1080
-      },
-      "panelType": "IPS"
+        "name": "FHD"
+      }
     }
   },
   {
     "input": "12.5\" FHD (1920x1080) IPS 300nits Anti-glare",
     "expected": {
       "size": 12.5,
-      "resolution": {
-        "name": "FHD",
-        "width": 1920,
-        "height": 1080
-      },
       "panelType": "IPS",
       "brightness": {
         "value": 300,
         "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
       },
       "antiGlare": true
     }
@@ -32,15 +32,15 @@
     "input": "12.5\" FHD (1920x1080) WVA 300nits Anti-glare",
     "expected": {
       "size": 12.5,
-      "resolution": {
-        "name": "FHD",
-        "width": 1920,
-        "height": 1080
-      },
       "panelType": "WVA",
       "brightness": {
         "value": 300,
         "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
       },
       "antiGlare": true
     }
@@ -50,9 +50,9 @@
     "expected": {
       "size": 12.5,
       "resolution": {
-        "name": "HD",
+        "height": 768,
         "width": 1366,
-        "height": 768
+        "name": "HD"
       }
     }
   },
@@ -60,27 +60,27 @@
     "input": "12.5\" HD (1366x768) IPS",
     "expected": {
       "size": 12.5,
+      "panelType": "IPS",
       "resolution": {
-        "name": "HD",
+        "height": 768,
         "width": 1366,
-        "height": 768
-      },
-      "panelType": "IPS"
+        "name": "HD"
+      }
     }
   },
   {
     "input": "12.5\" HD (1366x768) IPS 300nits Anti-glare",
     "expected": {
       "size": 12.5,
-      "resolution": {
-        "name": "HD",
-        "width": 1366,
-        "height": 768
-      },
       "panelType": "IPS",
       "brightness": {
         "value": 300,
         "unit": "nits"
+      },
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
       },
       "antiGlare": true
     }
@@ -89,15 +89,15 @@
     "input": "12.5\" HD (1366x768) TN 220nits Anti-glare",
     "expected": {
       "size": 12.5,
-      "resolution": {
-        "name": "HD",
-        "width": 1366,
-        "height": 768
-      },
       "panelType": "TN",
       "brightness": {
         "value": 220,
         "unit": "nits"
+      },
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
       },
       "antiGlare": true
     }
@@ -106,44 +106,27 @@
     "input": "14\" FHD (1920x1080) IPS",
     "expected": {
       "size": 14,
+      "panelType": "IPS",
       "resolution": {
-        "name": "FHD",
+        "height": 1080,
         "width": 1920,
-        "height": 1080
-      },
-      "panelType": "IPS"
+        "name": "FHD"
+      }
     }
   },
   {
     "input": "14\" FHD (1920x1080) IPS 250nits Anti-glare",
     "expected": {
       "size": 14,
-      "resolution": {
-        "name": "FHD",
-        "width": 1920,
-        "height": 1080
-      },
       "panelType": "IPS",
       "brightness": {
         "value": 250,
         "unit": "nits"
       },
-      "antiGlare": true
-    }
-  },
-  {
-    "input": "14\" FHD (1920x1080) WVA 250nits Anti-glare",
-    "expected": {
-      "size": 14,
       "resolution": {
-        "name": "FHD",
+        "height": 1080,
         "width": 1920,
-        "height": 1080
-      },
-      "panelType": "WVA",
-      "brightness": {
-        "value": 250,
-        "unit": "nits"
+        "name": "FHD"
       },
       "antiGlare": true
     }
@@ -152,15 +135,32 @@
     "input": "14\" FHD (1920x1080) WVA 250nits Anti-glare",
     "expected": {
       "size": 14,
-      "resolution": {
-        "name": "FHD",
-        "width": 1920,
-        "height": 1080
-      },
       "panelType": "WVA",
       "brightness": {
         "value": 250,
         "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "antiGlare": true
+    }
+  },
+  {
+    "input": "14\" FHD (1920x1080) WVA 250nits Anti-glare",
+    "expected": {
+      "size": 14,
+      "panelType": "WVA",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
       },
       "antiGlare": true
     }
@@ -170,9 +170,9 @@
     "expected": {
       "size": 14,
       "resolution": {
-        "name": "HD",
+        "height": 768,
         "width": 1366,
-        "height": 768
+        "name": "HD"
       },
       "privacyGuard": true
     }
@@ -181,15 +181,15 @@
     "input": "14\" HD (1366x768) TN 220nits Anti-glare",
     "expected": {
       "size": 14,
-      "resolution": {
-        "name": "HD",
-        "width": 1366,
-        "height": 768
-      },
       "panelType": "TN",
       "brightness": {
         "value": 220,
         "unit": "nits"
+      },
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
       },
       "antiGlare": true
     }
@@ -199,9 +199,9 @@
     "expected": {
       "size": 14,
       "resolution": {
-        "name": "HD+",
+        "height": 900,
         "width": 1600,
-        "height": 900
+        "name": "HD+"
       }
     }
   },
@@ -209,27 +209,27 @@
     "input": "14\" WQHD (2560x1440) IPS",
     "expected": {
       "size": 14,
+      "panelType": "IPS",
       "resolution": {
-        "name": "WQHD",
+        "height": 1440,
         "width": 2560,
-        "height": 1440
-      },
-      "panelType": "IPS"
+        "name": "WQHD"
+      }
     }
   },
   {
     "input": "14\" WQHD (2560x1440) IPS 300nits Anti-glare",
     "expected": {
       "size": 14,
-      "resolution": {
-        "name": "WQHD",
-        "width": 2560,
-        "height": 1440
-      },
       "panelType": "IPS",
       "brightness": {
         "value": 300,
         "unit": "nits"
+      },
+      "resolution": {
+        "height": 1440,
+        "width": 2560,
+        "name": "WQHD"
       },
       "antiGlare": true
     }
@@ -238,15 +238,15 @@
     "input": "14\" WQHD (2560x1440) WVA 300nits Anti-glare",
     "expected": {
       "size": 14,
-      "resolution": {
-        "name": "WQHD",
-        "width": 2560,
-        "height": 1440
-      },
       "panelType": "WVA",
       "brightness": {
         "value": 300,
         "unit": "nits"
+      },
+      "resolution": {
+        "height": 1440,
+        "width": 2560,
+        "name": "WQHD"
       },
       "antiGlare": true
     }

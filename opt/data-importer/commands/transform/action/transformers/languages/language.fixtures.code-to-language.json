@@ -2,204 +2,204 @@
   {
     "input": "ar",
     "expected": {
-      "name": "Arabic",
-      "code": "ar"
+      "code": "ar",
+      "name": "Arabic"
     }
   },
   {
     "input": "zh-cn",
     "expected": {
-      "name": "Mandarin Chinese (Simplified)",
-      "code": "zh-cn"
+      "code": "zh-cn",
+      "name": "Mandarin Chinese (Simplified)"
     }
   },
   {
     "input": "zh-tw",
     "expected": {
-      "name": "Mandarin Chinese (Traditional)",
-      "code": "zh-tw"
+      "code": "zh-tw",
+      "name": "Mandarin Chinese (Traditional)"
     }
   },
   {
     "input": "zh",
     "expected": {
-      "name": "Chinese",
-      "code": "zh"
+      "code": "zh",
+      "name": "Chinese"
     }
   },
   {
     "input": "cs",
     "expected": {
-      "name": "Czech",
-      "code": "cs"
+      "code": "cs",
+      "name": "Czech"
     }
   },
   {
     "input": "dk",
     "expected": {
-      "name": "Danish",
-      "code": "dk"
+      "code": "dk",
+      "name": "Danish"
     }
   },
   {
     "input": "nl",
     "expected": {
-      "name": "Dutch",
-      "code": "nl"
+      "code": "nl",
+      "name": "Dutch"
     }
   },
   {
     "input": "en",
     "expected": {
-      "name": "English",
-      "code": "en"
+      "code": "en",
+      "name": "English"
     }
   },
   {
     "input": "fr",
     "expected": {
-      "name": "French",
-      "code": "fr"
+      "code": "fr",
+      "name": "French"
     }
   },
   {
     "input": "de",
     "expected": {
-      "name": "German",
-      "code": "de"
+      "code": "de",
+      "name": "German"
     }
   },
   {
     "input": "gr",
     "expected": {
-      "name": "Greek",
-      "code": "gr"
+      "code": "gr",
+      "name": "Greek"
     }
   },
   {
     "input": "el",
     "expected": {
-      "name": "Greek",
-      "code": "el"
+      "code": "el",
+      "name": "Greek"
     }
   },
   {
     "input": "he",
     "expected": {
-      "name": "Hebrew",
-      "code": "he"
+      "code": "he",
+      "name": "Hebrew"
     }
   },
   {
     "input": "hu",
     "expected": {
-      "name": "Hungarian",
-      "code": "hu"
+      "code": "hu",
+      "name": "Hungarian"
     }
   },
   {
     "input": "it",
     "expected": {
-      "name": "Italian",
-      "code": "it"
+      "code": "it",
+      "name": "Italian"
     }
   },
   {
     "input": "ja",
     "expected": {
-      "name": "Japanese",
-      "code": "ja"
+      "code": "ja",
+      "name": "Japanese"
     }
   },
   {
     "input": "ko",
     "expected": {
-      "name": "Korean",
-      "code": "ko"
+      "code": "ko",
+      "name": "Korean"
     }
   },
   {
     "input": "no",
     "expected": {
-      "name": "Norwegian",
-      "code": "no"
+      "code": "no",
+      "name": "Norwegian"
     }
   },
   {
     "input": "pl",
     "expected": {
-      "name": "Polish",
-      "code": "pl"
+      "code": "pl",
+      "name": "Polish"
     }
   },
   {
     "input": "pt",
     "expected": {
-      "name": "Portuguese",
-      "code": "pt"
+      "code": "pt",
+      "name": "Portuguese"
     }
   },
   {
     "input": "ro",
     "expected": {
-      "name": "Romanian",
-      "code": "ro"
+      "code": "ro",
+      "name": "Romanian"
     }
   },
   {
     "input": "ru",
     "expected": {
-      "name": "Russian",
-      "code": "ru"
+      "code": "ru",
+      "name": "Russian"
     }
   },
   {
     "input": "sr",
     "expected": {
-      "name": "Serbian",
-      "code": "sr"
+      "code": "sr",
+      "name": "Serbian"
     }
   },
   {
     "input": "sk",
     "expected": {
-      "name": "Slovak",
-      "code": "sk"
+      "code": "sk",
+      "name": "Slovak"
     }
   },
   {
     "input": "es",
     "expected": {
-      "name": "Spanish",
-      "code": "es"
+      "code": "es",
+      "name": "Spanish"
     }
   },
   {
     "input": "sv",
     "expected": {
-      "name": "Swedish",
-      "code": "sv"
+      "code": "sv",
+      "name": "Swedish"
     }
   },
   {
     "input": "tr",
     "expected": {
-      "name": "Turkish",
-      "code": "tr"
+      "code": "tr",
+      "name": "Turkish"
     }
   },
   {
     "input": "uk",
     "expected": {
-      "name": "Ukrainian",
-      "code": "uk"
+      "code": "uk",
+      "name": "Ukrainian"
     }
   },
   {
     "input": "vi",
     "expected": {
-      "name": "Vietnamese",
-      "code": "vi"
+      "code": "vi",
+      "name": "Vietnamese"
     }
   }
 ]

@@ -8,8 +8,8 @@
     "expected": {
       "values": [
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -19,8 +19,8 @@
     "expected": {
       "values": [
         {
-          "name": "Japanese",
-          "code": "ja"
+          "code": "ja",
+          "name": "Japanese"
         }
       ]
     }
@@ -30,12 +30,12 @@
     "expected": {
       "values": [
         {
-          "name": "Arabic",
-          "code": "ar"
+          "code": "ar",
+          "name": "Arabic"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -45,16 +45,16 @@
     "expected": {
       "values": [
         {
-          "name": "Croatian",
-          "code": "hr"
+          "code": "hr",
+          "name": "Croatian"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         },
         {
-          "name": "Slovenian",
-          "code": "sl"
+          "code": "sl",
+          "name": "Slovenian"
         }
       ]
     }
@@ -64,12 +64,12 @@
     "expected": {
       "values": [
         {
-          "name": "Czech",
-          "code": "cs"
+          "code": "cs",
+          "name": "Czech"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -79,8 +79,8 @@
     "expected": {
       "values": [
         {
-          "name": "French",
-          "code": "fr"
+          "code": "fr",
+          "name": "French"
         }
       ]
     }
@@ -90,8 +90,8 @@
     "expected": {
       "values": [
         {
-          "name": "German",
-          "code": "de"
+          "code": "de",
+          "name": "German"
         }
       ]
     }
@@ -101,12 +101,12 @@
     "expected": {
       "values": [
         {
-          "name": "Greek",
-          "code": "el"
+          "code": "el",
+          "name": "Greek"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -116,12 +116,12 @@
     "expected": {
       "values": [
         {
-          "name": "Hebrew",
-          "code": "he"
+          "code": "he",
+          "name": "Hebrew"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -131,12 +131,12 @@
     "expected": {
       "values": [
         {
-          "name": "Hungarian",
-          "code": "hu"
+          "code": "hu",
+          "name": "Hungarian"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -144,29 +144,29 @@
   {
     "input": "Nordic (DK/FI/SV/NO/EN)",
     "expected": {
+      "family": "Nordic",
       "values": [
         {
-          "name": "Danish",
-          "code": "dk"
+          "code": "dk",
+          "name": "Danish"
         },
         {
-          "name": "Finnish",
-          "code": "fi"
+          "code": "fi",
+          "name": "Finnish"
         },
         {
-          "name": "Swedish",
-          "code": "sv"
+          "code": "sv",
+          "name": "Swedish"
         },
         {
-          "name": "Norwegian",
-          "code": "no"
+          "code": "no",
+          "name": "Norwegian"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
-      ],
-      "family": "Nordic"
+      ]
     }
   },
   {
@@ -174,12 +174,12 @@
     "expected": {
       "values": [
         {
-          "name": "Polish",
-          "code": "pl"
+          "code": "pl",
+          "name": "Polish"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -189,8 +189,8 @@
     "expected": {
       "values": [
         {
-          "name": "Portuguese",
           "code": "pt",
+          "name": "Portuguese",
           "region": "Brazil"
         }
       ]
@@ -201,12 +201,12 @@
     "expected": {
       "values": [
         {
-          "name": "Portuguese",
-          "code": "pt"
+          "code": "pt",
+          "name": "Portuguese"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -216,12 +216,12 @@
     "expected": {
       "values": [
         {
-          "name": "Romanian",
-          "code": "ro"
+          "code": "ro",
+          "name": "Romanian"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -231,8 +231,8 @@
     "expected": {
       "values": [
         {
-          "name": "Russian",
-          "code": "ru"
+          "code": "ru",
+          "name": "Russian"
         }
       ]
     }
@@ -242,12 +242,12 @@
     "expected": {
       "values": [
         {
-          "name": "Serbian",
-          "code": "sr"
+          "code": "sr",
+          "name": "Serbian"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -257,12 +257,12 @@
     "expected": {
       "values": [
         {
-          "name": "Slovak",
-          "code": "sk"
+          "code": "sk",
+          "name": "Slovak"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -272,8 +272,8 @@
     "expected": {
       "values": [
         {
-          "name": "Spanish",
-          "code": "es"
+          "code": "es",
+          "name": "Spanish"
         }
       ]
     }
@@ -283,12 +283,12 @@
     "expected": {
       "values": [
         {
-          "name": "Turkish",
-          "code": "tr"
+          "code": "tr",
+          "name": "Turkish"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
@@ -296,29 +296,29 @@
   {
     "input": "WE (EN/FR/DE/NL/IT)",
     "expected": {
+      "family": "Western European",
       "values": [
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         },
         {
-          "name": "French",
-          "code": "fr"
+          "code": "fr",
+          "name": "French"
         },
         {
-          "name": "German",
-          "code": "de"
+          "code": "de",
+          "name": "German"
         },
         {
-          "name": "Dutch",
-          "code": "nl"
+          "code": "nl",
+          "name": "Dutch"
         },
         {
-          "name": "Italian",
-          "code": "it"
+          "code": "it",
+          "name": "Italian"
         }
-      ],
-      "family": "Western European"
+      ]
     }
   },
   {
@@ -326,16 +326,16 @@
     "expected": {
       "values": [
         {
-          "name": "Croatian",
-          "code": "hr"
+          "code": "hr",
+          "name": "Croatian"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         },
         {
-          "name": "Slovenian",
-          "code": "sl"
+          "code": "sl",
+          "name": "Slovenian"
         }
       ]
     }
@@ -345,16 +345,16 @@
     "expected": {
       "values": [
         {
-          "name": "Mandarin Chinese (Traditional)",
-          "code": "zh-tw"
+          "code": "zh-tw",
+          "name": "Mandarin Chinese (Traditional)"
         },
         {
-          "name": "Mandarin Chinese (Simplified)",
-          "code": "zh-cn"
+          "code": "zh-cn",
+          "name": "Mandarin Chinese (Simplified)"
         },
         {
-          "name": "English",
-          "code": "en"
+          "code": "en",
+          "name": "English"
         }
       ]
     }
