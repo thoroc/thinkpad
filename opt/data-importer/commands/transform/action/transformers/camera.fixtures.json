@@ -1,0 +1,69 @@
+[
+  {
+    "input": "0.3MP",
+    "expected": {
+      "resolution": "0.3MP"
+    }
+  },
+  {
+    "input": "3D Camera",
+    "expected": {
+      "3D": true
+    }
+  },
+  {
+    "input": "720p",
+    "expected": {
+      "resolution": "720p"
+    }
+  },
+  {
+    "input": "720p + IR",
+    "expected": {
+      "resolution": "720p",
+      "infrared": true
+    }
+  },
+  {
+    "input": "720p + IR + World Facing 5.0MP",
+    "expected": {
+      "resolution": "720p",
+      "infrared": true,
+      "worldFacing": true
+    }
+  },
+  {
+    "input": "720p + IR with ThinkShutter",
+    "expected": {
+      "resolution": "720p",
+      "infrared": true,
+      "thinkShutter": true
+    }
+  },
+  {
+    "input": "720p + IR without ThinkShutter",
+    "expected": {
+      "resolution": "720p",
+      "infrared": true,
+      "thinkShutter": false
+    }
+  },
+  {
+    "input": "720p + World Facing 5.0MP",
+    "expected": {
+      "resolution": "720p",
+      "worldFacing": true
+    }
+  },
+  {
+    "input": "720p with ThinkShutter",
+    "expected": {
+      "resolution": "720p",
+      "thinkShutter": true
+    }
+  },
+  {
+    "input": "None",
+    "expected": {}
+  }
+]
