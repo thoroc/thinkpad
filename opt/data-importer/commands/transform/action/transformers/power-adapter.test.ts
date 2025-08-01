@@ -1,17 +1,19 @@
-import { assertEquals } from 'jsr:@std/assert';
-import { describe, it } from 'jsr:@std/testing/bdd';
-import { PowerAdapter, toPowerAdapter } from './power-adapter.ts';
+import { assertEquals } from "jsr:@std/assert";
+import { describe, it } from "jsr:@std/testing/bdd";
+import testCases from "./power-adapter.fixtures.json" with { type: "json" };
+import { PowerAdapter, toPowerAdapter } from "./power-adapter.ts";
 
-describe('toPowerAdapter', () => {
-  it('should parse wattage correctly', () => {
-    const input = '90W';
-    const result = toPowerAdapter(input);
-    assertEquals(result, { wattage: 90 } as PowerAdapter);
-  });
+describe("toPowerAdapter", () => {
+  for (
+    const { input, expected }
+      of (testCases as Array<{ input: string; expected: PowerAdapter }>)
+  ) {
+    it(`should parse "${input}" correctly`, () => {
+      // Act
+      const result = toPowerAdapter(input);
 
-  it('should indicate slim adapter', () => {
-    const input = '65W Slim';
-    const result = toPowerAdapter(input);
-    assertEquals(result, { wattage: 65, slim: true } as PowerAdapter);
-  });
+      // Assert
+      assertEquals(result, expected);
+    });
+  }
 });

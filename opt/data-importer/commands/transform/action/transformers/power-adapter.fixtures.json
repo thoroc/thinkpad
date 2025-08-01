@@ -1,0 +1,122 @@
+[
+  {
+    "input": "135W",
+    "expected": {
+      "wattage": 135
+    }
+  },
+  {
+    "input": "135W Slim Tip",
+    "expected": {
+      "wattage": 135,
+      "slim": true
+    }
+  },
+  {
+    "input": "170W",
+    "expected": {
+      "wattage": 170
+    }
+  },
+  {
+    "input": "45W",
+    "expected": {
+      "wattage": 45
+    }
+  },
+  {
+    "input": "45W Slim Tip",
+    "expected": {
+      "wattage": 45,
+      "slim": true
+    }
+  },
+  {
+    "input": "45W USB-C",
+    "expected": {
+      "wattage": 45,
+      "USBC": true
+    }
+  },
+  {
+    "input": "45W USB-C (2-pin)",
+    "expected": {
+      "wattage": 45,
+      "USBC": true,
+      "pins": 2
+    }
+  },
+  {
+    "input": "45W USB-C (3-pin)",
+    "expected": {
+      "wattage": 45,
+      "USBC": true,
+      "pins": 3
+    }
+  },
+  {
+    "input": "65W",
+    "expected": {
+      "wattage": 65
+    }
+  },
+  {
+    "input": "65W Slim",
+    "expected": {
+      "wattage": 65,
+      "slim": true
+    }
+  },
+  {
+    "input": "65W Slim Tip",
+    "expected": {
+      "wattage": 65,
+      "slim": true
+    }
+  },
+  {
+    "input": "65W USB-C",
+    "expected": {
+      "wattage": 65,
+      "USBC": true
+    }
+  },
+  {
+    "input": "65W USB-C (2-pin)",
+    "expected": {
+      "wattage": 65,
+      "USBC": true,
+      "pins": 2
+    }
+  },
+  {
+    "input": "65W USB-C (3-pin)",
+    "expected": {
+      "wattage": 65,
+      "USBC": true,
+      "pins": 3
+    }
+  },
+  {
+    "input": "65W USB-C Slim (2-pin)",
+    "expected": {
+      "wattage": 65,
+      "USBC": true,
+      "slim": true,
+      "pins": 2
+    }
+  },
+  {
+    "input": "90W",
+    "expected": {
+      "wattage": 90
+    }
+  },
+  {
+    "input": "90W Slim Tip",
+    "expected": {
+      "wattage": 90,
+      "slim": true
+    }
+  }
+]

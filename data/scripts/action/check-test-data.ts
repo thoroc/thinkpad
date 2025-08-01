@@ -35,6 +35,7 @@ export const checkTestDataAction = (options: CheckDataShapeOptions) => {
 
   const transformerTestData: Record<string, string> = {
     "memory": `${basePath}/memory/system.fixtures.json`,
+    "power-adapter": `${basePath}/power-adapter.fixtures.json`,
     "wlan": `${basePath}/wlan-device.fixtures.json`,
     "wwan": `${basePath}/wwan-device.fixtures.json`,
   };
