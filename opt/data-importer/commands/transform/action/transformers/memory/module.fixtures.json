@@ -1,13 +1,5 @@
 [
   {
-    "input": "16GB Soldered DDR4-2400",
-    "expected": {
-      "size": 16,
-      "unit": "GB",
-      "type": "DDR4-2400"
-    }
-  },
-  {
     "input": "16GB",
     "expected": {
       "size": 16,
@@ -38,16 +30,24 @@
     }
   },
   {
-    "input": "16GB",
+    "input": "16GB Soldered DDR4-2400",
     "expected": {
       "size": 16,
-      "unit": "GB"
+      "unit": "GB",
+      "type": "DDR4-2400"
     }
   },
   {
     "input": "2GB",
     "expected": {
       "size": 2,
+      "unit": "GB"
+    }
+  },
+  {
+    "input": "4GB",
+    "expected": {
+      "size": 4,
       "unit": "GB"
     }
   },
@@ -98,20 +98,6 @@
     }
   },
   {
-    "input": "4GB Soldered",
-    "expected": {
-      "size": 4,
-      "unit": "GB"
-    }
-  },
-  {
-    "input": "4GB",
-    "expected": {
-      "size": 4,
-      "unit": "GB"
-    }
-  },
-  {
     "input": "8GB",
     "expected": {
       "size": 8,
@@ -142,6 +128,13 @@
     }
   },
   {
+    "input": "8GB Soldered",
+    "expected": {
+      "size": 8,
+      "unit": "GB"
+    }
+  },
+  {
     "input": "8GB Soldered DDR4-2133",
     "expected": {
       "size": 8,
@@ -155,20 +148,6 @@
       "size": 8,
       "unit": "GB",
       "type": "DDR4-2400"
-    }
-  },
-  {
-    "input": "8GB Soldered",
-    "expected": {
-      "size": 8,
-      "unit": "GB"
-    }
-  },
-  {
-    "input": "8GB",
-    "expected": {
-      "size": 8,
-      "unit": "GB"
     }
   }
 ]

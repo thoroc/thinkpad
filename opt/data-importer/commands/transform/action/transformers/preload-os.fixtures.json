@@ -1787,56 +1787,6 @@
     ]
   },
   {
-    "input": "Windows 8.1 DG Windows 7 Pro 64",
-    "expected": [
-      {
-        "name": "Windows 8.1",
-        "version": "DG",
-        "languages": {}
-      },
-      {
-        "name": "Windows 7",
-        "version": "Pro 64",
-        "languages": {}
-      }
-    ]
-  },
-  {
-    "input": "Windows 8.1 Pro 64-bit",
-    "expected": [
-      {
-        "name": "Windows 8.1",
-        "version": "Pro 64-bit",
-        "languages": {}
-      }
-    ]
-  },
-  {
-    "input": "Windows 10 DG Windows 7 Pro 64",
-    "expected": [
-      {
-        "name": "Windows 10",
-        "version": "DG",
-        "languages": {}
-      },
-      {
-        "name": "Windows 7",
-        "version": "Pro 64",
-        "languages": {}
-      }
-    ]
-  },
-  {
-    "input": "Windows 10 Pro 64",
-    "expected": [
-      {
-        "name": "Windows 10",
-        "version": "Pro 64",
-        "languages": {}
-      }
-    ]
-  },
-  {
     "input": "Windows 8 DG Windows 7 Pro 64",
     "expected": [
       {

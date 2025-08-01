@@ -36,13 +36,19 @@ export const checkDataShapeAction = (options: CheckDataShapeOptions) => {
   }
 
   if (checkTestData) {
-    checkTestDataAction({
+    const checkTestDataOptions = {
       properties: selectedProperties
         ? properties.filter((p) => selectedProperties.includes(p.name))
         : properties,
       propertyName: checkTestData,
-    });
+      outputType: undefined as OutputType | undefined,
+    };
 
+    if (outputType === OutputType.JSON) {
+      checkTestDataOptions.outputType = outputType as OutputType;
+    }
+
+    checkTestDataAction(checkTestDataOptions);
     return;
   }
 

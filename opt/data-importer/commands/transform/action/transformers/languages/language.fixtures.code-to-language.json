@@ -7,59 +7,10 @@
     }
   },
   {
-    "input": "zh-cn",
-    "expected": {
-      "code": "zh-cn",
-      "name": "Mandarin Chinese (Simplified)"
-    }
-  },
-  {
-    "input": "zh-tw",
-    "expected": {
-      "code": "zh-tw",
-      "name": "Mandarin Chinese (Traditional)"
-    }
-  },
-  {
-    "input": "zh",
-    "expected": {
-      "code": "zh",
-      "name": "Chinese"
-    }
-  },
-  {
     "input": "cs",
     "expected": {
       "code": "cs",
       "name": "Czech"
-    }
-  },
-  {
-    "input": "dk",
-    "expected": {
-      "code": "dk",
-      "name": "Danish"
-    }
-  },
-  {
-    "input": "nl",
-    "expected": {
-      "code": "nl",
-      "name": "Dutch"
-    }
-  },
-  {
-    "input": "en",
-    "expected": {
-      "code": "en",
-      "name": "English"
-    }
-  },
-  {
-    "input": "fr",
-    "expected": {
-      "code": "fr",
-      "name": "French"
     }
   },
   {
@@ -70,16 +21,44 @@
     }
   },
   {
-    "input": "gr",
+    "input": "dk",
     "expected": {
-      "code": "gr",
-      "name": "Greek"
+      "code": "dk",
+      "name": "Danish"
     }
   },
   {
     "input": "el",
     "expected": {
       "code": "el",
+      "name": "Greek"
+    }
+  },
+  {
+    "input": "en",
+    "expected": {
+      "code": "en",
+      "name": "English"
+    }
+  },
+  {
+    "input": "es",
+    "expected": {
+      "code": "es",
+      "name": "Spanish"
+    }
+  },
+  {
+    "input": "fr",
+    "expected": {
+      "code": "fr",
+      "name": "French"
+    }
+  },
+  {
+    "input": "gr",
+    "expected": {
+      "code": "gr",
       "name": "Greek"
     }
   },
@@ -119,6 +98,13 @@
     }
   },
   {
+    "input": "nl",
+    "expected": {
+      "code": "nl",
+      "name": "Dutch"
+    }
+  },
+  {
     "input": "no",
     "expected": {
       "code": "no",
@@ -154,13 +140,6 @@
     }
   },
   {
-    "input": "sr",
-    "expected": {
-      "code": "sr",
-      "name": "Serbian"
-    }
-  },
-  {
     "input": "sk",
     "expected": {
       "code": "sk",
@@ -168,10 +147,10 @@
     }
   },
   {
-    "input": "es",
+    "input": "sr",
     "expected": {
-      "code": "es",
-      "name": "Spanish"
+      "code": "sr",
+      "name": "Serbian"
     }
   },
   {
@@ -200,6 +179,27 @@
     "expected": {
       "code": "vi",
       "name": "Vietnamese"
+    }
+  },
+  {
+    "input": "zh",
+    "expected": {
+      "code": "zh",
+      "name": "Chinese"
+    }
+  },
+  {
+    "input": "zh-cn",
+    "expected": {
+      "code": "zh-cn",
+      "name": "Mandarin Chinese (Simplified)"
+    }
+  },
+  {
+    "input": "zh-tw",
+    "expected": {
+      "code": "zh-tw",
+      "name": "Mandarin Chinese (Traditional)"
     }
   }
 ]

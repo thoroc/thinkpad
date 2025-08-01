@@ -149,35 +149,6 @@
     }
   },
   {
-    "input": "14\" FHD (1920x1080) WVA 250nits Anti-glare",
-    "expected": {
-      "size": 14,
-      "panelType": "WVA",
-      "brightness": {
-        "value": 250,
-        "unit": "nits"
-      },
-      "resolution": {
-        "height": 1080,
-        "width": 1920,
-        "name": "FHD"
-      },
-      "antiGlare": true
-    }
-  },
-  {
-    "input": "ThinkPad Privacy Guard, 14\" HD (1366x768)",
-    "expected": {
-      "size": 14,
-      "resolution": {
-        "height": 768,
-        "width": 1366,
-        "name": "HD"
-      },
-      "privacyGuard": true
-    }
-  },
-  {
     "input": "14\" HD (1366x768) TN 220nits Anti-glare",
     "expected": {
       "size": 14,
@@ -249,6 +220,18 @@
         "name": "WQHD"
       },
       "antiGlare": true
+    }
+  },
+  {
+    "input": "ThinkPad Privacy Guard, 14\" HD (1366x768)",
+    "expected": {
+      "size": 14,
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
+      },
+      "privacyGuard": true
     }
   }
 ]

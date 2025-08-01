@@ -7,27 +7,6 @@
     }
   },
   {
-    "input": "Portuguese (Brazil)",
-    "expected": {
-      "code": "pt",
-      "name": "Portuguese"
-    }
-  },
-  {
-    "input": "Traditional Chinese",
-    "expected": {
-      "code": "zh-tw",
-      "name": "Mandarin Chinese (Traditional)"
-    }
-  },
-  {
-    "input": "Simplified Chinese",
-    "expected": {
-      "code": "zh-cn",
-      "name": "Mandarin Chinese (Simplified)"
-    }
-  },
-  {
     "input": "Chinese",
     "expected": {
       "code": "zh",
@@ -140,6 +119,13 @@
     }
   },
   {
+    "input": "Portuguese (Brazil)",
+    "expected": {
+      "code": "pt",
+      "name": "Portuguese"
+    }
+  },
+  {
     "input": "Romanian",
     "expected": {
       "code": "ro",
@@ -161,6 +147,13 @@
     }
   },
   {
+    "input": "Simplified Chinese",
+    "expected": {
+      "code": "zh-cn",
+      "name": "Mandarin Chinese (Simplified)"
+    }
+  },
+  {
     "input": "Slovak",
     "expected": {
       "code": "sk",
@@ -179,6 +172,13 @@
     "expected": {
       "code": "sv",
       "name": "Swedish"
+    }
+  },
+  {
+    "input": "Traditional Chinese",
+    "expected": {
+      "code": "zh-tw",
+      "name": "Mandarin Chinese (Traditional)"
     }
   },
   {

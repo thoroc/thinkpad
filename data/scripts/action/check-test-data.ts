@@ -1,17 +1,18 @@
 import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.7/colors";
 import { flattenProperties } from "./properties/flatten.ts";
 import { groupProperties } from "./properties/group.ts";
-import { Property } from "./types.ts";
+import { OutputType, Property } from "./types.ts";
 
 interface CheckDataShapeOptions {
   properties: Property[];
   propertyName: string;
+  outputType?: OutputType;
 }
 
 type TestData = { input: string; expected: any };
 
 export const checkTestDataAction = (options: CheckDataShapeOptions) => {
-  const { properties, propertyName } = options;
+  const { properties, propertyName, outputType } = options;
 
   console.log(colors.bold(colors.yellow("Checking test data...")));
 
@@ -34,6 +35,7 @@ export const checkTestDataAction = (options: CheckDataShapeOptions) => {
 
   const transformerTestData: Record<string, string> = {
     "memory": `${basePath}/memory/system.fixtures.json`,
+    "wlan": `${basePath}/wlan-device.fixtures.json`,
     "wwan": `${basePath}/wwan-device.fixtures.json`,
   };
 
@@ -71,4 +73,19 @@ export const checkTestDataAction = (options: CheckDataShapeOptions) => {
     "Test data length matches properties length:",
     Object.keys(testDataProperties).length === flatProperties.values.length,
   );
+
+  console.log(
+    `Run the following command to sort the fixtures once you have added the new test data:
+    jq 'group_by(.input) | map(.[0]) | sort_by(.input)' ${Deno.cwd()}/${
+      transformerTestData[propertyName]
+    }n > tmp.json && mv tmp.json ${Deno.cwd()}/${
+      transformerTestData[propertyName]
+    }`,
+  );
+
+  if (outputType) {
+    console.log(notInTestData.map((value) => {
+      return { input: value, expected: null };
+    }));
+  }
 };

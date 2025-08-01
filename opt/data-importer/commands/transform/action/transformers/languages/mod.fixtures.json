@@ -1,31 +1,5 @@
 [
   {
-    "input": "None",
-    "expected": {}
-  },
-  {
-    "input": "English",
-    "expected": {
-      "values": [
-        {
-          "code": "en",
-          "name": "English"
-        }
-      ]
-    }
-  },
-  {
-    "input": "Japanese",
-    "expected": {
-      "values": [
-        {
-          "code": "ja",
-          "name": "Japanese"
-        }
-      ]
-    }
-  },
-  {
     "input": "Arabic / English",
     "expected": {
       "values": [
@@ -67,6 +41,17 @@
           "code": "cs",
           "name": "Czech"
         },
+        {
+          "code": "en",
+          "name": "English"
+        }
+      ]
+    }
+  },
+  {
+    "input": "English",
+    "expected": {
+      "values": [
         {
           "code": "en",
           "name": "English"
@@ -140,6 +125,21 @@
         }
       ]
     }
+  },
+  {
+    "input": "Japanese",
+    "expected": {
+      "values": [
+        {
+          "code": "ja",
+          "name": "Japanese"
+        }
+      ]
+    }
+  },
+  {
+    "input": "None",
+    "expected": {}
   },
   {
     "input": "Nordic (DK/FI/SV/NO/EN)",
@@ -279,6 +279,25 @@
     }
   },
   {
+    "input": "Traditional Chinese / Simplified Chinese / English",
+    "expected": {
+      "values": [
+        {
+          "code": "zh-tw",
+          "name": "Mandarin Chinese (Traditional)"
+        },
+        {
+          "code": "zh-cn",
+          "name": "Mandarin Chinese (Simplified)"
+        },
+        {
+          "code": "en",
+          "name": "English"
+        }
+      ]
+    }
+  },
+  {
     "input": "Turkish / English",
     "expected": {
       "values": [
@@ -317,44 +336,6 @@
         {
           "code": "it",
           "name": "Italian"
-        }
-      ]
-    }
-  },
-  {
-    "input": "Croatian / English / Slovenian",
-    "expected": {
-      "values": [
-        {
-          "code": "hr",
-          "name": "Croatian"
-        },
-        {
-          "code": "en",
-          "name": "English"
-        },
-        {
-          "code": "sl",
-          "name": "Slovenian"
-        }
-      ]
-    }
-  },
-  {
-    "input": "Traditional Chinese / Simplified Chinese / English",
-    "expected": {
-      "values": [
-        {
-          "code": "zh-tw",
-          "name": "Mandarin Chinese (Traditional)"
-        },
-        {
-          "code": "zh-cn",
-          "name": "Mandarin Chinese (Simplified)"
-        },
-        {
-          "code": "en",
-          "name": "English"
         }
       ]
     }

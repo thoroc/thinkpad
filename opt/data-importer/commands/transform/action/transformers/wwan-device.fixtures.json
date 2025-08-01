@@ -1,5 +1,17 @@
 [
   {
+    "input": "16GB",
+    "expected": {
+      "upgradable": true
+    }
+  },
+  {
+    "input": "16GB SSD",
+    "expected": {
+      "upgradable": true
+    }
+  },
+  {
     "input": "Ericsson N5321",
     "expected": {
       "model": "N5321",
@@ -37,6 +49,12 @@
       "model": "ME906S",
       "vendor": "HUAWEI",
       "upgradable": true
+    }
+  },
+  {
+    "input": "No",
+    "expected": {
+      "upgradable": false
     }
   },
   {
@@ -87,24 +105,6 @@
     "input": "WWAN upgradable",
     "expected": {
       "upgradable": true
-    }
-  },
-  {
-    "input": "16GB",
-    "expected": {
-      "upgradable": true
-    }
-  },
-  {
-    "input": "16GB SSD",
-    "expected": {
-      "upgradable": true
-    }
-  },
-  {
-    "input": "No",
-    "expected": {
-      "upgradable": false
     }
   }
 ]

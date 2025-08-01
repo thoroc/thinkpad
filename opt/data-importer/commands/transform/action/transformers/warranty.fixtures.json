@@ -1,31 +1,20 @@
 [
   {
+    "input": "1-year Depot with 2-year System Board",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "Depot",
+      "extended": {
+        "period": "2-year",
+        "description": "System Board"
+      }
+    }
+  },
+  {
     "input": "1-year depot",
     "expected": {
       "basePeriod": "1-year",
       "location": "depot"
-    }
-  },
-  {
-    "input": "1-year Depot with 2-year System Board",
-    "expected": {
-      "basePeriod": "1-year",
-      "location": "Depot",
-      "extended": {
-        "period": "2-year",
-        "description": "System Board"
-      }
-    }
-  },
-  {
-    "input": "1-year Depot with 2-year System Board",
-    "expected": {
-      "basePeriod": "1-year",
-      "location": "Depot",
-      "extended": {
-        "period": "2-year",
-        "description": "System Board"
-      }
     }
   },
   {

@@ -1,5 +1,27 @@
 [
   {
+    "input": "0+4GB",
+    "expected": {
+      "dimms": [
+        {
+          "size": 4,
+          "unit": "GB"
+        }
+      ]
+    }
+  },
+  {
+    "input": "0+8GB",
+    "expected": {
+      "dimms": [
+        {
+          "size": 8,
+          "unit": "GB"
+        }
+      ]
+    }
+  },
+  {
     "input": "16GB Soldered DDR4-2400",
     "expected": {
       "soldered": [
@@ -62,6 +84,18 @@
     }
   },
   {
+    "input": "1x 32GB SO-DIMM DDR4-2400",
+    "expected": {
+      "dimms": [
+        {
+          "size": 32,
+          "type": "DDR4-2400",
+          "unit": "GB"
+        }
+      ]
+    }
+  },
+  {
     "input": "1x 4GB SO-DIMM DDR4-2133",
     "expected": {
       "dimms": [
@@ -104,6 +138,17 @@
         {
           "size": 8,
           "type": "DDR4-2400",
+          "unit": "GB"
+        }
+      ]
+    }
+  },
+  {
+    "input": "2GBx1",
+    "expected": {
+      "dimms": [
+        {
+          "size": 2,
           "unit": "GB"
         }
       ]
@@ -221,6 +266,68 @@
         {
           "size": 8,
           "type": "DDR4-2400",
+          "unit": "GB"
+        }
+      ]
+    }
+  },
+  {
+    "input": "4+0GB",
+    "expected": {
+      "soldered": [
+        {
+          "size": 4,
+          "unit": "GB"
+        }
+      ]
+    }
+  },
+  {
+    "input": "4+2GB",
+    "expected": {
+      "dimms": [
+        {
+          "size": 2,
+          "unit": "GB"
+        }
+      ],
+      "soldered": [
+        {
+          "size": 4,
+          "unit": "GB"
+        }
+      ]
+    }
+  },
+  {
+    "input": "4+4GB",
+    "expected": {
+      "dimms": [
+        {
+          "size": 4,
+          "unit": "GB"
+        }
+      ],
+      "soldered": [
+        {
+          "size": 4,
+          "unit": "GB"
+        }
+      ]
+    }
+  },
+  {
+    "input": "4+8GB",
+    "expected": {
+      "dimms": [
+        {
+          "size": 8,
+          "unit": "GB"
+        }
+      ],
+      "soldered": [
+        {
+          "size": 4,
           "unit": "GB"
         }
       ]
@@ -595,113 +702,6 @@
         },
         {
           "size": 8,
-          "unit": "GB"
-        }
-      ]
-    }
-  },
-  {
-    "input": "0+4GB",
-    "expected": {
-      "dimms": [
-        {
-          "size": 4,
-          "unit": "GB"
-        }
-      ]
-    }
-  },
-  {
-    "input": "0+8GB",
-    "expected": {
-      "dimms": [
-        {
-          "size": 8,
-          "unit": "GB"
-        }
-      ]
-    }
-  },
-  {
-    "input": "4+0GB",
-    "expected": {
-      "soldered": [
-        {
-          "size": 4,
-          "unit": "GB"
-        }
-      ]
-    }
-  },
-  {
-    "input": "4+2GB",
-    "expected": {
-      "dimms": [
-        {
-          "size": 2,
-          "unit": "GB"
-        }
-      ],
-      "soldered": [
-        {
-          "size": 4,
-          "unit": "GB"
-        }
-      ]
-    }
-  },
-  {
-    "input": "4+4GB",
-    "expected": {
-      "dimms": [
-        {
-          "size": 4,
-          "unit": "GB"
-        }
-      ],
-      "soldered": [
-        {
-          "size": 4,
-          "unit": "GB"
-        }
-      ]
-    }
-  },
-  {
-    "input": "4+8GB",
-    "expected": {
-      "dimms": [
-        {
-          "size": 8,
-          "unit": "GB"
-        }
-      ],
-      "soldered": [
-        {
-          "size": 4,
-          "unit": "GB"
-        }
-      ]
-    }
-  },
-  {
-    "input": "1x 32GB SO-DIMM DDR4-2400",
-    "expected": {
-      "dimms": [
-        {
-          "size": 32,
-          "type": "DDR4-2400",
-          "unit": "GB"
-        }
-      ]
-    }
-  },
-  {
-    "input": "2GBx1",
-    "expected": {
-      "dimms": [
-        {
-          "size": 2,
           "unit": "GB"
         }
       ]

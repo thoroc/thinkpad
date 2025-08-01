@@ -1,5 +1,151 @@
 [
   {
+    "input": "11ac, 1x1 + BT4.0",
+    "expected": {
+      "antenna": "1x1",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "11ac, 1x1 + BT4.1",
+    "expected": {
+      "antenna": "1x1",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "11ac, 2x2 + BT4.1",
+    "expected": {
+      "antenna": "2x2",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "11b/g/n + BT4.0",
+    "expected": {
+      "standard": [
+        "11b",
+        "g",
+        "n"
+      ]
+    }
+  },
+  {
+    "input": "11b/g/n, 1x1 + BT4.0",
+    "expected": {
+      "antenna": "1x1",
+      "standard": [
+        "11b",
+        "g",
+        "n"
+      ]
+    }
+  },
+  {
+    "input": "11b/g/n, 2x2 + BT4.0",
+    "expected": {
+      "antenna": "2x2",
+      "standard": [
+        "11b",
+        "g",
+        "n"
+      ]
+    }
+  },
+  {
+    "input": "BCM ac + BT4.0",
+    "expected": {
+      "vendor": "BCM",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "BCM43162 ac, 1x1 + BT4.0",
+    "expected": {
+      "vendor": "BCM43162",
+      "antenna": "1x1",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 18260 ac, 2x2 + BT4.1",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "18260",
+      "antenna": "2x2",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 18265 11ac, 2x2 + BT4.1",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "18265",
+      "antenna": "2x2",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 3160 ac, 1x1 + BT4.0",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "3160",
+      "antenna": "1x1",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 3165 11ac, 1x1 + BT4.1",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "3165",
+      "antenna": "1x1",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 3165 ac, 1x1 + BT4.0",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "3165",
+      "antenna": "1x1",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 6235 a/b/g/n + BT4.0",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "6235",
+      "standard": [
+        "a",
+        "b",
+        "g",
+        "n"
+      ]
+    }
+  },
+  {
     "input": "Intel 7260 a/b/g/n + BT4.0",
     "expected": {
       "vendor": "Intel",
@@ -17,6 +163,17 @@
     "expected": {
       "vendor": "Intel",
       "chipset": "7260",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 7260 ac, 2x2 + BT4.0",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "7260",
+      "antenna": "2x2",
       "standard": [
         "ac"
       ]
@@ -48,6 +205,20 @@
     }
   },
   {
+    "input": "Intel 7265 a/b/g/n, 2x2 + BT4.0",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "7265",
+      "antenna": "2x2",
+      "standard": [
+        "a",
+        "b",
+        "g",
+        "n"
+      ]
+    }
+  },
+  {
     "input": "Intel 7265 ac + BT4.0",
     "expected": {
       "vendor": "Intel",
@@ -58,86 +229,14 @@
     }
   },
   {
-    "input": "11b/g/n, 2x2 + BT4.0",
-    "expected": {
-      "standard": [
-        "11b",
-        "g",
-        "n"
-      ],
-      "antenna": "2x2"
-    }
-  },
-  {
-    "input": "Intel 18260 ac, 2x2 + BT4.1",
-    "expected": {
-      "vendor": "Intel",
-      "chipset": "18260",
-      "standard": [
-        "ac"
-      ],
-      "antenna": "2x2"
-    }
-  },
-  {
-    "input": "Intel 18265 11ac, 2x2 + BT4.1",
-    "expected": {
-      "vendor": "Intel",
-      "chipset": "18265",
-      "standard": [
-        "11ac"
-      ],
-      "antenna": "2x2"
-    }
-  },
-  {
-    "input": "Intel 7265 a/b/g/n, 2x2 + BT4.0",
-    "expected": {
-      "vendor": "Intel",
-      "chipset": "7265",
-      "standard": [
-        "a",
-        "b",
-        "g",
-        "n"
-      ],
-      "antenna": "2x2"
-    }
-  },
-  {
-    "input": "Intel 7265 a/b/g/n, 2x2 + BT4.0",
-    "expected": {
-      "vendor": "Intel",
-      "chipset": "7265",
-      "standard": [
-        "a",
-        "b",
-        "g",
-        "n"
-      ],
-      "antenna": "2x2"
-    }
-  },
-  {
     "input": "Intel 7265 ac, 2x2 + BT4.0",
     "expected": {
       "vendor": "Intel",
       "chipset": "7265",
+      "antenna": "2x2",
       "standard": [
         "ac"
-      ],
-      "antenna": "2x2"
-    }
-  },
-  {
-    "input": "Intel 7265 ac, 2x2 + BT4.0",
-    "expected": {
-      "vendor": "Intel",
-      "chipset": "7265",
-      "standard": [
-        "ac"
-      ],
-      "antenna": "2x2"
+      ]
     }
   },
   {
@@ -145,25 +244,12 @@
     "expected": {
       "vendor": "Intel",
       "chipset": "7265",
+      "antenna": "2x2",
       "standard": [
         "b",
         "g",
         "n"
-      ],
-      "antenna": "2x2"
-    }
-  },
-  {
-    "input": "Intel 7265 b/g/n, 2x2 + BT4.0",
-    "expected": {
-      "vendor": "Intel",
-      "chipset": "7265",
-      "standard": [
-        "b",
-        "g",
-        "n"
-      ],
-      "antenna": "2x2"
+      ]
     }
   },
   {
@@ -171,10 +257,21 @@
     "expected": {
       "vendor": "Intel",
       "chipset": "8260",
+      "antenna": "2x2",
       "standard": [
         "11ac"
-      ],
-      "antenna": "2x2"
+      ]
+    }
+  },
+  {
+    "input": "Intel 8260 ac, 2x2 + BT4.0",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "8260",
+      "antenna": "2x2",
+      "standard": [
+        "ac"
+      ]
     }
   },
   {
@@ -182,10 +279,10 @@
     "expected": {
       "vendor": "Intel",
       "chipset": "8260",
+      "antenna": "2x2",
       "standard": [
         "ac"
-      ],
-      "antenna": "2x2"
+      ]
     }
   },
   {
@@ -193,10 +290,10 @@
     "expected": {
       "vendor": "Intel",
       "chipset": "8265",
+      "antenna": "2x2",
       "standard": [
         "11ac"
-      ],
-      "antenna": "2x2"
+      ]
     }
   },
   {
@@ -204,10 +301,54 @@
     "expected": {
       "vendor": "Intel",
       "chipset": "8265",
+      "antenna": "2x2",
       "standard": [
         "ac"
-      ],
-      "antenna": "2x2"
+      ]
+    }
+  },
+  {
+    "input": "Intel 9260 11ac, 2x2 + BT5.0",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "9260",
+      "antenna": "2x2",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 9260 11ac, 2x2 + BT5.1",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "9260",
+      "antenna": "2x2",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel 9560 11ac, 2x2 + BT5.1",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "9560",
+      "antenna": "2x2",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "Intel AX200 11ax, 2x2 + BT5.2",
+    "expected": {
+      "vendor": "Intel",
+      "chipset": "AX200",
+      "antenna": "2x2",
+      "standard": [
+        "11ax"
+      ]
     }
   },
   {
@@ -215,13 +356,99 @@
     "expected": {}
   },
   {
+    "input": "QCA435 ac, 1x1 + BT4.0",
+    "expected": {
+      "vendor": "QCA435",
+      "antenna": "1x1",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "QCNFA435 ac, 1x1 + BT4.1",
+    "expected": {
+      "vendor": "QCNFA435",
+      "antenna": "1x1",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "RTL8821CE 11ac, 1x1 + BT4.1",
+    "expected": {
+      "vendor": "RTL8821CE",
+      "antenna": "1x1",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
     "input": "RTL8822BE 11ac, 2x2 + BT4.1",
     "expected": {
       "vendor": "RTL8822BE",
+      "antenna": "2x2",
       "standard": [
         "11ac"
-      ],
-      "antenna": "2x2"
+      ]
+    }
+  },
+  {
+    "input": "RTL8822BE 11ac, 2x2 + BT4.2",
+    "expected": {
+      "vendor": "RTL8822BE",
+      "antenna": "2x2",
+      "standard": [
+        "11ac"
+      ]
+    }
+  },
+  {
+    "input": "RTL8822BE ac, 2x2 + BT4.1",
+    "expected": {
+      "vendor": "RTL8822BE",
+      "antenna": "2x2",
+      "standard": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "input": "Realtek 11 b/g/n + BT4.0",
+    "expected": {
+      "vendor": "Realtek",
+      "chipset": "11",
+      "standard": [
+        "b",
+        "g",
+        "n"
+      ]
+    }
+  },
+  {
+    "input": "ThinkPad 11 b/g/n",
+    "expected": {
+      "vendor": "ThinkPad",
+      "chipset": "11",
+      "standard": [
+        "b",
+        "g",
+        "n"
+      ]
+    }
+  },
+  {
+    "input": "ThinkPad 11 b/g/n + BT4.0",
+    "expected": {
+      "vendor": "ThinkPad",
+      "chipset": "11",
+      "standard": [
+        "b",
+        "g",
+        "n"
+      ]
     }
   }
 ]
