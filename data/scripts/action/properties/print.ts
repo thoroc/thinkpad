@@ -1,40 +1,37 @@
 import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
-import { loadProperties } from "./load-data.ts";
+import { OutputType, Property } from "../types.ts";
+import { flattenProperties } from "./flatten.ts";
+import { groupProperties } from "./group.ts";
 
-interface CheckDataShapeOptions {
-  inputPath: string;
-  selectedProperties: string[];
+interface PrintPropertiesOptions {
+  properties: Property[];
+  outputType: OutputType;
   grouped?: boolean;
-  list?: boolean;
 }
 
-export const checkDataShapeAction = (options: CheckDataShapeOptions) => {
-  const { inputPath, selectedProperties, grouped, list } = options;
-
-  const properties = loadProperties(inputPath);
-
-  if (list) {
-    console.log("Properties found:");
-    for (const property of properties) {
-      console.log(`- ${colors.yellow(property.name)}`);
-    }
-    return;
-  }
-
-  const toOutputProperties = properties.filter((property) => {
-    if (selectedProperties.includes("all")) return true;
-    return selectedProperties.includes(property.name);
-  });
+export const printProperties = (
+  options: PrintPropertiesOptions,
+) => {
+  const { properties, outputType = OutputType.JSON, grouped } = options;
 
   if (grouped) {
+    const groupedProperties = groupProperties({ properties });
+
+    if (outputType === OutputType.JSON) {
+      const jsonOutput = flattenProperties({ properties: groupedProperties });
+      console.log(JSON.stringify(jsonOutput, null, 2));
+      return;
+    }
+
     // 1 header composed of the properties names
-    const header = toOutputProperties.map((property) =>
-      colors.cyan(property.name)
-    ).join(" | ");
+    const header = groupedProperties.keys.map((property) =>
+      colors.cyan(property)
+    )
+      .join(" | ");
     console.log(colors.bold(header));
 
     // 2 rows with the values
-    const rows = toOutputProperties.map((property) => {
+    const rows = groupedProperties.values.map((property) => {
       const uniqueValues = Array.from(new Set(property.values)).sort();
       return uniqueValues.map((value) => colors.green(value)).join(" | ");
     }).join(" | ");
@@ -44,14 +41,14 @@ export const checkDataShapeAction = (options: CheckDataShapeOptions) => {
   }
 
   // Output the properties
-  for (const property of toOutputProperties) {
+  for (const property of properties) {
     if (property.name !== "Model" && property.name !== "EAN / UPC / JAN") {
       const uniqueValues = Array.from(new Set(property.values)).sort();
       console.log(`Property: ${colors.yellow(property.name)}`);
       console.log(`Files: ${colors.blue(property.filePresent.join(", "))}`);
       console.log(
         `Values: [\n\t- ${
-          uniqueValues.map((v) => colors.green(v)).join(",\n\t- ")
+          uniqueValues.map((value) => colors.green(value)).join(",\n\t- ")
         }\n]`,
       );
       console.log("-----------------------------");

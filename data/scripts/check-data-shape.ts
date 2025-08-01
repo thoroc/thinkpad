@@ -1,5 +1,6 @@
 import { Command } from "jsr:@cliffy/command@1.0.0-rc.8";
-import { checkDataShapeAction } from "./action.ts";
+import { checkDataShapeAction } from "./action/mod.ts";
+import { OutputType } from "./action/types.ts";
 
 // Script to find all the possible values for the properties in the extracted JSON files
 // This script reads all JSON files in the ./data/extracted directory and collects unique values for
@@ -22,12 +23,28 @@ const cli = new Command()
     "-s, --selected-properties <selectedProperties:string>",
     "The properties to output",
     {
-      default: "all",
       collect: true,
     },
   )
   .option("-l, --list", "List all property names")
-  .option("-g, --grouped", "Group the properties")
+  .option("-g, --grouped", "Group the properties", {
+    depends: ["selected-properties"],
+    default: false,
+  })
+  .option("-c, --check-test-data", "Check the test data shape", {
+    default: false,
+  })
+  .option(
+    "-o, --output-type <outputType:string>",
+    "Output type: json, table, raw",
+    {
+      default: OutputType.RAW,
+    },
+  )
+  .option("-d, --detailed", "Output detailed information", {
+    default: false,
+    conflicts: ["list"],
+  })
   .action(checkDataShapeAction);
 
 if (import.meta.main) {

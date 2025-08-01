@@ -1,8 +1,4 @@
-export interface Property {
-  name: string;
-  filePresent: string[];
-  values: string[];
-}
+import { Property } from "./types.ts";
 
 export const loadProperties = (inputPath: string): Property[] => {
   const jsonFiles = Deno.readDirSync(inputPath)
