@@ -1,4 +1,5 @@
 node_modules
-data/
-!data/imports/*
+data/*
+!data/imports/
+!data/imports/**
 !data/check-data-shape.ts
