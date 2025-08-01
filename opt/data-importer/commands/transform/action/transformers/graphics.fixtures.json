@@ -1,0 +1,487 @@
+[
+  {
+    "input": "AMD Exo Pro Radeon R5 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Exo Pro Radeon R5",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD HD 8570M",
+    "expected": {
+      "vendor": "AMD",
+      "model": "HD 8570M"
+    }
+  },
+  {
+    "input": "AMD HD graphics",
+    "expected": {
+      "vendor": "AMD",
+      "model": "HD graphics"
+    }
+  },
+  {
+    "input": "AMD Radeon 530 2GB GDDR5",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon 530",
+      "memory": {
+        "value": 2,
+        "unit": "GB",
+        "type": "GDDR5"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon 535 2GB GDDR5",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon 535",
+      "memory": {
+        "value": 2,
+        "unit": "GB",
+        "type": "GDDR5"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R4 HD Graphics",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R4 HD Graphics"
+    }
+  },
+  {
+    "input": "AMD Radeon R5 HD Graphics",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R5 HD Graphics"
+    }
+  },
+  {
+    "input": "AMD Radeon R5 M240",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R5 M240"
+    }
+  },
+  {
+    "input": "AMD Radeon R5 M240 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R5 M240",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R5 M240, 2GB Memory",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R5 M240",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R5 M330 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R5 M330",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R5 M430 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R5 M430",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R6 M335DX 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R6 M335DX",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R6 M340DX 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R6 M340DX",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R7 M260 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R7 M260",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R7 M260DX",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R7 M260DX"
+    }
+  },
+  {
+    "input": "AMD Radeon R7 M260DX, 2GB Memory",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R7 M260DX",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R7 M360 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R7 M360",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon R7 M370 2GB",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R7 M370",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon RX 540X 2GB GDDR5",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon RX 540X",
+      "memory": {
+        "value": 2,
+        "unit": "GB",
+        "type": "GDDR5"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon RX 550 2GB GDDR5",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon RX 550",
+      "memory": {
+        "value": 2,
+        "unit": "GB",
+        "type": "GDDR5"
+      }
+    }
+  },
+  {
+    "input": "AMD Radeon RX 550X 2GB GDDR5",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon RX 550X",
+      "memory": {
+        "value": 2,
+        "unit": "GB",
+        "type": "GDDR5"
+      }
+    }
+  },
+  {
+    "input": "Integrated AMD Radeon R5 Graphics",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R5 Graphics"
+    }
+  },
+  {
+    "input": "Integrated AMD Radeon R6 Graphics",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon R6 Graphics"
+    }
+  },
+  {
+    "input": "Integrated AMD Radeon RX Vega 10 Graphics",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon RX Vega 10 Graphics"
+    }
+  },
+  {
+    "input": "Integrated AMD Radeon Vega 3 Graphics",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon Vega 3 Graphics"
+    }
+  },
+  {
+    "input": "Integrated AMD Radeon Vega 8 Graphics",
+    "expected": {
+      "vendor": "AMD",
+      "model": "Radeon Vega 8 Graphics"
+    }
+  },
+  {
+    "input": "Integrated Intel HD Graphics",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics"
+    }
+  },
+  {
+    "input": "Integrated Intel HD Graphics 4400",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 4400"
+    }
+  },
+  {
+    "input": "Integrated Intel HD Graphics 520",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 520"
+    }
+  },
+  {
+    "input": "Integrated Intel HD Graphics 530",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 530"
+    }
+  },
+  {
+    "input": "Integrated Intel HD Graphics 5500",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 5500"
+    }
+  },
+  {
+    "input": "Integrated Intel HD Graphics 610",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 610"
+    }
+  },
+  {
+    "input": "Integrated Intel HD Graphics 620",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 620"
+    }
+  },
+  {
+    "input": "Integrated Intel HD Graphics 630",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 630"
+    }
+  },
+  {
+    "input": "Integrated Intel UHD Graphics",
+    "expected": {
+      "vendor": "Intel",
+      "model": "UHD Graphics"
+    }
+  },
+  {
+    "input": "Integrated Intel UHD Graphics 620",
+    "expected": {
+      "vendor": "Intel",
+      "model": "UHD Graphics 620"
+    }
+  },
+  {
+    "input": "Intel HD Graphics 4400",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 4400"
+    }
+  },
+  {
+    "input": "Intel HD Graphics 4600",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 4600"
+    }
+  },
+  {
+    "input": "Intel HD Graphics 5500",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics 5500"
+    }
+  },
+  {
+    "input": "Intel HD graphics",
+    "expected": {
+      "vendor": "Intel",
+      "model": "HD Graphics"
+    }
+  },
+  {
+    "input": "NVIDIA GeForce 710M, 1GB Memory",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce 710M",
+      "memory": {
+        "value": 1,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "NVIDIA GeForce 920MX 2GB",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce 920MX",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "NVIDIA GeForce 930M 2GB",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce 930M",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "NVIDIA GeForce 940MX 2GB",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce 940MX",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "NVIDIA GeForce 940MX 2GB GDDR5",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce 940MX",
+      "memory": {
+        "value": 2,
+        "unit": "GB",
+        "type": "GDDR5"
+      }
+    }
+  },
+  {
+    "input": "NVIDIA GeForce GT 720M",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce GT 720M"
+    }
+  },
+  {
+    "input": "NVIDIA GeForce GT 730M",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce GT 730M"
+    }
+  },
+  {
+    "input": "NVIDIA GeForce GT740, 2GB Memory",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce GT740",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "NVIDIA GeForce GTX 950M 2GB",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce GTX 950M",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  },
+  {
+    "input": "NVIDIA GeForce MX150 2GB GDDR5",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "GeForce MX150",
+      "memory": {
+        "value": 2,
+        "unit": "GB",
+        "type": "GDDR5"
+      }
+    }
+  },
+  {
+    "input": "NVIDIA Quadro K1100M",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "Quadro K1100M"
+    }
+  },
+  {
+    "input": "NVIDIA Quadro K2100M",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "Quadro K2100M"
+    }
+  },
+  {
+    "input": "NVIDIA Quadro K620M, 2GB memory",
+    "expected": {
+      "vendor": "NVIDIA",
+      "model": "Quadro K620M",
+      "memory": {
+        "value": 2,
+        "unit": "GB"
+      }
+    }
+  }
+]

@@ -4,8 +4,8 @@ export interface Graphics {
   memory?: {
     value: string;
     unit: string;
+    type?: string; // e.g., GDDR5
   };
-  type?: string; // e.g., GDDR5
 }
 
 export const toGraphics = (
@@ -30,7 +30,10 @@ export const toGraphics = (
       };
     }
     if (matches.groups.memoryType) {
-      graphics.type = matches.groups.memoryType;
+      if (!graphics.memory) {
+        graphics.memory = { value: '', unit: '' };
+      }
+      graphics.memory.type = matches.groups.memoryType;
     }
   }
 
