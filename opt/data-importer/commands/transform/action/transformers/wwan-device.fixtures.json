@@ -1,0 +1,92 @@
+[
+  {
+    "input": "Ericsson N5321",
+    "expected": {
+      "vendor": "Ericsson",
+      "model": "N5321",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "Fibocom L830-EB",
+    "expected": {
+      "vendor": "Fibocom",
+      "model": "L830-EB",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "Fibocom L831-EAU",
+    "expected": {
+      "vendor": "Fibocom",
+      "model": "L831-EAU",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "Fibocom L850-GL",
+    "expected": {
+      "vendor": "Fibocom",
+      "model": "L850-GL",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "HUAWEI ME906S",
+    "expected": {
+      "vendor": "HUAWEI",
+      "model": "ME906S",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "None",
+    "expected": {
+      "upgradable": false
+    }
+  },
+  {
+    "input": "Sierra EM7345",
+    "expected": {
+      "vendor": "Sierra",
+      "model": "EM7345",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "Sierra EM7355",
+    "expected": {
+      "vendor": "Sierra",
+      "model": "EM7355",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "Sierra EM7430",
+    "expected": {
+      "vendor": "Sierra",
+      "model": "EM7430",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "Sierra EM7455",
+    "expected": {
+      "vendor": "Sierra",
+      "model": "EM7455",
+      "upgradable": true
+    }
+  },
+  {
+    "input": "WWAN Upgradable",
+    "expected": {
+      "upgradable": true
+    }
+  },
+  {
+    "input": "WWAN upgradable",
+    "expected": {
+      "upgradable": true
+    }
+  }
+]

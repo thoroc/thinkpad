@@ -1,6 +1,6 @@
 import { Command } from 'jsr:@cliffy/command@^1.0.0-rc.8';
 import { toString } from '../utils/command-option.ts';
-import { extractAction } from './action/action.ts';
+import { extractAction } from './action/mod.ts';
 
 const outputDirOption = toString({
   flag: {

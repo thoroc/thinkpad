@@ -1,8 +1,8 @@
-import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
-import figlet from "npm:figlet";
-import { extractDirectory } from "./directory.ts";
-import { extractFile } from "./file.ts";
-import { ExtractOptions } from "./types.ts";
+import { colors } from 'jsr:@cliffy/ansi@1.0.0-rc.8/colors';
+import figlet from 'npm:figlet';
+import { extractDirectory } from './directory.ts';
+import { extractFile } from './file.ts';
+import { ExtractOptions } from './types.ts';
 
 export const extractAction = async (
   options: ExtractOptions,
@@ -15,7 +15,7 @@ export const extractAction = async (
   );
   console.log(
     colors.bold.yellow(
-      figlet.textSync("Extract data", { font: "Larry 3D" }),
+      figlet.textSync('Extract data', { font: 'Larry 3D' }),
     ),
   );
 

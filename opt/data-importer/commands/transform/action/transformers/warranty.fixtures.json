@@ -1,0 +1,103 @@
+[
+  {
+    "input": "1-year depot",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "depot"
+    }
+  },
+  {
+    "input": "1-year Depot with 2-year System Board",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "Depot",
+      "extended": {
+        "period": "2-year",
+        "description": "System Board"
+      }
+    }
+  },
+  {
+    "input": "1-year Depot with 2-year System Board",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "Depot",
+      "extended": {
+        "period": "2-year",
+        "description": "System Board"
+      }
+    }
+  },
+  {
+    "input": "1-year, Depot",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "Depot"
+    }
+  },
+  {
+    "input": "1-year, Depot with 2-year System Board",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "Depot",
+      "extended": {
+        "period": "2-year",
+        "description": "System Board"
+      }
+    }
+  },
+  {
+    "input": "1-year, Onsite",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "Onsite"
+    }
+  },
+  {
+    "input": "3-year depot",
+    "expected": {
+      "basePeriod": "3-year",
+      "location": "depot"
+    }
+  },
+  {
+    "input": "3-year onsite",
+    "expected": {
+      "basePeriod": "3-year",
+      "location": "onsite"
+    }
+  },
+  {
+    "input": "3-year onsite Onsite International Delivery",
+    "expected": {
+      "basePeriod": "3-year",
+      "location": "onsite",
+      "internationalDelivery": true
+    }
+  },
+  {
+    "input": "3-year, Depot",
+    "expected": {
+      "basePeriod": "3-year",
+      "location": "Depot"
+    }
+  },
+  {
+    "input": "3-year, Onsite",
+    "expected": {
+      "basePeriod": "3-year",
+      "location": "Onsite"
+    }
+  },
+  {
+    "input": "3-year, Onsite with 3-year Battery",
+    "expected": {
+      "basePeriod": "3-year",
+      "location": "Onsite",
+      "extended": {
+        "period": "3-year",
+        "description": "Battery"
+      }
+    }
+  }
+]

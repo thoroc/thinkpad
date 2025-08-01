@@ -29,6 +29,7 @@
     "npm:change-case@*": "5.4.4",
     "npm:figlet@*": "1.8.2",
     "npm:hyparquet@1.5.0": "1.5.0",
+    "npm:language-tags@*": "2.1.0",
     "npm:quicktype-core@*": "23.2.6",
     "npm:string-ts@*": "2.2.1",
     "npm:transform_json_keys@*": "1.0.8_typescript@5.8.3",
@@ -599,6 +600,15 @@
       ],
       "optionalDependencies": [
         "graceful-fs"
+      ]
+    },
+    "language-subtag-registry@0.3.23": {
+      "integrity": "sha512-0K65Lea881pHotoGEa5gDlMxt3pctLi2RplBb7Ezh4rRdLEOtgi7n4EwK9lamnUCkKBqaeKRVebTq6BAxSkpXQ=="
+    },
+    "language-tags@2.1.0": {
+      "integrity": "sha512-D4CgpyCt+61f6z2jHjJS1OmZPviAWM57iJ9OKdFFWSNgS7Udj9QVWqyGs/cveVNF57XpZmhSvMdVIV5mjLA7Vg==",
+      "dependencies": [
+        "language-subtag-registry"
       ]
     },
     "lilconfig@3.1.3": {

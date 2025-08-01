@@ -1,130 +1,15 @@
 import { assertEquals } from 'jsr:@std/assert';
 import { describe, it } from 'jsr:@std/testing/bdd';
+import testCases from './module.fixtures.json' with { type: 'json' };
 import { MemoryModule, toMemoryModule } from './module.ts';
 
 describe('toMemoryModule', () => {
-  const testCases: Array<{
-    input: string;
-    expected: MemoryModule | undefined;
-  }> = [
-    // 16GB Soldered DDR4-2400,
-    {
-      input: '16GB Soldered DDR4-2400',
-      expected: { size: 16, unit: 'GB', type: 'DDR4-2400' },
-    },
-    // 16GB,
-    {
-      input: '16GB',
-      expected: { size: 16, unit: 'GB' },
-    },
-    // 16GB DIMM,
-    {
-      input: '16GB DIMM',
-      expected: { size: 16, unit: 'GB' },
-    },
-    // 16GB SO-DIMM DDR4-2133
-    {
-      input: '16GB SO-DIMM DDR4-2133',
-      expected: { size: 16, unit: 'GB', type: 'DDR4-2133' },
-    },
-    // 16GB SO-DIMM DDR4-2400
-    {
-      input: '16GB SO-DIMM DDR4-2400',
-      expected: { size: 16, unit: 'GB', type: 'DDR4-2400' },
-    },
-    // 16GB
-    {
-      input: '16GB',
-      expected: { size: 16, unit: 'GB' },
-    },
-    // 2GB
-    {
-      input: '2GB',
-      expected: { size: 2, unit: 'GB' },
-    },
-    // 4GB DIMM
-    {
-      input: '4GB DIMM',
-      expected: { size: 4, unit: 'GB' },
-    },
-    // 4GB SO-DIMM DDR4-2133
-    {
-      input: '4GB SO-DIMM DDR4-2133',
-      expected: { size: 4, unit: 'GB', type: 'DDR4-2133' },
-    },
-    // 4GB SO-DIMM DDR4-2400
-    {
-      input: '4GB SO-DIMM DDR4-2400',
-      expected: { size: 4, unit: 'GB', type: 'DDR4-2400' },
-    },
-    // 4GB Soldered
-    {
-      input: '4GB Soldered',
-      expected: { size: 4, unit: 'GB' },
-    },
-    // 4GB Soldered DDR4-2133
-    {
-      input: '4GB Soldered DDR4-2133',
-      expected: { size: 4, unit: 'GB', type: 'DDR4-2133' },
-    },
-    // 4GB Soldered DDR4-2400
-    {
-      input: '4GB Soldered DDR4-2400',
-      expected: { size: 4, unit: 'GB', type: 'DDR4-2400' },
-    },
-    // 4GB Soldered
-    {
-      input: '4GB Soldered',
-      expected: { size: 4, unit: 'GB' },
-    },
-    // 4GB,
-    {
-      input: '4GB',
-      expected: { size: 4, unit: 'GB' },
-    },
-    // 8GB
-    {
-      input: '8GB',
-      expected: { size: 8, unit: 'GB' },
-    },
-    // 8GB DIMM
-    {
-      input: '8GB DIMM',
-      expected: { size: 8, unit: 'GB' },
-    },
-    // 8GB SO-DIMM DDR4-2133
-    {
-      input: '8GB SO-DIMM DDR4-2133',
-      expected: { size: 8, unit: 'GB', type: 'DDR4-2133' },
-    },
-    // 8GB SO-DIMM DDR4-2400
-    {
-      input: '8GB SO-DIMM DDR4-2400',
-      expected: { size: 8, unit: 'GB', type: 'DDR4-2400' },
-    },
-    // 8GB Soldered DDR4-2133
-    {
-      input: '8GB Soldered DDR4-2133',
-      expected: { size: 8, unit: 'GB', type: 'DDR4-2133' },
-    },
-    // 8GB Soldered DDR4-2400
-    {
-      input: '8GB Soldered DDR4-2400',
-      expected: { size: 8, unit: 'GB', type: 'DDR4-2400' },
-    },
-    // 8GB Soldered
-    {
-      input: '8GB Soldered',
-      expected: { size: 8, unit: 'GB' },
-    },
-    // 8GB
-    {
-      input: '8GB',
-      expected: { size: 8, unit: 'GB' },
-    },
-  ];
-
-  for (const { input, expected } of testCases) {
+  for (
+    const { input, expected } of (testCases as Array<{
+      input: string;
+      expected: MemoryModule | undefined;
+    }>)
+  ) {
     it(`should parse "${input}" correctly`, () => {
       // Arrange & Act
       const result = toMemoryModule(input);

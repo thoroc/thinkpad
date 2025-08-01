@@ -1,15 +1,16 @@
-import figlet from "npm:figlet";
-import { generate } from "./src/actions/mod.ts";
+import { colors } from 'jsr:@cliffy/ansi@1.0.0-rc.8/colors';
+import figlet from 'npm:figlet';
+import { generate } from './src/actions/mod.ts';
 
 console.log(
   colors.bold.yellow(
-    figlet.textSync("Types Generator", { font: "Larry 3D" }),
+    figlet.textSync('Types Generator', { font: 'Larry 3D' }),
   ),
 );
 
 await generate({
-  inputDir: "data/imports",
-  dataDir: "data/json",
-  schemaDir: "data/schemas",
-  fileExtension: "xls",
+  inputDir: 'data/imports',
+  dataDir: 'data/json',
+  schemaDir: 'data/schemas',
+  fileExtension: 'xls',
 });

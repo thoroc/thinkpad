@@ -5,12 +5,12 @@ export interface Resolution {
 }
 
 export interface Brightness {
-  value?: string;
+  value?: number;
   unit?: string;
 }
 
 export interface Display {
-  size: string;
+  size: number;
   resolution: Resolution;
   panelType?: string;
   brightness?: Brightness;
@@ -36,7 +36,7 @@ export const toDisplay = (displayString: string): Display => {
 
   const sizeMatch = displayString.match(/(?<size>\d+(\.\d+)?)\s*\"/);
   if (sizeMatch?.groups?.size) {
-    display.size = sizeMatch.groups.size;
+    display.size = parseFloat(sizeMatch.groups.size);
   }
 
   const privacyGuardMatch = displayString.match(/Privacy Guard/i);
@@ -63,7 +63,7 @@ export const toDisplay = (displayString: string): Display => {
   const brightnessMatch = displayString.match(/(?<value>\d+)\s*(?<unit>nits)/i);
   if (brightnessMatch?.groups?.value) {
     display.brightness = {
-      value: brightnessMatch.groups.value,
+      value: parseInt(brightnessMatch.groups.value, 10),
       unit: brightnessMatch.groups.unit || 'nits',
     };
   }

@@ -1,0 +1,362 @@
+[
+  {
+    "input": "None",
+    "expected": {}
+  },
+  {
+    "input": "English",
+    "expected": {
+      "values": [
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Japanese",
+    "expected": {
+      "values": [
+        {
+          "name": "Japanese",
+          "code": "ja"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Arabic / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Arabic",
+          "code": "ar"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Croatian / English / Slovenian",
+    "expected": {
+      "values": [
+        {
+          "name": "Croatian",
+          "code": "hr"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        },
+        {
+          "name": "Slovenian",
+          "code": "sl"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Czech / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Czech",
+          "code": "cs"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "French",
+    "expected": {
+      "values": [
+        {
+          "name": "French",
+          "code": "fr"
+        }
+      ]
+    }
+  },
+  {
+    "input": "German",
+    "expected": {
+      "values": [
+        {
+          "name": "German",
+          "code": "de"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Greek / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Greek",
+          "code": "el"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Hebrew / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Hebrew",
+          "code": "he"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Hungarian / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Hungarian",
+          "code": "hu"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Nordic (DK/FI/SV/NO/EN)",
+    "expected": {
+      "values": [
+        {
+          "name": "Danish",
+          "code": "dk"
+        },
+        {
+          "name": "Finnish",
+          "code": "fi"
+        },
+        {
+          "name": "Swedish",
+          "code": "sv"
+        },
+        {
+          "name": "Norwegian",
+          "code": "no"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ],
+      "family": "Nordic"
+    }
+  },
+  {
+    "input": "Polish / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Polish",
+          "code": "pl"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Portuguese (Brazil)",
+    "expected": {
+      "values": [
+        {
+          "name": "Portuguese",
+          "code": "pt",
+          "region": "Brazil"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Portuguese / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Portuguese",
+          "code": "pt"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Romanian / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Romanian",
+          "code": "ro"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Russian",
+    "expected": {
+      "values": [
+        {
+          "name": "Russian",
+          "code": "ru"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Serbian / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Serbian",
+          "code": "sr"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Slovak / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Slovak",
+          "code": "sk"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Spanish",
+    "expected": {
+      "values": [
+        {
+          "name": "Spanish",
+          "code": "es"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Turkish / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Turkish",
+          "code": "tr"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  },
+  {
+    "input": "WE (EN/FR/DE/NL/IT)",
+    "expected": {
+      "values": [
+        {
+          "name": "English",
+          "code": "en"
+        },
+        {
+          "name": "French",
+          "code": "fr"
+        },
+        {
+          "name": "German",
+          "code": "de"
+        },
+        {
+          "name": "Dutch",
+          "code": "nl"
+        },
+        {
+          "name": "Italian",
+          "code": "it"
+        }
+      ],
+      "family": "Western European"
+    }
+  },
+  {
+    "input": "Croatian / English / Slovenian",
+    "expected": {
+      "values": [
+        {
+          "name": "Croatian",
+          "code": "hr"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        },
+        {
+          "name": "Slovenian",
+          "code": "sl"
+        }
+      ]
+    }
+  },
+  {
+    "input": "Traditional Chinese / Simplified Chinese / English",
+    "expected": {
+      "values": [
+        {
+          "name": "Mandarin Chinese (Traditional)",
+          "code": "zh-tw"
+        },
+        {
+          "name": "Mandarin Chinese (Simplified)",
+          "code": "zh-cn"
+        },
+        {
+          "name": "English",
+          "code": "en"
+        }
+      ]
+    }
+  }
+]
