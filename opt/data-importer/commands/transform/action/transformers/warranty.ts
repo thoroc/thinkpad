@@ -9,7 +9,8 @@ export const toWarranty = (warrantyString: string): Warranty => {
   const warranty = {} as Warranty;
 
   // Match base period and location (dash, comma, or whitespace as separator)
-  const basePattern = /^(?<basePeriod>[\d\w\-]+)[\s,-]+(?<where>Depot|Onsite)/i;
+  const basePattern =
+    /^(?<basePeriod>[\d\w\-]+)[\s,-]+(?<where>Mail-in|Depot|Onsite)/i;
   const baseMatch = basePattern.exec(warrantyString);
 
   if (baseMatch?.groups) {
@@ -18,7 +19,8 @@ export const toWarranty = (warrantyString: string): Warranty => {
   }
 
   // Match extended warranty details
-  const extendedPattern = /with\s+(?<extendedPeriod>[\d\w\-]+)\s+(?<extendedDescription>.+)/i;
+  const extendedPattern =
+    /with\s+(?<extendedPeriod>[\d\w\-]+)\s+(?<extendedDescription>.+)/i;
   const extendedMatch = extendedPattern.exec(warrantyString);
 
   if (extendedMatch?.groups) {
@@ -29,7 +31,7 @@ export const toWarranty = (warrantyString: string): Warranty => {
   }
 
   // Check for international delivery
-  if (/International Delivery/i.test(warrantyString)) {
+  if (/International Delivery|OID/i.test(warrantyString)) {
     warranty.internationalDelivery = true;
   }
 

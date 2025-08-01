@@ -36,10 +36,24 @@
     }
   },
   {
+    "input": "1-year, Mail-in",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "Mail-in"
+    }
+  },
+  {
     "input": "1-year, Onsite",
     "expected": {
       "basePeriod": "1-year",
       "location": "Onsite"
+    }
+  },
+  {
+    "input": "1-year, depot",
+    "expected": {
+      "basePeriod": "1-year",
+      "location": "depot"
     }
   },
   {
@@ -58,6 +72,14 @@
   },
   {
     "input": "3-year onsite Onsite International Delivery",
+    "expected": {
+      "basePeriod": "3-year",
+      "location": "onsite",
+      "internationalDelivery": true
+    }
+  },
+  {
+    "input": "3-year onsite, Onsite International Delivery",
     "expected": {
       "basePeriod": "3-year",
       "location": "onsite",
@@ -87,6 +109,14 @@
         "period": "3-year",
         "description": "Battery"
       }
+    }
+  },
+  {
+    "input": "3-year, Onsite, OID",
+    "expected": {
+      "basePeriod": "3-year",
+      "location": "Onsite",
+      "internationalDelivery": true
     }
   }
 ]

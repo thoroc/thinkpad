@@ -38,6 +38,7 @@ export const checkTestDataAction = (options: CheckDataShapeOptions) => {
     "power-adapter": `${basePath}/power-adapter.fixtures.json`,
     "wlan": `${basePath}/wlan-device.fixtures.json`,
     "wwan": `${basePath}/wwan-device.fixtures.json`,
+    "warranty": `${basePath}/warranty.fixtures.json`,
   };
 
   const loadTestData = Deno.readTextFileSync(
