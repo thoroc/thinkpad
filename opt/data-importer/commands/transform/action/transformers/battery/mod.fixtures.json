@@ -1,0 +1,551 @@
+[
+  {
+    "input": "3-cell (23Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "3-cell (23Wh) + 3-cell (23Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "3-cell (23Wh) + 3-cell (26Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 26,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "3-cell (23Wh) + 6-cell (48Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 48,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "3-cell (23Wh) + 6-cell (72Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 72,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "3-cell (24Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 24,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "3-cell (45Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 3,
+          "type": {
+            "value": 45,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "4-cell (32Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 4,
+          "type": {
+            "value": 32,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "4-cell (41Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 4,
+          "type": {
+            "value": 41,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "41Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 41,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "45Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 45,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "6-cell (47Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 47,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "6-cell (48Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 48,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "6-cell (48wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 48,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "6-cell (56Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 56,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "6-cell (62wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 62,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "6-cell (72Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 72,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "9-cell (99.9Wh)",
+    "expected": {
+      "internal": [
+        {
+          "cells": 9,
+          "type": {
+            "value": 99.9,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 23Wh + Integrated 26Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        },
+        {
+          "type": {
+            "value": 26,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 23Wh + Swappable 23Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 23Wh + Swappable 47Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "type": {
+            "value": 47,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 23Wh + Swappable 72Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "type": {
+            "value": 72,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 24Wh + Swappable 24Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 24,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "type": {
+            "value": 24,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 24Wh + Swappable 48Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 24,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "type": {
+            "value": 48,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 24Wh + Swappable 72Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 24,
+            "unit": "Wh"
+          }
+        }
+      ],
+      "external": [
+        {
+          "type": {
+            "value": 72,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 42Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 42,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 45Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 45,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 48Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 48,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Integrated 57Wh",
+    "expected": {
+      "internal": [
+        {
+          "type": {
+            "value": 57,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "None + 6-cell (48Wh)",
+    "expected": {
+      "external": [
+        {
+          "cells": 6,
+          "type": {
+            "value": 48,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Swappable 23Wh",
+    "expected": {
+      "external": [
+        {
+          "type": {
+            "value": 23,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Swappable 24Wh",
+    "expected": {
+      "external": [
+        {
+          "type": {
+            "value": 24,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Swappable 48Wh",
+    "expected": {
+      "external": [
+        {
+          "type": {
+            "value": 48,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": "Swappable 72Wh",
+    "expected": {
+      "external": [
+        {
+          "type": {
+            "value": 72,
+            "unit": "Wh"
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,4 +1,4 @@
-import { BatteryCells, toBatteryCells } from './battery-cells.ts';
+import { Batteries, toBatteries } from './battery/mod.ts';
 import { Bluetooth, toBluetooth } from './bluetooth.ts';
 import { toBoolean } from './boolean.ts';
 import { Camera, toCamera } from './camera.ts';
@@ -192,8 +192,8 @@ export class ThinkpadTransformer {
     return toBoolean(this._nfc);
   }
 
-  public get batteryCells(): BatteryCells {
-    return toBatteryCells(this._batteryCells);
+  public get batteryCells(): Batteries {
+    return toBatteries(this._batteryCells);
   }
 
   public get powerAdapter(): PowerAdapter {
