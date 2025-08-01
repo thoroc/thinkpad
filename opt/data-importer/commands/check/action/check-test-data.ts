@@ -37,6 +37,9 @@ export const checkTestDataAction = (options: CheckDataShapeOptions) => {
   const transformerTestData: Record<string, string> = {
     'battery': `${basePath}/battery-cells.fixtures.json`,
     'camera': `${basePath}/camera.fixtures.json`,
+    'display': `${basePath}/display.fixtures.json`,
+    'graphics': `${basePath}/graphics.fixtures.json`,
+    'processor': `${basePath}/processor.fixtures.json`,
     'memory': `${basePath}/memory/system.fixtures.json`,
     'power-adapter': `${basePath}/power-adapter.fixtures.json`,
     'wlan': `${basePath}/wlan-device.fixtures.json`,
@@ -84,7 +87,7 @@ export const checkTestDataAction = (options: CheckDataShapeOptions) => {
     `Run the following command to sort the fixtures once you have added the new test data:
     jq 'group_by(.input) | map(.[0]) | sort_by(.input)' ${Deno.cwd()}/${
       transformerTestData[propertyName]
-    }n > tmp.json && mv tmp.json ${Deno.cwd()}/${transformerTestData[propertyName]}`,
+    } > tmp.json && mv tmp.json ${Deno.cwd()}/${transformerTestData[propertyName]}`,
   );
 
   if (outputType) {

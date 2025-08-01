@@ -15,21 +15,26 @@ export interface Display {
   panelType?: string;
   brightness?: Brightness;
   antiGlare?: boolean;
+  antiReflection?: boolean;
   privacyGuard?: boolean;
+  touch?: boolean;
 }
 
 /**
- * Parses a display specification string and extracts structured display information.
+ * Parses a display specification string and returns a `Display` object with extracted properties.
  *
- * The function supports parsing display size, resolution, panel type, brightness, and anti-glare features
- * from strings such as:
- * - "14\" HD+ (1600x900)"
- * - "14\" FHD (1920x1080) IPS"
- * - "14\" FHD (1920x1080) WVA 250nits Anti-glare"
- * - "12.5\" FHD (1920x1080) WVA 300nits Anti-glare"
+ * The function attempts to extract the following properties from the input string:
+ * - `size`: The display size in inches (e.g., `14.0"`).
+ * - `privacyGuard`: Whether the display has a privacy guard feature.
+ * - `resolution`: The display resolution, including name (e.g., "FHD+"), width, and height.
+ * - `panelType`: The panel type (e.g., "IPS", "TN", "WVA").
+ * - `brightness`: The brightness value and unit (e.g., "400 nits").
+ * - `antiGlare`: Whether the display is anti-glare.
+ * - `antiReflection`: Whether the display is anti-reflection.
+ * - `touch`: Whether the display is touch-enabled.
  *
- * @param displayString - The display specification string to parse.
- * @returns A `Display` object containing the extracted properties.
+ * @param displayString - The string describing the display specifications.
+ * @returns A `Display` object populated with the extracted properties.
  */
 export const toDisplay = (displayString: string): Display => {
   const display = {} as Display;
@@ -64,13 +69,23 @@ export const toDisplay = (displayString: string): Display => {
   if (brightnessMatch?.groups?.value) {
     display.brightness = {
       value: parseInt(brightnessMatch.groups.value, 10),
-      unit: brightnessMatch.groups.unit || 'nits',
+      unit: brightnessMatch.groups.unit || "nits",
     };
   }
 
   const antiGlareMatch = displayString.match(/Anti-glare/i);
   if (antiGlareMatch) {
     display.antiGlare = true;
+  }
+
+  const antiReflectionMatch = displayString.match(/Anti-reflection/i);
+  if (antiReflectionMatch) {
+    display.antiReflection = true;
+  }
+
+  const touchMatch = displayString.match(/Touch/i);
+  if (touchMatch) {
+    display.touch = true;
   }
 
   return display;

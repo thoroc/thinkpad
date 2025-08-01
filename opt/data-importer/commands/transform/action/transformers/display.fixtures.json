@@ -103,6 +103,121 @@
     }
   },
   {
+    "input": "13.3\" FHD (1920x1080) IPS 250nits Anti-glare",
+    "expected": {
+      "size": 13.3,
+      "panelType": "IPS",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "antiGlare": true
+    }
+  },
+  {
+    "input": "13.3\" FHD (1920x1080) IPS 250nits Anti-glare, Touch",
+    "expected": {
+      "size": 13.3,
+      "panelType": "IPS",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "antiGlare": true,
+      "touch": true
+    }
+  },
+  {
+    "input": "13.3\" FHD (1920x1080) IPS 300nits AR (anti-reflection), Touch",
+    "expected": {
+      "size": 13.3,
+      "panelType": "IPS",
+      "brightness": {
+        "value": 300,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "antiReflection": true,
+      "touch": true
+    }
+  },
+  {
+    "input": "13.3\" FHD (1920x1080) WVA 250nits Anti-glare",
+    "expected": {
+      "size": 13.3,
+      "panelType": "WVA",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "antiGlare": true
+    }
+  },
+  {
+    "input": "13.3\" FHD (1920x1080) WVA 300nits AR (anti-reflection)",
+    "expected": {
+      "size": 13.3,
+      "panelType": "WVA",
+      "brightness": {
+        "value": 300,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "antiReflection": true
+    }
+  },
+  {
+    "input": "13.3\" HD (1366x768) TN 250nits Anti-glare",
+    "expected": {
+      "size": 13.3,
+      "panelType": "TN",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
+      },
+      "antiGlare": true
+    }
+  },
+  {
+    "input": "14\" FHD (1920x1080)",
+    "expected": {
+      "size": 14,
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      }
+    }
+  },
+  {
     "input": "14\" FHD (1920x1080) IPS",
     "expected": {
       "size": 14,
@@ -132,6 +247,41 @@
     }
   },
   {
+    "input": "14\" FHD (1920x1080) IPS 250nits Anti-glare, Touch",
+    "expected": {
+      "size": 14,
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "panelType": "IPS",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "antiGlare": true,
+      "touch": true
+    }
+  },
+  {
+    "input": "14\" FHD (1920x1080) TN 220nits Anti-glare",
+    "expected": {
+      "size": 14,
+      "panelType": "TN",
+      "brightness": {
+        "value": 220,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "antiGlare": true
+    }
+  },
+  {
     "input": "14\" FHD (1920x1080) WVA 250nits Anti-glare",
     "expected": {
       "size": 14,
@@ -146,6 +296,35 @@
         "name": "FHD"
       },
       "antiGlare": true
+    }
+  },
+  {
+    "input": "14\" FHD (1920x1080) WVA 250nits Anti-glare, ThinkPad Privacy Guard",
+    "expected": {
+      "size": 14,
+      "panelType": "WVA",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "antiGlare": true,
+      "privacyGuard": true
+    }
+  },
+  {
+    "input": "14\" HD (1366x768)",
+    "expected": {
+      "size": 14,
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
+      }
     }
   },
   {
@@ -218,6 +397,132 @@
         "height": 1440,
         "width": 2560,
         "name": "WQHD"
+      },
+      "antiGlare": true
+    }
+  },
+  {
+    "input": "14.0\" HD (1366x768)",
+    "expected": {
+      "size": 14,
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
+      }
+    }
+  },
+  {
+    "input": "15.5\" 3K (2880x1620) IPS",
+    "expected": {
+      "size": 15.5,
+      "resolution": {
+        "height": 1620,
+        "width": 2880,
+        "name": "3K"
+      },
+      "panelType": "IPS"
+    }
+  },
+  {
+    "input": "15.6\" FHD (1920x1080)",
+    "expected": {
+      "size": 15.6,
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      }
+    }
+  },
+  {
+    "input": "15.6\" FHD (1920x1080) IPS",
+    "expected": {
+      "size": 15.6,
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "panelType": "IPS"
+    }
+  },
+  {
+    "input": "15.6\" FHD (1920x1080) IPS 250nits Anti-glare",
+    "expected": {
+      "size": 15.6,
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "panelType": "IPS",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "antiGlare": true
+    }
+  },
+  {
+    "input": "15.6\" FHD (1920x1080) IPS 250nits Anti-glare, Touch",
+    "expected": {
+      "size": 15.6,
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "panelType": "IPS",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "antiGlare": true,
+      "touch": true
+    }
+  },
+  {
+    "input": "15.6\" FHD (1920x1080) WVA 250nits Anti-glare",
+    "expected": {
+      "size": 15.6,
+      "resolution": {
+        "height": 1080,
+        "width": 1920,
+        "name": "FHD"
+      },
+      "panelType": "WVA",
+      "brightness": {
+        "value": 250,
+        "unit": "nits"
+      },
+      "antiGlare": true
+    }
+  },
+  {
+    "input": "15.6\" HD (1366x768)",
+    "expected": {
+      "size": 15.6,
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
+      }
+    }
+  },
+  {
+    "input": "15.6\" HD (1366x768) TN 220nits Anti-glare",
+    "expected": {
+      "size": 15.6,
+      "panelType": "TN",
+      "brightness": {
+        "value": 220,
+        "unit": "nits"
+      },
+      "resolution": {
+        "height": 768,
+        "width": 1366,
+        "name": "HD"
       },
       "antiGlare": true
     }
