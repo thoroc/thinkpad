@@ -1,17 +1,22 @@
-import { colors } from 'jsr:@cliffy/ansi@1.0.0-rc.8/colors';
-import { Command } from 'jsr:@cliffy/command@^1.0.0-rc.8';
-import figlet from 'npm:figlet';
-import denoConfig from '../../deno.json' with { type: 'json' };
-import { extractCommand, loadCommand, transformCommand } from './commands/mod.ts';
+import { colors } from "jsr:@cliffy/ansi@1.0.0-rc.8/colors";
+import { Command } from "jsr:@cliffy/command@^1.0.0-rc.8";
+import figlet from "npm:figlet";
+import denoConfig from "../../deno.json" with { type: "json" };
+import { checkDataShapeCommand } from "./commands/check/command.ts";
+import {
+  extractCommand,
+  loadCommand,
+  transformCommand,
+} from "./commands/mod.ts";
 
-const appName = 'DataImporter';
+const appName = "DataImporter";
 
 if (import.meta.main) {
-  const version = (denoConfig as { version?: string }).version || '0.0.0';
+  const version = (denoConfig as { version?: string }).version || "0.0.0";
   const banner = figlet.textSync(appName, {
-    font: 'Slant',
-    horizontalLayout: 'default',
-    verticalLayout: 'default',
+    font: "Slant",
+    horizontalLayout: "default",
+    verticalLayout: "default",
     whitespaceBreak: true,
   });
   console.log(colors.cyan(banner));
@@ -19,12 +24,13 @@ if (import.meta.main) {
     .name(appName)
     .description(`${appName} CLI`)
     .version(version)
-    .option('-v, --verbose', 'Verbose output')
+    .option("-v, --verbose", "Verbose output")
     .action(function () {
       this.showHelp();
     })
-    .command('extract', extractCommand)
-    .command('transform', transformCommand)
-    .command('load', loadCommand)
+    .command("check-data-shape", checkDataShapeCommand)
+    .command("extract", extractCommand)
+    .command("transform", transformCommand)
+    .command("load", loadCommand)
     .parse(Deno.args);
 }

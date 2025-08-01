@@ -2,15 +2,9 @@ import { Command } from "jsr:@cliffy/command@1.0.0-rc.8";
 import { checkDataShapeAction } from "./action/mod.ts";
 import { OutputType } from "./action/types.ts";
 
-// Script to find all the possible values for the properties in the extracted JSON files
-// This script reads all JSON files in the ./data/extracted directory and collects unique values for
-// each property across all files. It then prints the property name, the files it appears in,
-// and the unique values found for that property.
-
-// list all JSON files
-
-const cli = new Command()
+export const checkDataShapeCommand = new Command()
   .name("check-data-shape")
+  .alias("c")
   .description("Check the shape of data in extracted JSON files")
   .option(
     "-i, --input-path <inputPath:string>",
@@ -50,7 +44,3 @@ const cli = new Command()
     conflicts: ["list"],
   })
   .action(checkDataShapeAction);
-
-if (import.meta.main) {
-  cli.parse(Deno.args);
-}

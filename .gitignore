@@ -2,5 +2,3 @@ node_modules
 data/*
 !data/imports/
 !data/imports/**
-!data/scripts/
-!data/scripts/**
