@@ -31,9 +31,13 @@ const cli = new Command()
     depends: ["selected-properties"],
     default: false,
   })
-  .option("-c, --check-test-data", "Check the test data shape", {
-    default: false,
-  })
+  .option(
+    "-c, --check-test-data <checkTestData:string>",
+    "Check the test data shape",
+    {
+      required: false,
+    },
+  )
   .option(
     "-o, --output-type <outputType:string>",
     "Output type: json, table, raw",

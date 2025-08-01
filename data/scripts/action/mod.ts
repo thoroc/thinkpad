@@ -12,7 +12,7 @@ interface CheckDataShapeOptions {
   list?: boolean;
   outputType: string;
   detailed?: boolean;
-  checkTestData?: boolean;
+  checkTestData?: string;
 }
 
 export const checkDataShapeAction = (options: CheckDataShapeOptions) => {
@@ -40,6 +40,7 @@ export const checkDataShapeAction = (options: CheckDataShapeOptions) => {
       properties: selectedProperties
         ? properties.filter((p) => selectedProperties.includes(p.name))
         : properties,
+      propertyName: checkTestData,
     });
 
     return;

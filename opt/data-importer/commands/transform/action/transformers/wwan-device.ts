@@ -9,11 +9,19 @@ export const toWWANDevice = (
 ): WWANDevice => {
   const wwan = {} as WWANDevice;
 
-  if (wwanString.toUpperCase() === 'NONE') {
+  if (
+    wwanString.toUpperCase() === "NONE" || wwanString.toUpperCase() === "NO"
+  ) {
     return { upgradable: false };
   }
 
-  if (wwanString.toUpperCase() === 'WWAN UPGRADABLE') {
+  if (wwanString.toUpperCase() === "WWAN UPGRADABLE") {
+    return { upgradable: true };
+  }
+
+  // special case if we have an SSD
+  const ssdPattern = /\d{1,2}GB\s*(SSD)?/i;
+  if (ssdPattern.test(wwanString)) {
     return { upgradable: true };
   }
 

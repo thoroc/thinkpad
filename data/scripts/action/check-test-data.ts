@@ -5,12 +5,13 @@ import { Property } from "./types.ts";
 
 interface CheckDataShapeOptions {
   properties: Property[];
+  propertyName: string;
 }
 
 type TestData = { input: string; expected: any };
 
 export const checkTestDataAction = (options: CheckDataShapeOptions) => {
-  const { properties } = options;
+  const { properties, propertyName } = options;
 
   console.log(colors.bold(colors.yellow("Checking test data...")));
 
@@ -29,13 +30,15 @@ export const checkTestDataAction = (options: CheckDataShapeOptions) => {
     return;
   }
 
+  const basePath = "opt/data-importer/commands/transform/action/transformers";
+
   const transformerTestData: Record<string, string> = {
-    "memory":
-      "opt/data-importer/commands/transform/action/transformers/memory/system.fixtures.json",
+    "memory": `${basePath}/memory/system.fixtures.json`,
+    "wwan": `${basePath}/wwan-device.fixtures.json`,
   };
 
   const loadTestData = Deno.readTextFileSync(
-    `${Deno.cwd()}/${transformerTestData["memory"]}`,
+    `${Deno.cwd()}/${transformerTestData[propertyName]}`,
   );
   const testDataProperties: TestData[] = JSON.parse(loadTestData);
 
