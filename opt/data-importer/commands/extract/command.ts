@@ -12,4 +12,7 @@ export const extractCommand = new Command()
       default: `${Deno.cwd()}/data/extracted`,
     }
   )
+  .option('-f, --force', 'Overwrite existing files.', {
+    default: false,
+  })
   .action(extractAction);

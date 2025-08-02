@@ -56,6 +56,18 @@ export const extractFile = async (
       `${fileConfig.name}.${fileExtension}`
     );
 
+    // does the file already exist?
+    const outputFileExists = await exists(outputFilepath);
+
+    if (outputFileExists && !options.force) {
+      console.warn(
+        colors.yellow(
+          `File already exists: ${outputFilepath}. Use --force to overwrite.`
+        )
+      );
+      return;
+    }
+
     await Deno.writeFile(outputFilepath, exportSheet(data, ExportTypes.JSON));
 
     console.log(
