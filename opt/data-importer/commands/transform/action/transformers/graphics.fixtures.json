@@ -352,7 +352,7 @@
     "input": "Intel HD graphics",
     "expected": {
       "vendor": "Intel",
-      "model": "HD Graphics"
+      "model": "HD graphics"
     }
   },
   {

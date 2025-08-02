@@ -2,38 +2,36 @@ export interface Graphics {
   vendor?: string;
   model?: string;
   memory?: {
-    value: string;
-    unit: string;
+    value?: number;
+    unit?: string;
     type?: string; // e.g., GDDR5
   };
 }
 
-export const toGraphics = (
-  graphicsString: string,
-): Graphics => {
+export const toGraphics = (graphicsString: string): Graphics => {
   const graphics = {} as Graphics;
 
-  // Improved regex: vendor, model, optional memory (with or without parentheses), optional type
+  // Regex for vendor, model, and memory (handles all your test cases)
   const pattern =
-    /^(Integrated)?\s*(?<vendor>Intel|NVIDIA|AMD)?\s*(?<modelName>[\w\- ]+)?(?:[\s\(]*(?<memoryValue>\d+)\s*(?<memoryUnit>GB|MB)[\)]*)?\s*(?<memoryType>GDDR5|GDDR6|LPDDR4|LPDDR5)?/i;
-  const matches = pattern.exec(graphicsString);
+    /^(Integrated\s+)?(?<vendor>Intel|NVIDIA|AMD)?\s*(?<model>(?:HD|UHD|GeForce|Quadro|Radeon|GT|MX|K)?[\w\s\-\.]+?)(?:,?\s*(?<memoryValue>\d+)\s*(?<memoryUnit>GB|MB)\s*(?<memoryType>GDDR5|GDDR6|LPDDR4|LPDDR5|Memory)?)?$/i;
+  const matches = pattern.exec(graphicsString.trim());
 
   if (matches?.groups) {
-    if (matches.groups.vendor) graphics.vendor = matches.groups.vendor;
-    if (matches.groups.modelName) {
-      graphics.model = matches.groups.modelName.trim();
-    }
+    if (matches.groups.vendor) graphics.vendor = matches.groups.vendor.trim();
+    if (matches.groups.model)
+      graphics.model = matches.groups.model.trim().replace(/\s+$/, '');
     if (matches.groups.memoryValue && matches.groups.memoryUnit) {
       graphics.memory = {
-        value: matches.groups.memoryValue,
+        value: parseInt(matches.groups.memoryValue, 10),
         unit: matches.groups.memoryUnit.toUpperCase(),
       };
-    }
-    if (matches.groups.memoryType) {
-      if (!graphics.memory) {
-        graphics.memory = { value: '', unit: '' };
+      // Only add type if it's not "Memory"
+      if (
+        matches.groups.memoryType &&
+        !/memory/i.test(matches.groups.memoryType)
+      ) {
+        graphics.memory.type = matches.groups.memoryType;
       }
-      graphics.memory.type = matches.groups.memoryType;
     }
   }
 
