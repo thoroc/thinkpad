@@ -2,7 +2,13 @@ import { colors } from 'jsr:@cliffy/ansi@1.0.0-rc.7/colors';
 import { existsSync } from 'jsr:@std/fs/exists';
 import { flattenProperties } from './properties/flatten.ts';
 import { groupProperties } from './properties/group.ts';
-import { OutputType, Property, TransformerFixtures } from './types.ts';
+import {
+  FlattenProperties,
+  GroupedProperties,
+  OutputType,
+  Property,
+  TransformerFixtures,
+} from './types.ts';
 
 interface CheckDataShapeOptions {
   properties: Property[];
@@ -18,8 +24,10 @@ export const checkTestDataAction = (options: CheckDataShapeOptions) => {
 
   console.log(colors.bold(colors.yellow('Checking test data...')));
 
-  const groupedProperties = groupProperties({ properties });
-  const flatProperties = flattenProperties({ properties: groupedProperties });
+  const groupedProperties: GroupedProperties = groupProperties({ properties });
+  const flatProperties: FlattenProperties = flattenProperties({
+    properties: groupedProperties,
+  });
 
   // console.log(flatProperties);
 
@@ -103,7 +111,16 @@ Run the following command to sort the fixtures once you have added the new test 
     console.log(
       colors.yellow(`Creating new test data file at: ${fixtureFilePath}`)
     );
-    Deno.writeTextFileSync(fixtureFilePath, JSON.stringify([], null, 2));
+
+    const newTestData: TestData[] = flatProperties.values.map((value) => ({
+      input: value,
+      expected: {},
+    }));
+
+    Deno.writeTextFileSync(
+      fixtureFilePath,
+      JSON.stringify(newTestData, null, 2)
+    );
     console.log(
       colors.green(`New test data file created at: ${fixtureFilePath}`)
     );
