@@ -1,3 +1,4 @@
+import { toModel } from './model.ts';
 import { Specs, toSpecs } from './specs.ts';
 
 export interface Processor {
@@ -50,47 +51,27 @@ export const AMDProcessorFamilies = [
 export const toProcessor = (processorString: string): Processor => {
   const processor = {} as Processor;
 
-  const specsMatch = processorString.match(/^.*\((?<specs>.+)\)$/);
+  // Split into model and specs using regex
+  const match = processorString.match(/^(.*?)\s*\((.+)\)\s*$/);
+  let modelPart = processorString;
+  let specsPart = '';
+  if (match) {
+    modelPart = match[1].trim();
+    specsPart = match[2].trim();
+  }
 
-  if (specsMatch?.groups?.specs) {
-    const specsString = specsMatch.groups.specs.trim();
-    const specs = toSpecs(specsString);
+  // Use toModel on the model part
+  const model = toModel(modelPart);
+  processor.vendor = model.vendor || 'Unknown';
+  processor.family = model.family;
+  processor.model = model.name || '';
 
+  // Use toSpecs on the specs part if present
+  if (specsPart) {
+    const specs = toSpecs(specsPart);
     if (specs) {
       processor.specs = specs;
     }
-  }
-
-  const processorMatch = processorString.match(
-    /Core?\s?(?<family>[\w\d]+)\-(?<model>[\w\d]+)/
-  );
-  if (processorMatch?.groups) {
-    processor.family = processorMatch.groups.family;
-    processor.model = processorMatch.groups.model;
-  }
-
-  console.log(`processorMatch: [${processorMatch}]`);
-
-  const vendorMatch = processorString.match(/^(?<vendor>AMD|Intel)/);
-  if (vendorMatch?.groups) {
-    processor.vendor = vendorMatch.groups.vendor;
-  } else if (
-    IntelProcessorFamilies.map((family) => family.toLowerCase()).includes(
-      processor.family.toLowerCase()
-    )
-  ) {
-    // Default to Intel if the family is recognized
-    processor.vendor = 'Intel';
-  } else if (
-    AMDProcessorFamilies.map((family) => family.toLowerCase()).includes(
-      processor.family.toLowerCase()
-    )
-  ) {
-    // Default to AMD if the family is recognized
-    processor.vendor = 'AMD';
-  } else {
-    // Default vendor if not specified
-    processor.vendor = 'Unknown';
   }
 
   return processor;

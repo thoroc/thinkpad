@@ -4,6 +4,17 @@ export interface Model {
   name?: string;
 }
 
+/**
+ * Parses a CPU model string and returns a normalized `Model` object.
+ *
+ * The function attempts to extract the vendor, family, and name from the input string
+ * using a regular expression. If the vendor is not explicitly provided, it tries to infer
+ * the vendor based on the family. It also normalizes Intel i-series family names to the
+ * "Core iX" format.
+ *
+ * @param modelString - The CPU model string to parse (e.g., "Intel Core i5-8250U", "Ryzen 5 3600").
+ * @returns A `Model` object with extracted and normalized `vendor`, `family`, and `name` properties.
+ */
 export const toModel = (modelString: string): Model => {
   const model = {} as Model;
 

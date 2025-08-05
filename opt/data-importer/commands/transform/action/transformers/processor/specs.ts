@@ -8,6 +8,22 @@ export interface Specs {
   cache?: string;
 }
 
+/**
+ * Parses a CPU specification string and returns a `Specs` object containing
+ * the number of cores, threads, speed (min/max GHz), and cache size.
+ *
+ * The input string should contain comma-separated parts, such as:
+ * - "4C/8T, 2.0/3.6GHz, 8MB"
+ * - "6C, 2.5GHz, 12MB"
+ *
+ * Recognized patterns:
+ * - Cores/Threads: e.g. "4C/8T", "6C"
+ * - Speed: e.g. "2.0/3.6GHz", "2.5GHz"
+ * - Cache: e.g. "8MB", "12 MB"
+ *
+ * @param specsString - The CPU specification string to parse.
+ * @returns A `Specs` object with parsed core count, thread count, speed, and cache size.
+ */
 export const toSpecs = (specsString: string): Specs => {
   const specs = {} as Specs;
 
@@ -16,14 +32,10 @@ export const toSpecs = (specsString: string): Specs => {
   // Core/Thread parsing
   const corePart = parts.find((p) => /\dC/.test(p)) ?? '';
 
-  console.log(`corePart: [${corePart}]`);
-
   // Updated regex: allow spaces around /, and before/after C/T
   const coreCountMatch = corePart.match(
     /^\s*(?<cores>\d+)\s*C(?:\s*\/\s*(?<threads>\d+)\s*T)?\s*$/i
   );
-
-  console.log('coreCountMatch', coreCountMatch);
 
   if (coreCountMatch?.groups) {
     specs.cores = parseInt(coreCountMatch.groups.cores, 10);

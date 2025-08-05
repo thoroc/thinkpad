@@ -4,14 +4,6 @@
     "expected": {
       "family": "A10",
       "model": "5750M",
-      "specs": {
-        "cores": 4,
-        "speed": {
-          "min": "2.5 Ghz",
-          "max": "3.5 Ghz"
-        },
-        "cache": "4 Mb"
-      },
       "vendor": "AMD"
     }
   },
@@ -68,14 +60,6 @@
     "expected": {
       "family": "A6",
       "model": "5350M",
-      "specs": {
-        "cores": 2,
-        "speed": {
-          "min": "2 Ghz",
-          "max": "2.9 Ghz"
-        },
-        "cache": "2 Mb"
-      },
       "vendor": "AMD"
     }
   },
@@ -88,7 +72,7 @@
         "cores": 2,
         "speed": {
           "min": "2.2 Ghz",
-          "max": "3.0 Ghz"
+          "max": "3 Ghz"
         },
         "cache": "1 Mb"
       },
@@ -132,14 +116,6 @@
     "expected": {
       "family": "A8",
       "model": "4500M",
-      "specs": {
-        "cores": 4,
-        "speed": {
-          "min": "1.5 Ghz",
-          "max": "2.4 Ghz"
-        },
-        "cache": "4 Mb"
-      },
       "vendor": "AMD"
     }
   },
@@ -148,14 +124,6 @@
     "expected": {
       "family": "A8",
       "model": "5550M",
-      "specs": {
-        "cores": 4,
-        "speed": {
-          "min": "2 Ghz",
-          "max": "2.5 Ghz"
-        },
-        "cache": "4 Mb"
-      },
       "vendor": "AMD"
     }
   },
@@ -168,7 +136,7 @@
         "cores": 4,
         "speed": {
           "min": "1.8 Ghz",
-          "max": "3.0 Ghz"
+          "max": "3 Ghz"
         },
         "cache": "4 Mb"
       },
@@ -274,7 +242,7 @@
   {
     "input": "Core i3-4005U (2C, 1.7GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "4005U",
       "specs": {
         "cores": 2,
@@ -290,7 +258,7 @@
   {
     "input": "Core i3-4030U (2C, 1.9GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "4030U",
       "specs": {
         "cores": 2,
@@ -306,7 +274,7 @@
   {
     "input": "Core i3-5005U (2C, 2.0GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "5005U",
       "specs": {
         "cores": 2,
@@ -322,7 +290,7 @@
   {
     "input": "Core i3-5005U (2C, 2GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "5005U",
       "specs": {
         "cores": 2,
@@ -338,7 +306,7 @@
   {
     "input": "Core i3-5010U (2C, 2.1GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "5010U",
       "specs": {
         "cores": 2,
@@ -354,7 +322,7 @@
   {
     "input": "Core i3-5015U (2C, 2.1GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "5015U",
       "specs": {
         "cores": 2,
@@ -370,7 +338,7 @@
   {
     "input": "Core i3-6006U (2C, 2.0GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "6006U",
       "specs": {
         "cores": 2,
@@ -386,7 +354,7 @@
   {
     "input": "Core i3-6100U (2C, 2.3GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "6100U",
       "specs": {
         "cores": 2,
@@ -402,7 +370,7 @@
   {
     "input": "Core i3-7100U (2C, 2.4GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "7100U",
       "specs": {
         "cores": 2,
@@ -418,7 +386,7 @@
   {
     "input": "Core i5-4210U (2C, 1.7 / 2.7GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4210U",
       "specs": {
         "cores": 2,
@@ -434,7 +402,7 @@
   {
     "input": "Core i5-4300U (2C, 1.9 / 2.9GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4300U",
       "specs": {
         "cores": 2,
@@ -450,7 +418,7 @@
   {
     "input": "Core i5-5200U (2C, 2.2 / 2.7GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "5200U",
       "specs": {
         "cores": 2,
@@ -466,7 +434,7 @@
   {
     "input": "Core i5-5300U (2C, 2.3 / 2.9GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "5300U",
       "specs": {
         "cores": 2,
@@ -482,7 +450,7 @@
   {
     "input": "Core i5-6200U (2C, 2.3 / 2.8GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "6200U",
       "specs": {
         "cores": 2,
@@ -498,7 +466,7 @@
   {
     "input": "Core i5-6300HQ (4C, 2.3 / 3.2GHz, 6MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "6300HQ",
       "specs": {
         "cores": 4,
@@ -514,7 +482,7 @@
   {
     "input": "Core i5-6300U (2C, 2.4 / 3.0GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "6300U",
       "specs": {
         "cores": 2,
@@ -530,7 +498,7 @@
   {
     "input": "Core i5-6440HQ (4C, 2.6 / 3.5GHz, 6MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "6440HQ",
       "specs": {
         "cores": 4,
@@ -546,7 +514,7 @@
   {
     "input": "Core i5-7200U (2C, 2.5 / 3.1GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "7200U",
       "specs": {
         "cores": 2,
@@ -562,7 +530,7 @@
   {
     "input": "Core i5-7300HQ (4C, 2.5 / 3.5GHz, 6MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "7300HQ",
       "specs": {
         "cores": 4,
@@ -578,7 +546,7 @@
   {
     "input": "Core i5-7300U (2C, 2.6 / 3.5GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "7300U",
       "specs": {
         "cores": 2,
@@ -594,7 +562,7 @@
   {
     "input": "Core i5-7440HQ (4C, 2.8 / 3.8GHz, 6MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "7440HQ",
       "specs": {
         "cores": 4,
@@ -610,7 +578,7 @@
   {
     "input": "Core i7-5500U (2C, 2.4 / 3.0GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "5500U",
       "specs": {
         "cores": 2,
@@ -626,7 +594,7 @@
   {
     "input": "Core i7-5600U (2C, 2.6 / 3.2GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "5600U",
       "specs": {
         "cores": 2,
@@ -642,7 +610,7 @@
   {
     "input": "Core i7-6500U (2C, 2.5 / 3.1GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "6500U",
       "specs": {
         "cores": 2,
@@ -658,7 +626,7 @@
   {
     "input": "Core i7-6600U (2C, 2.6 / 3.4GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "6600U",
       "specs": {
         "cores": 2,
@@ -674,7 +642,7 @@
   {
     "input": "Core i7-6700HQ (4C, 2.6 / 3.5GHz, 6MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "6700HQ",
       "specs": {
         "cores": 4,
@@ -690,7 +658,7 @@
   {
     "input": "Core i7-6820HQ (4C, 2.7 / 3.6GHz, 8MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "6820HQ",
       "specs": {
         "cores": 4,
@@ -706,7 +674,7 @@
   {
     "input": "Core i7-7500U (2C, 2.7 / 3.5GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "7500U",
       "specs": {
         "cores": 2,
@@ -722,7 +690,7 @@
   {
     "input": "Core i7-7600U (2C, 2.8 / 3.9GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "7600U",
       "specs": {
         "cores": 2,
@@ -738,7 +706,7 @@
   {
     "input": "Core i7-7700HQ (4C, 2.8 / 3.8GHz, 6MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "7700HQ",
       "specs": {
         "cores": 4,
@@ -754,7 +722,7 @@
   {
     "input": "Core i7-7820HQ (4C, 2.9 / 3.9GHz, 8MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "7820HQ",
       "specs": {
         "cores": 4,
@@ -770,96 +738,48 @@
   {
     "input": "I3-4000M",
     "expected": {
-      "family": "I3",
+      "family": "Core i3",
       "model": "4000M",
-      "specs": {
-        "cores": 2,
-        "speed": {
-          "min": "2.4 Ghz",
-          "max": "2.4 Ghz"
-        },
-        "cache": "3 Mb"
-      },
       "vendor": "Intel"
     }
   },
   {
     "input": "I3-4100M",
     "expected": {
-      "family": "I3",
+      "family": "Core i3",
       "model": "4100M",
-      "specs": {
-        "cores": 2,
-        "speed": {
-          "min": "2.5 Ghz",
-          "max": "2.5 Ghz"
-        },
-        "cache": "3 Mb"
-      },
       "vendor": "Intel"
     }
   },
   {
     "input": "I5-4200M",
     "expected": {
-      "family": "I5",
+      "family": "Core i5",
       "model": "4200M",
-      "specs": {
-        "cores": 2,
-        "speed": {
-          "min": "2.5 Ghz",
-          "max": "3.1 Ghz"
-        },
-        "cache": "3 Mb"
-      },
       "vendor": "Intel"
     }
   },
   {
     "input": "I5-4210M",
     "expected": {
-      "family": "I5",
+      "family": "Core i5",
       "model": "4210M",
-      "specs": {
-        "cores": 2,
-        "speed": {
-          "min": "2.6 Ghz",
-          "max": "3.2 Ghz"
-        },
-        "cache": "3 Mb"
-      },
       "vendor": "Intel"
     }
   },
   {
     "input": "I7-4702MQ",
     "expected": {
-      "family": "I7",
+      "family": "Core i7",
       "model": "4702MQ",
-      "specs": {
-        "cores": 4,
-        "speed": {
-          "min": "2.2 Ghz",
-          "max": "3.2 Ghz"
-        },
-        "cache": "8 Mb"
-      },
       "vendor": "Intel"
     }
   },
   {
     "input": "I7-4712MQ",
     "expected": {
-      "family": "I7",
+      "family": "Core i7",
       "model": "4712MQ",
-      "specs": {
-        "cores": 4,
-        "speed": {
-          "min": "2.3 Ghz",
-          "max": "3.3 Ghz"
-        },
-        "cache": "8 Mb"
-      },
       "vendor": "Intel"
     }
   },
@@ -900,7 +820,7 @@
   {
     "input": "Intel Core i3-6006U (2C / 4T, 2.0GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "6006U",
       "specs": {
         "cores": 2,
@@ -917,7 +837,7 @@
   {
     "input": "Intel Core i3-7020U (2C / 4T, 2.3GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "7020U",
       "specs": {
         "cores": 2,
@@ -934,7 +854,7 @@
   {
     "input": "Intel Core i3-7100U (2C / 4T, 2.4GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "7100U",
       "specs": {
         "cores": 2,
@@ -951,7 +871,7 @@
   {
     "input": "Intel Core i3-7130U (2C / 4T, 2.7GHz, 3MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "7130U",
       "specs": {
         "cores": 2,
@@ -968,7 +888,7 @@
   {
     "input": "Intel Core i3-8130U (2C / 4T, 2.2 / 3.4GHz, 4MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "8130U",
       "specs": {
         "cores": 2,
@@ -985,7 +905,7 @@
   {
     "input": "Intel Core i3-8145U (2C / 4T, 2.1 / 3.9GHz, 4MB)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "8145U",
       "specs": {
         "cores": 2,
@@ -1002,7 +922,7 @@
   {
     "input": "Intel Core i5-6200U (2C / 4T, 2.3 / 2.8GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "6200U",
       "specs": {
         "cores": 2,
@@ -1019,7 +939,7 @@
   {
     "input": "Intel Core i5-6300U (2C / 4T, 2.4 / 3.0GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "6300U",
       "specs": {
         "cores": 2,
@@ -1036,7 +956,7 @@
   {
     "input": "Intel Core i5-7200U (2C / 4T, 2.5 / 3.1GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "7200U",
       "specs": {
         "cores": 2,
@@ -1053,7 +973,7 @@
   {
     "input": "Intel Core i5-7300U (2C / 4T, 2.6 / 3.5GHz, 3MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "7300U",
       "specs": {
         "cores": 2,
@@ -1070,7 +990,7 @@
   {
     "input": "Intel Core i5-8250U (4C / 8T, 1.6 / 3.4GHz, 6MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "8250U",
       "specs": {
         "cores": 4,
@@ -1087,7 +1007,7 @@
   {
     "input": "Intel Core i5-8265U (4C / 8T, 1.6 / 3.9GHz, 6MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "8265U",
       "specs": {
         "cores": 4,
@@ -1104,7 +1024,7 @@
   {
     "input": "Intel Core i5-8350U (4C / 8T, 1.7 / 3.6GHz, 6MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "8350U",
       "specs": {
         "cores": 4,
@@ -1121,7 +1041,7 @@
   {
     "input": "Intel Core i5-8365U (4C / 8T, 1.6 / 4.1GHz, 6MB)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "8365U",
       "specs": {
         "cores": 4,
@@ -1138,7 +1058,7 @@
   {
     "input": "Intel Core i7-6500U (2C / 4T, 2.5 / 3.1GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "6500U",
       "specs": {
         "cores": 2,
@@ -1155,7 +1075,7 @@
   {
     "input": "Intel Core i7-6600U (2C / 4T, 2.6 / 3.4GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "6600U",
       "specs": {
         "cores": 2,
@@ -1172,7 +1092,7 @@
   {
     "input": "Intel Core i7-7500U (2C / 4T, 2.7 / 3.5GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "7500U",
       "specs": {
         "cores": 2,
@@ -1189,7 +1109,7 @@
   {
     "input": "Intel Core i7-7600U (2C / 4T, 2.8 / 3.9GHz, 4MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "7600U",
       "specs": {
         "cores": 2,
@@ -1206,7 +1126,7 @@
   {
     "input": "Intel Core i7-8550U (4C / 8T, 1.8 / 4.0GHz, 8MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "8550U",
       "specs": {
         "cores": 4,
@@ -1223,7 +1143,7 @@
   {
     "input": "Intel Core i7-8565U (4C / 8T, 1.8 / 4.6GHz, 8MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "8565U",
       "specs": {
         "cores": 4,
@@ -1240,7 +1160,7 @@
   {
     "input": "Intel Core i7-8650U (4C / 8T, 1.9 / 4.2GHz, 8MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "8650U",
       "specs": {
         "cores": 4,
@@ -1257,7 +1177,7 @@
   {
     "input": "Intel Core i7-8665U (4C / 8T, 1.9 / 4.8GHz, 8MB)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "8665U",
       "specs": {
         "cores": 4,
@@ -1322,7 +1242,7 @@
   {
     "input": "i3-4000M (2C, 2.40GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "4000M",
       "specs": {
         "cores": 2,
@@ -1338,7 +1258,7 @@
   {
     "input": "i3-4000M (2C, 2.4GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "4000M",
       "specs": {
         "cores": 2,
@@ -1354,7 +1274,7 @@
   {
     "input": "i3-4010U (2C, 1.7GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "4010U",
       "specs": {
         "cores": 2,
@@ -1370,7 +1290,7 @@
   {
     "input": "i3-4030U (2C, 1.9GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "4030U",
       "specs": {
         "cores": 2,
@@ -1386,7 +1306,7 @@
   {
     "input": "i3-4100M (2C, 2.50GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "4100M",
       "specs": {
         "cores": 2,
@@ -1402,7 +1322,7 @@
   {
     "input": "i3-4100M (2C, 2.5GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i3",
+      "family": "Core i3",
       "model": "4100M",
       "specs": {
         "cores": 2,
@@ -1418,7 +1338,7 @@
   {
     "input": "i5-4200M (2C, 2.5 / 3.1GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4200M",
       "specs": {
         "cores": 2,
@@ -1434,7 +1354,7 @@
   {
     "input": "i5-4200M (2C, 2.50 / 3.10GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4200M",
       "specs": {
         "cores": 2,
@@ -1450,7 +1370,7 @@
   {
     "input": "i5-4200U (2C, 1.6 / 2.6GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4200U",
       "specs": {
         "cores": 2,
@@ -1466,7 +1386,7 @@
   {
     "input": "i5-4210M (2C, 2.6 / 3.2GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4210M",
       "specs": {
         "cores": 2,
@@ -1482,7 +1402,7 @@
   {
     "input": "i5-4210M (2C, 2.60 / 3.20GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4210M",
       "specs": {
         "cores": 2,
@@ -1498,7 +1418,7 @@
   {
     "input": "i5-4210U (2C, 1.7 / 2.7GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4210U",
       "specs": {
         "cores": 2,
@@ -1514,7 +1434,7 @@
   {
     "input": "i5-4300M (2C, 2.6 / 3.3GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4300M",
       "specs": {
         "cores": 2,
@@ -1530,7 +1450,7 @@
   {
     "input": "i5-4300M (2C, 2.60 / 3.30GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4300M",
       "specs": {
         "cores": 2,
@@ -1546,7 +1466,7 @@
   {
     "input": "i5-4300U (2C, 1.9 / 2.9GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4300U",
       "specs": {
         "cores": 2,
@@ -1562,7 +1482,7 @@
   {
     "input": "i5-4330M (2C, 2.8 / 3.5GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4330M",
       "specs": {
         "cores": 2,
@@ -1578,7 +1498,7 @@
   {
     "input": "i5-4340M (2C, 2.9 / 3.6GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "4340M",
       "specs": {
         "cores": 2,
@@ -1594,7 +1514,7 @@
   {
     "input": "i5-5200U (2C, 2.2 / 2.7GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "5200U",
       "specs": {
         "cores": 2,
@@ -1610,7 +1530,7 @@
   {
     "input": "i5-5300U (2C, 2.3 / 2.9GHz, 3MB, 1600MHz)",
     "expected": {
-      "family": "i5",
+      "family": "Core i5",
       "model": "5300U",
       "specs": {
         "cores": 2,
@@ -1626,7 +1546,7 @@
   {
     "input": "i7-4500U (2C, 1.8 / 3.0GHz, 4MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4500U",
       "specs": {
         "cores": 2,
@@ -1642,7 +1562,7 @@
   {
     "input": "i7-4600M (2C, 2.9 / 3.6GHz, 4MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4600M",
       "specs": {
         "cores": 2,
@@ -1658,7 +1578,7 @@
   {
     "input": "i7-4600U (2C, 2.1 / 3.3GHz, 4MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4600U",
       "specs": {
         "cores": 2,
@@ -1674,7 +1594,7 @@
   {
     "input": "i7-4700MQ (4C, 2.4 / 3.4GHz, 6MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4700MQ",
       "specs": {
         "cores": 4,
@@ -1690,7 +1610,7 @@
   {
     "input": "i7-4702MQ (4C, 2.2 / 3.2GHz, 6MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4702MQ",
       "specs": {
         "cores": 4,
@@ -1706,7 +1626,7 @@
   {
     "input": "i7-4702MQ (4C, 2.20 / 3.20GHz, 6MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4702MQ",
       "specs": {
         "cores": 4,
@@ -1722,7 +1642,7 @@
   {
     "input": "i7-4710MQ (4C, 2.5 / 3.5GHz, 6MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4710MQ",
       "specs": {
         "cores": 4,
@@ -1738,7 +1658,7 @@
   {
     "input": "i7-4712MQ (4C, 2.3 / 3.3GHz, 6MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4712MQ",
       "specs": {
         "cores": 4,
@@ -1754,7 +1674,7 @@
   {
     "input": "i7-4712MQ (4C, 2.30 / 3.30GHz, 6MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4712MQ",
       "specs": {
         "cores": 4,
@@ -1770,7 +1690,7 @@
   {
     "input": "i7-4800MQ (4C, 2.7 / 3.7GHz, 6MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4800MQ",
       "specs": {
         "cores": 4,
@@ -1786,7 +1706,7 @@
   {
     "input": "i7-4810MQ (4C, 2.8 / 3.8GHz, 6MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4810MQ",
       "specs": {
         "cores": 4,
@@ -1802,7 +1722,7 @@
   {
     "input": "i7-4900MQ (4C, 2.8 / 3.8GHz, 8MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4900MQ",
       "specs": {
         "cores": 4,
@@ -1818,7 +1738,7 @@
   {
     "input": "i7-4910MQ (4C, 2.9 / 3.9GHz, 8MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4910MQ",
       "specs": {
         "cores": 4,
@@ -1834,7 +1754,7 @@
   {
     "input": "i7-4930MX (4C, 3.0 / 3.9GHz, 8MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4930MX",
       "specs": {
         "cores": 4,
@@ -1850,7 +1770,7 @@
   {
     "input": "i7-4940MX (4C, 3.1 / 4GHz, 8MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "4940MX",
       "specs": {
         "cores": 4,
@@ -1866,7 +1786,7 @@
   {
     "input": "i7-5500U (2C, 2.4 / 3.0GHz, 4MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "5500U",
       "specs": {
         "cores": 2,
@@ -1882,7 +1802,7 @@
   {
     "input": "i7-5600U (2C, 2.6 / 3.2GHz, 4MB, 1600MHz)",
     "expected": {
-      "family": "i7",
+      "family": "Core i7",
       "model": "5600U",
       "specs": {
         "cores": 2,
