@@ -1,0 +1,866 @@
+[
+  {
+    "input": "AMD A10-7300",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A10",
+      "name": "7300"
+    }
+  },
+  {
+    "input": "AMD A10-8700P",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A10",
+      "name": "8700P"
+    }
+  },
+  {
+    "input": "AMD A10-9600P",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A10",
+      "name": "9600P"
+    }
+  },
+  {
+    "input": "AMD A6-5350M",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A6",
+      "name": "5350M"
+    }
+  },
+  {
+    "input": "AMD A6-7000",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A6",
+      "name": "7000"
+    }
+  },
+  {
+    "input": "AMD A6-8500P",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A6",
+      "name": "8500P"
+    }
+  },
+  {
+    "input": "AMD A6-9500B",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A6",
+      "name": "9500B"
+    }
+  },
+  {
+    "input": "AMD A8-4500M",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A8",
+      "name": "4500M"
+    }
+  },
+  {
+    "input": "AMD A8-5550M",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A8",
+      "name": "5550M"
+    }
+  },
+  {
+    "input": "AMD A8-7100",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A8",
+      "name": "7100"
+    }
+  },
+  {
+    "input": "AMD A8-8600P",
+    "expected": {
+      "vendor": "AMD",
+      "family": "A8",
+      "name": "8600P"
+    }
+  },
+  {
+    "input": "AMD Ryzen 3 2200U",
+    "expected": {
+      "vendor": "AMD",
+      "family": "Ryzen 3",
+      "name": "2200U"
+    }
+  },
+  {
+    "input": "AMD Ryzen 5 2500U",
+    "expected": {
+      "vendor": "AMD",
+      "family": "Ryzen 5",
+      "name": "2500U"
+    }
+  },
+  {
+    "input": "AMD Ryzen 7 2700U",
+    "expected": {
+      "vendor": "AMD",
+      "family": "Ryzen 7",
+      "name": "2700U"
+    }
+  },
+  {
+    "input": "Celeron 2950M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Celeron",
+      "name": "2950M"
+    }
+  },
+  {
+    "input": "Celeron 3205U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Celeron",
+      "name": "3205U"
+    }
+  },
+  {
+    "input": "Core i3-4005U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "4005U"
+    }
+  },
+  {
+    "input": "Core i3-4030U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "4030U"
+    }
+  },
+  {
+    "input": "Core i3-5005U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "5005U"
+    }
+  },
+  {
+    "input": "Core i3-5010U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "5010U"
+    }
+  },
+  {
+    "input": "Core i3-5015U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "5015U"
+    }
+  },
+  {
+    "input": "Core i3-6006U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "6006U"
+    }
+  },
+  {
+    "input": "Core i3-6100U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "6100U"
+    }
+  },
+  {
+    "input": "Core i3-7100U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "7100U"
+    }
+  },
+  {
+    "input": "Core i5-4210U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4210U"
+    }
+  },
+  {
+    "input": "Core i5-4300U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4300U"
+    }
+  },
+  {
+    "input": "Core i5-5200U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "5200U"
+    }
+  },
+  {
+    "input": "Core i5-5300U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "5300U"
+    }
+  },
+  {
+    "input": "Core i5-6200U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "6200U"
+    }
+  },
+  {
+    "input": "Core i5-6300HQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "6300HQ"
+    }
+  },
+  {
+    "input": "Core i5-6300U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "6300U"
+    }
+  },
+  {
+    "input": "Core i5-6440HQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "6440HQ"
+    }
+  },
+  {
+    "input": "Core i5-7200U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "7200U"
+    }
+  },
+  {
+    "input": "Core i5-7300HQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "7300HQ"
+    }
+  },
+  {
+    "input": "Core i5-7300U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "7300U"
+    }
+  },
+  {
+    "input": "Core i5-7440HQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "7440HQ"
+    }
+  },
+  {
+    "input": "Core i7-5500U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "5500U"
+    }
+  },
+  {
+    "input": "Core i7-5600U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "5600U"
+    }
+  },
+  {
+    "input": "Core i7-6500U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "6500U"
+    }
+  },
+  {
+    "input": "Core i7-6600U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "6600U"
+    }
+  },
+  {
+    "input": "Core i7-6700HQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "6700HQ"
+    }
+  },
+  {
+    "input": "Core i7-6820HQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "6820HQ"
+    }
+  },
+  {
+    "input": "Core i7-7500U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "7500U"
+    }
+  },
+  {
+    "input": "Core i7-7600U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "7600U"
+    }
+  },
+  {
+    "input": "Core i7-7700HQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "7700HQ"
+    }
+  },
+  {
+    "input": "Core i7-7820HQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "7820HQ"
+    }
+  },
+  {
+    "input": "I3-4000M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "4000M"
+    }
+  },
+  {
+    "input": "I3-4100M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "4100M"
+    }
+  },
+  {
+    "input": "I5-4200M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4200M"
+    }
+  },
+  {
+    "input": "I5-4210M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4210M"
+    }
+  },
+  {
+    "input": "I7-4702MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4702MQ"
+    }
+  },
+  {
+    "input": "I7-4712MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4712MQ"
+    }
+  },
+  {
+    "input": "Intel Celeron 3965U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Celeron",
+      "name": "3965U"
+    }
+  },
+  {
+    "input": "Intel Celeron 4305U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Celeron",
+      "name": "4305U"
+    }
+  },
+  {
+    "input": "Intel Core i3-6006U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "6006U"
+    }
+  },
+  {
+    "input": "Intel Core i3-7020U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "7020U"
+    }
+  },
+  {
+    "input": "Intel Core i3-7100U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "7100U"
+    }
+  },
+  {
+    "input": "Intel Core i3-7130U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "7130U"
+    }
+  },
+  {
+    "input": "Intel Core i3-8130U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "8130U"
+    }
+  },
+  {
+    "input": "Intel Core i3-8145U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "8145U"
+    }
+  },
+  {
+    "input": "Intel Core i5-6200U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "6200U"
+    }
+  },
+  {
+    "input": "Intel Core i5-6300U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "6300U"
+    }
+  },
+  {
+    "input": "Intel Core i5-7200U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "7200U"
+    }
+  },
+  {
+    "input": "Intel Core i5-7300U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "7300U"
+    }
+  },
+  {
+    "input": "Intel Core i5-8250U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "8250U"
+    }
+  },
+  {
+    "input": "Intel Core i5-8265U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "8265U"
+    }
+  },
+  {
+    "input": "Intel Core i5-8350U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "8350U"
+    }
+  },
+  {
+    "input": "Intel Core i5-8365U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "8365U"
+    }
+  },
+  {
+    "input": "Intel Core i7-6500U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "6500U"
+    }
+  },
+  {
+    "input": "Intel Core i7-6600U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "6600U"
+    }
+  },
+  {
+    "input": "Intel Core i7-7500U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "7500U"
+    }
+  },
+  {
+    "input": "Intel Core i7-7600U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "7600U"
+    }
+  },
+  {
+    "input": "Intel Core i7-8550U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "8550U"
+    }
+  },
+  {
+    "input": "Intel Core i7-8565U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "8565U"
+    }
+  },
+  {
+    "input": "Intel Core i7-8650U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "8650U"
+    }
+  },
+  {
+    "input": "Intel Core i7-8665U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "8665U"
+    }
+  },
+  {
+    "input": "Pentium 3805U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Pentium",
+      "name": "3805U"
+    }
+  },
+  {
+    "input": "Pentium-3550M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Pentium",
+      "name": "3550M"
+    }
+  },
+  {
+    "input": "Pentium-3560M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Pentium",
+      "name": "3560M"
+    }
+  },
+  {
+    "input": "i3-4000M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "4000M"
+    }
+  },
+  {
+    "input": "i3-4010U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "4010U"
+    }
+  },
+  {
+    "input": "i3-4030U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "4030U"
+    }
+  },
+  {
+    "input": "i3-4100M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i3",
+      "name": "4100M"
+    }
+  },
+  {
+    "input": "i5-4200M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4200M"
+    }
+  },
+  {
+    "input": "i5-4200U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4200U"
+    }
+  },
+  {
+    "input": "i5-4210M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4210M"
+    }
+  },
+  {
+    "input": "i5-4210U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4210U"
+    }
+  },
+  {
+    "input": "i5-4300M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4300M"
+    }
+  },
+  {
+    "input": "i5-4300U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4300U"
+    }
+  },
+  {
+    "input": "i5-4330M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4330M"
+    }
+  },
+  {
+    "input": "i5-4340M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "4340M"
+    }
+  },
+  {
+    "input": "i5-5200U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "5200U"
+    }
+  },
+  {
+    "input": "i5-5300U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i5",
+      "name": "5300U"
+    }
+  },
+  {
+    "input": "i7-4500U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4500U"
+    }
+  },
+  {
+    "input": "i7-4600M",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4600M"
+    }
+  },
+  {
+    "input": "i7-4600U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4600U"
+    }
+  },
+  {
+    "input": "i7-4700MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4700MQ"
+    }
+  },
+  {
+    "input": "i7-4702MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4702MQ"
+    }
+  },
+  {
+    "input": "i7-4710MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4710MQ"
+    }
+  },
+  {
+    "input": "i7-4712MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4712MQ"
+    }
+  },
+  {
+    "input": "i7-4800MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4800MQ"
+    }
+  },
+  {
+    "input": "i7-4810MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4810MQ"
+    }
+  },
+  {
+    "input": "i7-4900MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4900MQ"
+    }
+  },
+  {
+    "input": "i7-4910MQ",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4910MQ"
+    }
+  },
+  {
+    "input": "i7-4930MX",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4930MX"
+    }
+  },
+  {
+    "input": "i7-4940MX",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "4940MX"
+    }
+  },
+  {
+    "input": "i7-5500U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "5500U"
+    }
+  },
+  {
+    "input": "i7-5600U",
+    "expected": {
+      "vendor": "Intel",
+      "family": "Core i7",
+      "name": "5600U"
+    }
+  }
+]
