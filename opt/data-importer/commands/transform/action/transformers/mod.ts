@@ -151,7 +151,7 @@ export class ThinkpadTransformer {
     return toMultiTouch(this._multiTouch);
   }
 
-  public get storage(): Storage {
+  public get storage(): Storage[] {
     return toStorage(this._storage);
   }
 

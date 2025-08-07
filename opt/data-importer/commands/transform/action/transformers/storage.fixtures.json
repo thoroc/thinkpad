@@ -1,0 +1,1328 @@
+[
+  {
+    "input": "128GB SSD",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB"
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD 2.5\" SATA6Gb/s",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "2.5\"",
+        "interface": "SATA6Gb/s"
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2"
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe 3.0x2 NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe 3.0x2 NVMe"
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe 3.0x2 NVMe + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe 3.0x2 NVMe"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe 3.0x2 NVMe + 500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe 3.0x2 NVMe"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe 3.0x2 NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe 3.0x2 NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe 3.0x2 NVMe Opal2 + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe 3.0x2 NVMe",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe 3.0x2 NVMe Opal2 + 500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe 3.0x2 NVMe",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe NVMe"
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe NVMe + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe NVMe"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe NVMe + 2TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe NVMe"
+      },
+      {
+        "type": "HDD",
+        "capacity": "2TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe NVMe + 500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe NVMe"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 PCIe NVMe Opal2 + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 SATA6Gb/s + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "SATA6Gb/s"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2242 SATA6Gb/s + 500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2242",
+        "interface": "SATA6Gb/s"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 2280 SATA6Gb/s",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2280",
+        "interface": "SATA6Gb/s"
+      }
+    ]
+  },
+  {
+    "input": "128GB SSD M.2 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "180GB SSD 2.5\" SATA6Gb/s Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "180GB",
+        "formFactor": "2.5\"",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "180GB SSD M.2 2280 SATA6Gb/s Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "180GB",
+        "formFactor": "M.2 2280",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "180GB SSD M.2 Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "180GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "180GB SSD Opal",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "180GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal"
+      }
+    ]
+  },
+  {
+    "input": "180GB SSD Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "180GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "192GB SSD",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "192GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe"
+      }
+    ]
+  },
+  {
+    "input": "192GB SSD M.2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "192GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe"
+      }
+    ]
+  },
+  {
+    "input": "1TB 5400 rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm"
+      }
+    ]
+  },
+  {
+    "input": "1TB 5400rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm"
+      }
+    ]
+  },
+  {
+    "input": "1TB 5400rpm + 128GB SSD M.2",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm"
+      },
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe"
+      }
+    ]
+  },
+  {
+    "input": "1TB 5400rpm + 256GB SSD M.2 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm"
+      },
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "1TB SSD M.2 2280 PCIe 3.0x4 NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "1TB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe 3.0x4 NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "1TB SSD M.2 2280 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "1TB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "1TB SSD M.2 PCIe NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "1TB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe"
+      }
+    ]
+  },
+  {
+    "input": "1TB SSD M.2 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "1TB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "240GB SSD M.2 Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "240GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "240GB SSD Opal",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "240GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal"
+      }
+    ]
+  },
+  {
+    "input": "240GB SSD Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "240GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD 2.5\" SATA6Gb/s Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "2.5\"",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2242 PCIe 3.0x2 NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe 3.0x2 NVMe"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2242 PCIe 3.0x2 NVMe + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2242 PCIe NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe NVMe"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2242 PCIe NVMe + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2242 PCIe NVMe + 2TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "2TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2242 PCIe NVMe + 500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2242 PCIe x2 NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe x2 NVMe"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 PCIe 3.0x4 NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe 3.0x4 NVMe"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 PCIe 3.0x4 NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe 3.0x4 NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 PCIe 3.0x4 NVMe Opal2 + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe 3.0x4 NVMe",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 PCIe 3.0x4 NVMe Opal2 + 256GB SSD M.2 2242 PCIe 3.0x2 NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe 3.0x4 NVMe",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2242",
+        "interface": "PCIe 3.0x2 NVMe"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 PCIe 3.0x4 NVMe Opal2 + 500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe 3.0x4 NVMe",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 PCIe NVMe Opal2 + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 PCIe NVMe Opal2 + 500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 SATA",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "SATA"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 SATA6Gb/s Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 SATA6Gb/s Opal2 + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 SATA6Gb/s Opal2 + 2TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "2TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 2280 SATA6Gb/s Opal2 + 500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2 2280",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD M.2 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD Opal",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2",
+        "encryption": "Opal"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD eDrive",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2",
+        "interface": "SATA",
+        "encryption": "eDrive"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD eDrive + 1TB 5400rpm",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2",
+        "interface": "SATA",
+        "encryption": "eDrive"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm"
+      }
+    ]
+  },
+  {
+    "input": "256GB SSD eDrive + 500GB 7200rpm",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "256GB",
+        "formFactor": "M.2",
+        "interface": "SATA",
+        "encryption": "eDrive"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm"
+      }
+    ]
+  },
+  {
+    "input": "2TB 5400rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "2TB",
+        "speed": "5400rpm"
+      }
+    ]
+  },
+  {
+    "input": "2TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "2TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "2x500GB 7200rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm"
+      },
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm"
+      }
+    ]
+  },
+  {
+    "input": "2x512GB SSD",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2"
+      },
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2"
+      }
+    ]
+  },
+  {
+    "input": "320GB 5400 rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "320GB",
+        "speed": "5400rpm"
+      }
+    ]
+  },
+  {
+    "input": "320GB 7200 rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "320GB",
+        "speed": "7200rpm"
+      }
+    ]
+  },
+  {
+    "input": "32GB Optane Memory Integrated with 512GB SSD M.2 2280",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2 2280"
+      },
+      {
+        "type": "Optane Memory",
+        "capacity": "32GB"
+      }
+    ]
+  },
+  {
+    "input": "480GB SSD Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "480GB",
+        "formFactor": "M.2",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "500GB (8GB) SSHD 5400rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\"",
+        "cache": "8GB"
+      }
+    ]
+  },
+  {
+    "input": "500GB 5400 rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "500GB 5400 rpm 8GB Hybrid",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\"",
+        "cache": "8GB"
+      }
+    ]
+  },
+  {
+    "input": "500GB 5400rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "500GB 5400rpm + 8GB SSHD",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      },
+      {
+        "type": "HDD",
+        "capacity": "8GB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "500GB 7200 rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "500GB 7200rpm",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "500GB 7200rpm + 128GB SSD M.2",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      },
+      {
+        "type": "SSD",
+        "capacity": "128GB",
+        "formFactor": "M.2"
+      }
+    ]
+  },
+  {
+    "input": "500GB 7200rpm Opal",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\"",
+        "encryption": "Opal"
+      }
+    ]
+  },
+  {
+    "input": "500GB 7200rpm Opal2",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\"",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "500GB HDD 7200rpm 2.5\"",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "500GB HDD 7200rpm 2.5\" Opal2",
+    "expected": [
+      {
+        "type": "HDD",
+        "capacity": "500GB",
+        "speed": "7200rpm",
+        "formFactor": "2.5\"",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD 2.5\" SATA6Gb/s Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "2.5\"",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 2242 PCIe NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "length": "2242",
+        "interface": "PCIe NVMe"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 2242 PCIe NVMe + 1TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "length": "2242",
+        "interface": "PCIe NVMe"
+      },
+      {
+        "type": "HDD",
+        "capacity": "1TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 2242 PCIe NVMe + 2TB HDD 5400rpm 2.5\"",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "length": "2242",
+        "interface": "PCIe NVMe"
+      },
+      {
+        "type": "HDD",
+        "capacity": "2TB",
+        "speed": "5400rpm",
+        "formFactor": "2.5\""
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 2242 PCIe x2 NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "length": "2242",
+        "interface": "PCIe x2 NVMe"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 2280 PCIe 3.0x4 NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "length": "2280",
+        "interface": "PCIe 3.0x4 NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 2280 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "length": "2280",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 2280 PCIe x4 NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "length": "2280",
+        "interface": "PCIe x4 NVMe"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 2280 SATA6Gb/s Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "length": "2280",
+        "interface": "SATA6Gb/s",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 PCIe NVMe",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "interface": "PCIe NVMe"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD M.2 PCIe NVMe Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "interface": "PCIe NVMe",
+        "encryption": "Opal2"
+      }
+    ]
+  },
+  {
+    "input": "512GB SSD Opal2",
+    "expected": [
+      {
+        "type": "SSD",
+        "capacity": "512GB",
+        "formFactor": "M.2",
+        "encryption": "Opal2"
+      }
+    ]
+  }
+]

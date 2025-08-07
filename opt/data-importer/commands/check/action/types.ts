@@ -40,6 +40,7 @@ export const TransformerFixtures: Record<string, string> = {
   processor: `${basePath}/processor.fixtures.json`,
   memory: `${basePath}/memory/system.fixtures.json`,
   'power-adapter': `${basePath}/power-adapter.fixtures.json`,
+  storage: `${basePath}/storage.fixtures.json`,
   wlan: `${basePath}/wlan-device.fixtures.json`,
   wwan: `${basePath}/wwan-device.fixtures.json`,
   warranty: `${basePath}/warranty.fixtures.json`,
